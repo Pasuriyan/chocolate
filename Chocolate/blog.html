@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cacao & Cru | Specialty Chocolate & Confectionery Imports</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+ <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      referrerpolicy="no-referrer">
+         <!-- Website Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.ico.png">
+  <!-- Common Global CSS -->
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+
+  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <!-- Logo with Brand Icon (Guaranteed SVG) -->
+      <a href="index.html" class="brand-logo" aria-label="Cacao & Cru Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+            <path d="M12 2V22"></path>
+            <path d="M8 9C10 11 14 11 16 9"></path>
+            <path d="M7 15C10 17 14 17 17 15"></path>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">Cacao <span>&</span> Cru</span>
+          <span class="logo-subtitle">Specialty Imports</span>
+        </span>
+      </a>
+
+      <!-- Main Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Home Dropdown (Home 1 & Home 2 with Custom Names) -->
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link active">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link active">
+                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
+                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-atelier.html" class="dropdown-link">
+                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
+                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products by Origin</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="gifting.html" class="nav-link">Luxury Gifting</a>
+          </li>
+             <li class="nav-item">
+            <a href="blog.html" class="nav-link">blog</a>
+          </li>
+          <!-- Pages Dropdown (Maintenance & Coming Soon) -->
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              <span>Pages</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="maintenance.html" class="dropdown-link">
+                  <span class="dropdown-title">Maintenance Mode</span>
+                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
+                </a>
+              </li>
+              <li>
+                <a href="coming-soon.html" class="dropdown-link">
+                  <span class="dropdown-title">Coming Soon Launch</span>
+                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact & Salon</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
+      <div class="navbar-actions">
+        <!-- RTL to LTR Capsule Pill Button with Horizontal Double-Ended Arrow -->
+        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
+          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
+        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navMoonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFCA28" />
+                <stop offset="100%" stop-color="#FF9800" />
+              </linearGradient>
+            </defs>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGrad)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
+            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
+            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
+          </svg>
+        </button>
+
+      
+
+        <!-- Mobile Navigation Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+<!-- ================================
+     CHOCOLATE BLOG HERO SECTION
+================================= -->
+
+<section id="chocolateBlogHero"
+    style="
+        position:relative;
+        width:100%;
+        min-height:520px;
+        display:flex;
+        align-items:center;
+        overflow:hidden;
+        background:#24140f;
+        color:#ffffff;
+    ">
+
+    <!-- BACKGROUND IMAGE -->
+    <div
+        style="
+            position:absolute;
+            inset:0;
+            background-image:
+                linear-gradient(90deg,
+                    rgba(28,15,10,0.96) 0%,
+                    rgba(28,15,10,0.86) 35%,
+                    rgba(28,15,10,0.35) 70%,
+                    rgba(28,15,10,0.12) 100%
+                ),
+                url('https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=2000&q=90');
+            background-size:cover;
+            background-position:center;
+        ">
+    </div>
+
+
+    <!-- HERO CONTENT -->
+    <div class="container position-relative"
+        style="z-index:2; padding-top:75px; padding-bottom:75px;">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-12 col-lg-7 col-xl-6">
+
+                <!-- EYEBROW -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+
+                  
+
+                    <span
+                        style="
+                            color:#e3bd70;
+                            font-size:12px;
+                            letter-spacing:3px;
+                            font-weight:600;
+                        ">
+                          PURE · NATURAL · PREMIUM
+                    </span>
+
+                </div>
+
+
+                <!-- TITLE -->
+                <h1
+                    style="
+                        color:#ffffff;
+                        font-size:clamp(38px, 5.5vw, 68px);
+                        font-weight:700;
+                        line-height:1.12;
+                        letter-spacing:-1.5px;
+                        margin-bottom:24px;
+                    ">
+
+                    The World of
+                    <span
+                        style="
+                            display:block;
+                            color:#e5bc69;
+                        ">
+                        Fine Chocolate
+                    </span>
+
+                </h1>
+
+
+                <!-- DESCRIPTION -->
+                <p
+                    style="
+                        max-width:530px;
+                        color:#e4d8cc;
+                        font-size:16px;
+                        line-height:1.9;
+                        margin-bottom:30px;
+                    ">
+
+                    From carefully selected cacao beans to handcrafted
+                    creations, discover the journey, passion, and tradition
+                    behind every bite.
+
+                </p>
+
+
+                <!-- BUTTON -->
+                <a
+                    href="#cacaoBlog"
+                    style="
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:12px;
+                        padding:15px 27px;
+                        background:#e5bc69;
+                        color:#24140f;
+                        text-decoration:none;
+                        font-size:15px;
+                        font-weight:600;
+                        border-radius:50px;
+                        transition:all 0.3s ease;
+                    "
+                    onmouseover="this.style.background='#f3d493'; this.style.transform='translateY(-3px)'"
+                    onmouseout="this.style.background='#e5bc69'; this.style.transform='translateY(0)'">
+
+                    Explore Our Blog
+                </a>
+
+
+             
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- =========================================================
+     CACAO & CRU — COMPLETE BLOG SECTION
+     HTML + CSS + JAVASCRIPT IN ONE SECTION
+========================================================= -->
+
+<section id="cacaoBlog" style="
+    width:100%;
+    padding:65px 0;
+    background:var(--bs-body-bg, #faf7f2);
+    color:var(--bs-body-color, #24170f);
+    font-family:inherit;
+">
+
+    <style>
+        /* BLOG SECTION */
+
+        #cacaoBlog,
+        #cacaoBlog * {
+            box-sizing:border-box;
+        }
+
+        #cacaoBlog .cb-container {
+            width:92%;
+            max-width:1260px;
+            margin:0 auto;
+        }
+
+        #cacaoBlog .cb-heading {
+            max-width:760px;
+            margin:0 auto 45px;
+            text-align:center;
+        }
+
+        #cacaoBlog .cb-tag {
+            display:inline-block;
+            color:var(--gold-primary, #b38b24);
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            margin-bottom:14px;
+        }
+
+        #cacaoBlog .cb-main-title {
+            margin:0 0 18px;
+            color:var(--bs-body-color, #24170f);
+            font-size:clamp(30px, 4vw, 46px);
+            font-weight:700;
+            line-height:1.25;
+        }
+
+        #cacaoBlog .cb-intro {
+            margin:0;
+            color:var(--bs-secondary-color, #777);
+            font-size:15px;
+            line-height:1.9;
+        }
+
+        /* GRID */
+
+        #cacaoBlog .cb-grid {
+            display:grid;
+            grid-template-columns:repeat(4, minmax(0, 1fr));
+            gap:24px;
+            align-items:stretch;
+        }
+
+        /* CARD */
+
+        #cacaoBlog .cb-card {
+            min-width:0;
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            overflow:hidden;
+            background:var(--bg-surface-elevated, #fff);
+            border:1px solid var(--border-medium, #e2d7c9);
+            border-radius:15px;
+            transition:transform .3s ease, box-shadow .3s ease;
+        }
+
+        #cacaoBlog .cb-card:hover {
+            transform:translateY(-5px);
+            box-shadow:0 14px 35px rgba(45, 29, 12, .12);
+        }
+
+        #cacaoBlog .cb-image-wrap {
+            position:relative;
+            width:100%;
+            height:205px;
+            flex-shrink:0;
+            overflow:hidden;
+            background:#e8ded0;
+        }
+
+        #cacaoBlog .cb-image {
+            display:block;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:transform .45s ease;
+        }
+
+        #cacaoBlog .cb-card:hover .cb-image {
+            transform:scale(1.05);
+        }
+
+        #cacaoBlog .cb-image-label {
+            position:absolute;
+            left:12px;
+            bottom:12px;
+            max-width:calc(100% - 24px);
+            padding:7px 10px;
+            background:#170c07;
+            color:#f4d16d;
+            border-radius:5px;
+            font-size:10px;
+            font-weight:700;
+            letter-spacing:.6px;
+        }
+
+        #cacaoBlog .cb-content {
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            align-items:stretch;
+            padding:20px;
+        }
+
+        #cacaoBlog .cb-meta {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:8px;
+            margin-bottom:13px;
+            color:var(--bs-secondary-color, #777);
+            font-size:11px;
+        }
+
+        #cacaoBlog .cb-meta span:last-child {
+            white-space:nowrap;
+        }
+
+        #cacaoBlog .cb-title {
+            min-height:58px;
+            margin:0 0 12px;
+            color:var(--bs-body-color, #24170f);
+            font-size:18px;
+            font-weight:700;
+            line-height:1.55;
+        }
+
+        #cacaoBlog .cb-description {
+            flex:1;
+            min-height:76px;
+            margin:0 0 22px;
+            color:var(--bs-secondary-color, #777);
+            font-size:13px;
+            line-height:1.85;
+        }
+
+        #cacaoBlog .cb-read-more {
+            width:100%;
+            min-height:46px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+            margin-top:auto;
+            padding:12px 15px;
+            background:var(--gold-gradient, linear-gradient(110deg, #f4df96, #a77b16));
+            color:#fff;
+            border:0;
+            border-radius:8px;
+            font-family:inherit;
+            font-size:14px;
+            font-weight:700;
+            cursor:pointer;
+            transition:filter .2s ease, transform .2s ease;
+        }
+
+        #cacaoBlog .cb-read-more:hover {
+            filter:brightness(.95);
+            transform:translateY(-2px);
+        }
+
+        #cacaoBlog .cb-read-more:focus-visible {
+            outline:3px solid var(--gold-primary, #b38b24);
+            outline-offset:3px;
+        }
+
+        /* ARTICLE MODAL */
+
+        #cacaoBlog .cb-modal {
+            position:fixed;
+            inset:0;
+            z-index:99999;
+            display:none;
+            align-items:center;
+            justify-content:center;
+            padding:20px;
+            background:rgba(0, 0, 0, .76);
+        }
+
+        #cacaoBlog .cb-modal.cb-open {
+            display:flex;
+        }
+
+        #cacaoBlog .cb-modal-panel {
+            position:relative;
+            width:100%;
+            max-width:900px;
+            max-height:90vh;
+            overflow-y:auto;
+            overscroll-behavior:contain;
+            background:var(--bs-body-bg, #faf7f2);
+            color:var(--bs-body-color, #24170f);
+            border:1px solid var(--border-medium, #e2d7c9);
+            border-radius:16px;
+            box-shadow:0 20px 70px rgba(0, 0, 0, .3);
+        }
+
+        #cacaoBlog .cb-modal-top {
+            position:sticky;
+            top:0;
+            z-index:2;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:15px;
+            padding:16px 22px;
+            background:var(--bs-body-bg, #faf7f2);
+            border-bottom:1px solid var(--border-medium, #e2d7c9);
+        }
+
+        #cacaoBlog .cb-modal-brand {
+            margin:0;
+            color:var(--gold-primary, #b38b24);
+            font-size:11px;
+            font-weight:700;
+            letter-spacing:2px;
+        }
+
+        #cacaoBlog .cb-close {
+            width:38px;
+            height:38px;
+            flex-shrink:0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:0;
+            background:transparent;
+            color:var(--bs-body-color, #24170f);
+            border:1px solid var(--border-medium, #e2d7c9);
+            border-radius:50%;
+            font-size:25px;
+            line-height:1;
+            cursor:pointer;
+        }
+
+        #cacaoBlog .cb-close:hover {
+            background:var(--bg-surface-elevated, #fff);
+        }
+
+        #cacaoBlog .cb-modal-hero {
+            display:block;
+            width:100%;
+            height:clamp(220px, 35vw, 390px);
+            object-fit:cover;
+            background:#e8ded0;
+        }
+
+        #cacaoBlog .cb-article {
+            max-width:760px;
+            margin:0 auto;
+            padding:32px clamp(20px, 5vw, 45px) 40px;
+        }
+
+        #cacaoBlog .cb-article-category {
+            display:block;
+            margin-bottom:12px;
+            color:var(--gold-primary, #b38b24);
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:1.5px;
+            text-transform:uppercase;
+        }
+
+        #cacaoBlog .cb-article-title {
+            margin:0 0 15px;
+            color:var(--bs-body-color, #24170f);
+            font-size:clamp(25px, 4vw, 38px);
+            font-weight:700;
+            line-height:1.35;
+        }
+
+        #cacaoBlog .cb-article-meta {
+            margin:0 0 25px;
+            color:var(--bs-secondary-color, #777);
+            font-size:13px;
+        }
+
+        #cacaoBlog .cb-article-body h3 {
+            margin:28px 0 12px;
+            color:var(--bs-body-color, #24170f);
+            font-size:21px;
+            font-weight:700;
+            line-height:1.5;
+        }
+
+        #cacaoBlog .cb-article-body p {
+            margin:0 0 18px;
+            color:var(--bs-secondary-color, #777);
+            font-size:15px;
+            line-height:2;
+        }
+
+        #cacaoBlog .cb-article-image {
+            display:block;
+            width:100%;
+            height:300px;
+            margin:28px 0;
+            object-fit:cover;
+            border-radius:12px;
+            background:#e8ded0;
+        }
+
+        #cacaoBlog .cb-modal-bottom {
+            padding:16px 22px;
+            text-align:right;
+            border-top:1px solid var(--border-medium, #e2d7c9);
+        }
+
+        #cacaoBlog .cb-done {
+            padding:11px 23px;
+            background:var(--gold-gradient, linear-gradient(110deg, #f4df96, #a77b16));
+            color:#fff;
+            border:0;
+            border-radius:8px;
+            font-family:inherit;
+            font-size:13px;
+            font-weight:700;
+            cursor:pointer;
+        }
+
+        @media (max-width:1050px) {
+            #cacaoBlog .cb-grid {
+                grid-template-columns:repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width:575px) {
+            #cacaoBlog {
+                padding:42px 0;
+            }
+
+            #cacaoBlog .cb-container {
+                width:91%;
+            }
+
+            #cacaoBlog .cb-grid {
+                grid-template-columns:minmax(0, 1fr);
+                gap:20px;
+            }
+
+            #cacaoBlog .cb-image-wrap {
+                height:225px;
+            }
+
+            #cacaoBlog .cb-title,
+            #cacaoBlog .cb-description {
+                min-height:0;
+            }
+
+            #cacaoBlog .cb-modal {
+                padding:8px;
+            }
+
+            #cacaoBlog .cb-modal-panel {
+                max-height:94vh;
+                border-radius:12px;
+            }
+
+            #cacaoBlog .cb-article-image {
+                height:220px;
+            }
+        }
+        /* ==========================================
+   BLOG CARDS - DYNAMIC DARK/LIGHT MODE
+========================================== */
+
+/* All 8 blog card backgrounds */
+#cacaoBlog .cb-card {
+    background-color: var(--bs-tertiary-bg, #ffffff) !important;
+    color: var(--bs-body-color, #24170f) !important;
+    border-color: var(--bs-border-color, #e2d7c9) !important;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Light mode */
+[data-bs-theme="light"] #cacaoBlog .cb-card {
+    background-color: #ffffff !important;
+    color: #24170f !important;
+    border-color: #e2d7c9 !important;
+}
+
+/* Dark mode */
+[data-bs-theme="dark"] #cacaoBlog .cb-card {
+    background-color: #24170f !important;
+    color: #ffffff !important;
+    border-color: #493527 !important;
+}
+
+/* Blog titles */
+#cacaoBlog .cb-title {
+    color: var(--bs-body-color) !important;
+}
+
+/* Blog descriptions */
+#cacaoBlog .cb-description {
+    color: var(--bs-secondary-color) !important;
+}
+
+/* Category and reading time */
+#cacaoBlog .cb-meta {
+    color: var(--bs-secondary-color) !important;
+}
+
+/* Blog section background */
+#cacaoBlog {
+    background-color: var(--bs-body-bg) !important;
+}
+
+/* Card content */
+#cacaoBlog .cb-content {
+    background-color: transparent !important;
+}
+ 
+    </style>
+
+
+    <div class="cb-container">
+
+        <!-- HEADING -->
+
+        <header class="cb-heading">
+
+            <span class="cb-tag">
+                The Chocolate Journal
+                <h2>Stories Behind Every Bite</h2>
+               
+            </span>
+        </header>
+
+
+        <!-- EIGHT BLOG CARDS -->
+
+        <div class="cb-grid" id="cbBlogGrid"></div>
+
+    </div>
+
+
+    <!-- ARTICLE MODAL -->
+
+    <div
+        class="cb-modal"
+        id="cbArticleModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cbModalTitle"
+        aria-hidden="true"
+    >
+
+        <div class="cb-modal-panel">
+
+            <div class="cb-modal-top">
+
+                <p class="cb-modal-brand">
+                    CACAO &amp; CRU — THE JOURNAL
+                </p>
+
+                <button
+                    type="button"
+                    class="cb-close"
+                    id="cbCloseTop"
+                    aria-label="Close article"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+            <img
+                id="cbModalHero"
+                class="cb-modal-hero"
+                src=""
+                alt=""
+            >
+
+            <article class="cb-article">
+
+                <span
+                    id="cbModalCategory"
+                    class="cb-article-category"
+                ></span>
+
+                <h2
+                    id="cbModalTitle"
+                    class="cb-article-title"
+                ></h2>
+
+                <p
+                    id="cbModalMeta"
+                    class="cb-article-meta"
+                ></p>
+
+                <div
+                    id="cbModalBody"
+                    class="cb-article-body"
+                ></div>
+
+                <img
+                    id="cbModalSecondary"
+                    class="cb-article-image"
+                    src=""
+                    alt=""
+                >
+
+            </article>
+
+            <div class="cb-modal-bottom">
+
+                <button
+                    type="button"
+                    class="cb-done"
+                    id="cbCloseBottom"
+                >
+                    Close Article
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BLOG JAVASCRIPT — SELF-CONTAINED
+    ====================================================== -->
+
+    <script>
+    (function () {
+
+        "use strict";
+
+        const blogRoot = document.getElementById("cacaoBlog");
+
+        if (!blogRoot || blogRoot.dataset.initialized === "true") {
+            return;
+        }
+
+        blogRoot.dataset.initialized = "true";
+
+
+        /* BLOG DATA */
+
+        const articles = [
+
+            {
+                category: "Chocolate Craft",
+                topic: "Craftsmanship",
+                readTime: "5 min read",
+                title: "The Art of Fine Chocolate Making",
+                description: "Explore the craftsmanship, ingredients, and techniques that transform cacao into exceptional chocolate.",
+                image: "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Handcrafted chocolate assortment",
+                secondImage: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Fine chocolate making combines carefully selected ingredients, precise techniques, and creative presentation. Every stage contributes to the aroma, texture, appearance, and flavor of the finished chocolate.</p>
+
+                    <h3>Start with Quality Cacao</h3>
+                    <p>Cacao variety, growing conditions, fermentation, and drying all influence the character of chocolate. Choosing quality ingredients gives chocolatiers a strong foundation for developing distinctive flavors.</p>
+
+                    <h3>The Importance of Tempering</h3>
+                    <p>Tempering encourages cocoa butter to form a stable crystal structure. Properly tempered chocolate typically has an attractive shine, a smooth finish, and a satisfying snap.</p>
+
+                    <h3>Finishing with Care</h3>
+                    <p>Artisans pay attention to the shape, fillings, decoration, and packaging of each confection. These finishing touches make chocolate a thoughtful gift as well as a delicious treat.</p>
+                `
+            },
+
+            {
+                category: "Cacao Origins",
+                topic: "Origins",
+                readTime: "6 min read",
+                title: "From Cacao Bean to Chocolate Bar",
+                description: "Follow the fascinating journey from cacao harvesting and fermentation to the finished chocolate bar.",
+                image: "https://images.unsplash.com/photo-1548907040-4d42e3f6c4b0?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Dark chocolate and cacao",
+                secondImage: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Every chocolate bar begins with cacao seeds harvested from tropical cacao trees. The journey from the farm to a finished chocolate bar involves several important stages.</p>
+
+                    <h3>Harvesting and Fermentation</h3>
+                    <p>Farmers harvest ripe cacao pods and remove the seeds. Fermentation helps develop flavor compounds that contribute to chocolate's characteristic aroma.</p>
+
+                    <h3>Roasting and Grinding</h3>
+                    <p>Roasting develops flavor. The beans are cracked and their shells removed, leaving cacao nibs that are ground into a thick paste known as chocolate liquor.</p>
+
+                    <h3>Creating the Chocolate</h3>
+                    <p>Ingredients such as sugar, cocoa butter, and milk ingredients may be added according to the recipe. Refining, conching, tempering, and molding help produce the finished chocolate.</p>
+                `
+            },
+
+            {
+                category: "Tasting Guide",
+                topic: "Tasting",
+                readTime: "4 min read",
+                title: "How to Taste Chocolate Like an Expert",
+                description: "Learn to appreciate chocolate through its aroma, texture, flavor, and lingering finish.",
+                image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Premium chocolate pieces",
+                secondImage: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Chocolate tasting encourages you to slow down and notice the details behind every bite. A few small samples and a quiet setting are all you need to begin exploring.</p>
+
+                    <h3>Observe the Appearance</h3>
+                    <p>Look at the chocolate's surface, shape, and color. A smooth finish and attractive shine can be signs of good tempering.</p>
+
+                    <h3>Explore the Aroma</h3>
+                    <p>Before tasting, notice the aroma. Depending on the chocolate, you may discover notes reminiscent of coffee, fruit, nuts, caramel, or spices.</p>
+
+                    <h3>Let the Flavor Develop</h3>
+                    <p>Allow a small piece to melt slowly. Notice the initial taste, the texture, and how the flavors change over time.</p>
+                `
+            },
+
+            {
+                category: "Gift Inspiration",
+                topic: "Gifting",
+                readTime: "5 min read",
+                title: "The Art of Gifting Fine Chocolate",
+                description: "Discover thoughtful ways to make celebrations and special occasions memorable with chocolate.",
+                image: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Chocolate gift assortment",
+                secondImage: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>A thoughtful chocolate gift brings together delicious flavors, elegant presentation, and a personal touch. It can make an ordinary day or a special celebration feel more memorable.</p>
+
+                    <h3>Choose the Right Assortment</h3>
+                    <p>Consider the recipient's preferences. Dark chocolate may suit someone who enjoys intense cocoa flavors, while milk chocolate and filled pralines offer different textures and sweetness.</p>
+
+                    <h3>Make the Presentation Special</h3>
+                    <p>Elegant packaging, a handwritten message, and a carefully selected assortment can make the gift feel personal and considered.</p>
+
+                    <h3>Plan the Delivery</h3>
+                    <p>Check delivery dates, storage requirements, dietary preferences, and ingredient information to help your gift arrive in good condition.</p>
+                `
+            },
+
+            {
+                category: "Pairing Guide",
+                topic: "Pairings",
+                readTime: "4 min read",
+                title: "Perfect Pairings for Dark Chocolate",
+                description: "Explore chocolate combinations with coffee, fruit, nuts, and complementary flavors.",
+                image: "https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Chocolate dessert",
+                secondImage: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Pairing chocolate with foods and drinks can reveal new layers of flavor. The most enjoyable combinations balance richness, sweetness, acidity, and texture.</p>
+
+                    <h3>Dark Chocolate and Coffee</h3>
+                    <p>Roasted notes in coffee can complement the rich flavor of dark chocolate. Try a small piece with your favorite coffee and compare their aromas.</p>
+
+                    <h3>Chocolate and Fruit</h3>
+                    <p>Berries and citrus fruits provide freshness and acidity that can contrast beautifully with rich chocolate.</p>
+
+                    <h3>Chocolate and Nuts</h3>
+                    <p>Almonds, hazelnuts, and pistachios bring roasted flavors and crunch that complement smooth chocolate.</p>
+                `
+            },
+
+            {
+                category: "Chocolate Knowledge",
+                topic: "Education",
+                readTime: "5 min read",
+                title: "Understanding Cocoa Percentages",
+                description: "Learn what cocoa percentages mean and how they influence the flavor of chocolate.",
+                image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Chocolate assortment",
+                secondImage: "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Cocoa percentages tell you how much of a chocolate product comes from cacao-derived ingredients. They can help you compare different styles of chocolate.</p>
+
+                    <h3>What Does 70% Cocoa Mean?</h3>
+                    <p>A chocolate labeled 70% cocoa contains 70% cacao ingredients by weight. The remaining portion consists of other ingredients, often including sugar.</p>
+
+                    <h3>How Percentage Affects Flavor</h3>
+                    <p>Higher cocoa percentages often leave less room for sugar, resulting in a more intense cocoa experience. However, bitterness also depends on cacao origin and production methods.</p>
+
+                    <h3>Find Your Favorite</h3>
+                    <p>Compare several cocoa percentages and read the ingredient lists and tasting notes. The best choice is the chocolate whose flavor you enjoy.</p>
+                `
+            },
+
+            {
+                category: "Recipes",
+                topic: "Recipes",
+                readTime: "6 min read",
+                title: "Artisan Chocolate in Your Kitchen",
+                description: "Find inspiration for using premium chocolate in delicious homemade desserts and treats.",
+                image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Freshly baked cookies",
+                secondImage: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Fine chocolate can transform simple home recipes. Cookies, brownies, cakes, and ganache all offer opportunities to explore its flavor and texture.</p>
+
+                    <h3>Choose Chocolate for the Recipe</h3>
+                    <p>Dark chocolate adds depth to brownies and ganache. Milk chocolate brings sweetness, while white chocolate provides buttery notes.</p>
+
+                    <h3>Melt Chocolate Gently</h3>
+                    <p>Chop chocolate into small pieces and melt it slowly, stirring regularly. Avoid overheating and keep unwanted water away from the chocolate.</p>
+
+                    <h3>Make a Simple Ganache</h3>
+                    <p>Place finely chopped chocolate in a heatproof bowl. Pour warm cream over it, let it stand briefly, and stir until smooth. Adjust the ratio according to the recipe.</p>
+                `
+            },
+
+            {
+                category: "Artisan Stories",
+                topic: "Artisan Stories",
+                readTime: "5 min read",
+                title: "Why Handmade Chocolate Feels Different",
+                description: "Discover how ingredients, flavor, and presentation shape artisan chocolate.",
+                image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=900&q=80",
+                imageAlt: "Handcrafted chocolate bonbons",
+                secondImage: "https://images.unsplash.com/photo-1548907040-4d42e3f6c4b0?auto=format&fit=crop&w=1000&q=80",
+                content: `
+                    <p>Handmade chocolate is appreciated for the attention given to its ingredients, flavors, finishing, and presentation. Small-batch production also gives artisans opportunities to explore distinctive ideas.</p>
+
+                    <h3>Attention to Detail</h3>
+                    <p>Carefully prepared fillings, decorative finishes, and thoughtful packaging all contribute to the identity of a handcrafted confection.</p>
+
+                    <h3>Creative Flavor Combinations</h3>
+                    <p>Artisans may combine chocolate with fruit, nuts, spices, coffee, or caramel. The goal is to create balance between the different ingredients.</p>
+
+                    <h3>Quality and Craftsmanship</h3>
+                    <p>Good ingredients, suitable production methods, and proper storage all matter. Together, they help create a chocolate experience worth savoring.</p>
+                `
+            }
+
+        ];
+
+
+        /* BUILD THE EIGHT CARDS */
+
+        const grid = blogRoot.querySelector("#cbBlogGrid");
+
+        grid.innerHTML = articles.map(function (article, index) {
+
+            return `
+                <article class="cb-card">
+
+                    <div class="cb-image-wrap">
+
+                        <img
+                            class="cb-image"
+                            src="${article.image}"
+                            alt="${article.imageAlt}"
+                            loading="lazy"
+                        >
+
+                        <span class="cb-image-label">
+                            ${article.category}
+                        </span>
+
+                    </div>
+
+                    <div class="cb-content">
+
+                        <div class="cb-meta">
+                            <span>${article.topic}</span>
+                            <span>${article.readTime}</span>
+                        </div>
+
+                        <h2 class="cb-title">
+                            ${article.title}
+                        </h2>
+
+                        <p class="cb-description">
+                            ${article.description}
+                        </p>
+
+                        <button
+                            type="button"
+                            class="cb-read-more"
+                            data-blog-index="${index}"
+                        >
+                            Read More <span aria-hidden="true">→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+            `;
+
+        }).join("");
+
+
+        /* MODAL ELEMENTS */
+
+        const modal = blogRoot.querySelector("#cbArticleModal");
+        const modalPanel = modal.querySelector(".cb-modal-panel");
+
+        const modalHero = blogRoot.querySelector("#cbModalHero");
+        const modalCategory = blogRoot.querySelector("#cbModalCategory");
+        const modalTitle = blogRoot.querySelector("#cbModalTitle");
+        const modalMeta = blogRoot.querySelector("#cbModalMeta");
+        const modalBody = blogRoot.querySelector("#cbModalBody");
+        const modalSecondary = blogRoot.querySelector("#cbModalSecondary");
+
+        const closeTop = blogRoot.querySelector("#cbCloseTop");
+        const closeBottom = blogRoot.querySelector("#cbCloseBottom");
+
+        let previouslyFocusedElement = null;
+
+
+        /* OPEN SELECTED ARTICLE */
+
+        function openArticle(index) {
+
+            const article = articles[index];
+
+            if (!article) {
+                return;
+            }
+
+            previouslyFocusedElement = document.activeElement;
+
+            modalHero.src = article.image;
+            modalHero.alt = article.imageAlt;
+
+            modalCategory.textContent = article.category;
+            modalTitle.textContent = article.title;
+            modalMeta.textContent =
+                article.readTime + " | Cacao & Cru Journal";
+
+            modalBody.innerHTML = article.content;
+
+            modalSecondary.src = article.secondImage;
+            modalSecondary.alt = article.title;
+
+            modal.classList.add("cb-open");
+            modal.setAttribute("aria-hidden", "false");
+
+            document.body.style.overflow = "hidden";
+
+            modalPanel.scrollTop = 0;
+
+            closeTop.focus();
+
+        }
+
+
+        /* CLOSE ARTICLE */
+
+        function closeArticle() {
+
+            modal.classList.remove("cb-open");
+            modal.setAttribute("aria-hidden", "true");
+
+            document.body.style.overflow = "";
+
+            if (
+                previouslyFocusedElement &&
+                typeof previouslyFocusedElement.focus === "function"
+            ) {
+                previouslyFocusedElement.focus();
+            }
+
+        }
+
+
+        /* READ MORE BUTTON CLICK */
+
+        grid.addEventListener("click", function (event) {
+
+            const button = event.target.closest("[data-blog-index]");
+
+            if (!button) {
+                return;
+            }
+
+            const index = Number(button.getAttribute("data-blog-index"));
+
+            openArticle(index);
+
+        });
+
+
+        /* CLOSE BUTTONS */
+
+        closeTop.addEventListener("click", closeArticle);
+        closeBottom.addEventListener("click", closeArticle);
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE THE ARTICLE */
+
+        modal.addEventListener("click", function (event) {
+
+            if (event.target === modal) {
+                closeArticle();
+            }
+
+        });
+
+
+        /* ESCAPE KEY CLOSES THE MODAL */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (
+                event.key === "Escape" &&
+                modal.classList.contains("cb-open")
+            ) {
+                closeArticle();
+            }
+
+        });
+
+
+        /* IF AN IMAGE FAILS, HIDE THE BROKEN IMAGE */
+
+        blogRoot.querySelectorAll(".cb-image, #cbModalHero, #cbModalSecondary")
+            .forEach(function (image) {
+
+                image.addEventListener("error", function () {
+
+                    image.style.background = "#e8ded0";
+                    image.style.color = "#24170f";
+
+                    if (image.id === "cbModalSecondary") {
+                        image.style.display = "none";
+                    }
+
+                });
+
+                image.addEventListener("load", function () {
+
+                    image.style.display = "block";
+
+                });
+
+            });
+
+
+    })();
+    </script>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURED CHOCOLATE STORY
+====================================================== -->
+
+<section id="featuredChocolateStory"
+    style="padding:75px 0;background:var(--bs-body-bg);">
+
+    <div style="width:92%;max-width:1260px;margin:auto;">
+
+        <div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+            gap:40px;
+            align-items:center;
+            background:var(--bg-surface-elevated,#fff);
+            border:1px solid var(--border-medium,#e2d7c9);
+            border-radius:20px;
+            overflow:hidden;
+        ">
+
+            <!-- IMAGE -->
+
+            <div style="min-width:0;height:100%;min-height:350px;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=1000&q=85"
+                    alt="Artisan chocolate craftsmanship"
+                    loading="lazy"
+                    style="
+                        width:100%;
+                        height:100%;
+                        min-height:350px;
+                        object-fit:cover;
+                        display:block;
+                    "
+                >
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div style="padding:clamp(25px,5vw,55px);">
+
+                <span style="
+                    display:inline-block;
+                    color:var(--gold-primary,#b38b24);
+                    font-size:12px;
+                    font-weight:700;
+                    letter-spacing:2px;
+                    text-transform:uppercase;
+                    margin-bottom:18px;
+                ">
+                    Editor's Pick
+                </span>
+
+                <h2 style="
+                    color:var(--bs-body-color);
+                    font-size:clamp(27px,3vw,40px);
+                    line-height:1.35;
+                    font-weight:700;
+                    margin:0 0 20px;
+                ">
+                    The Secret Behind Exceptional Chocolate
+                </h2>
+
+                <p style="
+                    color:var(--bs-secondary-color);
+                    font-size:15px;
+                    line-height:1.9;
+                    margin:0 0 22px;
+                ">
+                    Discover how carefully selected cacao, thoughtful
+                    fermentation, precise tempering, and artisan
+                    techniques combine to create an extraordinary
+                    chocolate experience.
+                </p>
+
+                <div style="
+                    display:flex;
+                    flex-wrap:wrap;
+                    gap:15px;
+                    margin-bottom:25px;
+                    color:var(--bs-secondary-color);
+                    font-size:13px;
+                ">
+                    <span>Chocolate Craft</span>
+                    <span>•</span>
+                    <span>7 min read</span>
+                </div>
+
+                <button
+                    type="button"
+                    onclick="document.querySelector('#cacaoBlog .cb-read-more').click()"
+                    style="
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:12px;
+                        padding:14px 25px;
+                        background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));
+                        color:#fff;
+                        border:0;
+                        border-radius:8px;
+                        font-size:14px;
+                        font-weight:700;
+                        cursor:pointer;
+                    "
+                >
+                    Explore Our Stories <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     EXPLORE BLOG CATEGORIES
+====================================================== -->
+
+<section id="chocolateBlogCategories"
+    style="padding:65px 0;background:var(--bs-body-bg);">
+
+    <div style="width:92%;max-width:1260px;margin:auto;">
+
+        <div style="text-align:center;margin-bottom:35px;">
+
+            <span style="
+                color:var(--gold-primary,#b38b24);
+                font-size:12px;
+                font-weight:700;
+                letter-spacing:3px;
+                text-transform:uppercase;
+            ">
+                Explore the Journal
+            </span>
+
+            <h2 style="
+                color:var(--bs-body-color);
+                font-size:clamp(28px,4vw,40px);
+                font-weight:700;
+                margin:15px 0;
+            ">
+                Discover Your Next Read
+            </h2>
+
+            <p style="
+                max-width:650px;
+                margin:0 auto;
+                color:var(--bs-secondary-color);
+                font-size:15px;
+                line-height:1.8;
+            ">
+                From cacao origins to tasting techniques, explore
+                the subjects that make the world of fine chocolate special.
+            </p>
+
+        </div>
+
+        <div style="
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:12px;
+        ">
+
+            <button type="button" data-blog-filter="all"
+                style="padding:12px 22px;border:1px solid var(--gold-primary,#b38b24);border-radius:30px;background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));color:#fff;font-size:13px;font-weight:700;cursor:pointer;">
+                All Stories
+            </button>
+
+            <button type="button" data-blog-filter="Chocolate Craft"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Chocolate Craft
+            </button>
+
+            <button type="button" data-blog-filter="Cacao Origins"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Cacao Origins
+            </button>
+
+            <button type="button" data-blog-filter="Tasting Guide"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Tasting Guides
+            </button>
+
+            <button type="button" data-blog-filter="Gift Inspiration"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Luxury Gifting
+            </button>
+
+            <button type="button" data-blog-filter="Pairing Guide"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Pairing Guides
+            </button>
+
+            <button type="button" data-blog-filter="Recipes"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Recipes
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+(function () {
+
+    const categorySection = document.getElementById("chocolateBlogCategories");
+
+    if (!categorySection || categorySection.dataset.ready === "true") {
+        return;
+    }
+
+    categorySection.dataset.ready = "true";
+
+    const buttons = categorySection.querySelectorAll("[data-blog-filter]");
+
+    buttons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedCategory = button.dataset.blogFilter;
+
+            const cards = document.querySelectorAll("#cacaoBlog .cb-card");
+
+            cards.forEach(function (card) {
+
+                const label = card.querySelector(".cb-image-label");
+
+                const matches =
+                    selectedCategory === "all" ||
+                    (label && label.textContent.trim() === selectedCategory);
+
+                card.style.display = matches ? "flex" : "none";
+
+            });
+
+            buttons.forEach(function (item) {
+
+                const active = item === button;
+
+                item.style.background = active
+                    ? "var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16))"
+                    : "var(--bg-surface-elevated,#fff)";
+
+                item.style.color = active
+                    ? "#fff"
+                    : "var(--bs-body-color)";
+
+                item.style.borderColor = active
+                    ? "var(--gold-primary,#b38b24)"
+                    : "var(--border-medium,#ddd)";
+
+            });
+
+            document.getElementById("cacaoBlog").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    });
+
+})();
+</script>
+
+<!-- =====================================================
+     CHOCOLATE OF THE MONTH
+====================================================== -->
+
+<section id="chocolateOfMonth"
+    style="padding:75px 0;background:var(--bs-body-bg);">
+
+    <div style="width:92%;max-width:1260px;margin:auto;">
+
+        <div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+            gap:35px;
+            align-items:center;
+        ">
+
+            <div style="position:relative;min-width:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1000&q=85"
+                    alt="Premium dark chocolate"
+                    loading="lazy"
+                    style="
+                        width:100%;
+                        height:380px;
+                        display:block;
+                        object-fit:cover;
+                        border-radius:18px;
+                    "
+                >
+
+                <span style="
+                    position:absolute;
+                    left:18px;
+                    top:18px;
+                    background:#1b1009;
+                    color:#f4d16d;
+                    padding:10px 15px;
+                    border-radius:5px;
+                    font-size:11px;
+                    font-weight:700;
+                    letter-spacing:1px;
+                ">
+                    MONTHLY FEATURE
+                </span>
+
+            </div>
+
+            <div>
+
+                <span style="
+                    color:var(--gold-primary,#b38b24);
+                    font-size:12px;
+                    font-weight:700;
+                    letter-spacing:3px;
+                    text-transform:uppercase;
+                ">
+                    A Closer Look
+                </span>
+
+                <h2 style="
+                    color:var(--bs-body-color);
+                    font-size:clamp(28px,4vw,42px);
+                    line-height:1.3;
+                    font-weight:700;
+                    margin:18px 0;
+                ">
+                    Discover the World of Dark Chocolate
+                </h2>
+
+                <p style="
+                    color:var(--bs-secondary-color);
+                    font-size:15px;
+                    line-height:1.9;
+                    margin:0 0 20px;
+                ">
+                    Rich, complex, and full of character, dark chocolate
+                    offers a fascinating range of flavors. Explore
+                    cocoa percentages, discover tasting notes, and
+                    learn how origin influences each bar.
+                </p>
+
+                <div style="
+                    display:grid;
+                    grid-template-columns:repeat(2,minmax(0,1fr));
+                    gap:15px;
+                    margin:25px 0;
+                ">
+
+                    <div style="
+                        padding:18px;
+                        background:var(--bg-surface-elevated,#fff);
+                        border:1px solid var(--border-medium,#ddd);
+                        border-radius:10px;
+                    ">
+
+                        <h3 style="
+                            color:var(--gold-primary,#b38b24);
+                            font-size:19px;
+                            margin:0 0 8px;
+                        ">
+                            Flavor
+                        </h3>
+
+                        <p style="
+                            color:var(--bs-secondary-color);
+                            font-size:13px;
+                            line-height:1.7;
+                            margin:0;
+                        ">
+                            Explore fruity, roasted, nutty, and earthy notes.
+                        </p>
+
+                    </div>
+
+                    <div style="
+                        padding:18px;
+                        background:var(--bg-surface-elevated,#fff);
+                        border:1px solid var(--border-medium,#ddd);
+                        border-radius:10px;
+                    ">
+
+                        <h3 style="
+                            color:var(--gold-primary,#b38b24);
+                            font-size:19px;
+                            margin:0 0 8px;
+                        ">
+                            Pairing
+                        </h3>
+
+                        <p style="
+                            color:var(--bs-secondary-color);
+                            font-size:13px;
+                            line-height:1.7;
+                            margin:0;
+                        ">
+                            Find combinations with coffee, nuts, and fruit.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    onclick="document.querySelector('#cacaoBlog .cb-read-more[data-blog-index=&quot;5&quot;]').click()"
+                    style="
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:12px;
+                        padding:14px 25px;
+                        background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));
+                        color:#fff;
+                        border:0;
+                        border-radius:8px;
+                        font-size:14px;
+                        font-weight:700;
+                        cursor:pointer;
+                    "
+                >
+                    Read the Cocoa Guide →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CHOCOLATE JOURNAL NEWSLETTER
+====================================================== -->
+
+<section id="chocolateNewsletter"
+    style="padding:70px 0;background:var(--bs-body-bg);">
+
+    <div style="
+        width:92%;
+        max-width:1260px;
+        margin:auto;
+        padding:clamp(30px,5vw,60px) 25px;
+        text-align:center;
+        background:var(--nav-footer-bg,#1b1009);
+        border:1px solid var(--gold-primary,#b38b24);
+        border-radius:18px;
+    ">
+
+        <span style="
+            display:inline-block;
+            color:#f4d16d;
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            margin-bottom:18px;
+        ">
+            The Cacao &amp; Cru Journal
+        </span>
+
+        <h2 style="
+            max-width:700px;
+            margin:0 auto 18px;
+            color:#fff;
+            font-size:clamp(28px,4vw,42px);
+            line-height:1.35;
+            font-weight:700;
+        ">
+            A Little More Chocolate in Your Inbox
+        </h2>
+
+        <p style="
+            max-width:620px;
+            margin:0 auto 30px;
+            color:#e0d4c8;
+            font-size:15px;
+            line-height:1.9;
+        ">
+            Discover new chocolate stories, tasting inspiration,
+            artisan techniques, and thoughtful gifting ideas.
+        </p>
+
+        <form id="chocolateNewsletterForm"
+            style="
+                width:100%;
+                max-width:560px;
+                display:flex;
+                flex-wrap:wrap;
+                gap:12px;
+                margin:0 auto;
+            ">
+
+            <input
+                type="email"
+                id="chocolateNewsletterEmail"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required
+                style="
+                    flex:1 1 230px;
+                    min-width:0;
+                    min-height:50px;
+                    padding:14px 16px;
+                    background:#fff;
+                    color:#24170f;
+                    border:1px solid #d8c8b2;
+                    border-radius:8px;
+                    font-size:14px;
+                    outline:none;
+                "
+            >
+
+            <button
+                type="submit"
+                style="
+                    flex:0 0 auto;
+                    min-height:50px;
+                    padding:14px 24px;
+                    background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));
+                    color:#fff;
+                    border:0;
+                    border-radius:8px;
+                    font-size:14px;
+                    font-weight:700;
+                    cursor:pointer;
+                "
+            >
+                Subscribe →
+            </button>
+
+        </form>
+
+        <p id="chocolateNewsletterMessage"
+            role="status"
+            aria-live="polite"
+            style="
+                display:none;
+                margin:20px 0 0;
+                color:#f4d16d;
+                font-size:13px;
+                line-height:1.8;
+            ">
+        </p>
+
+        <p style="
+            margin:20px 0 0;
+            color:#c9bdb1;
+            font-size:12px;
+        ">
+            Chocolate inspiration, delivered thoughtfully.
+        </p>
+
+    </div>
+
+</section>
+
+<script>
+(function () {
+
+    const form = document.getElementById("chocolateNewsletterForm");
+
+    if (!form || form.dataset.ready === "true") {
+        return;
+    }
+
+    form.dataset.ready = "true";
+
+    const message = document.getElementById("chocolateNewsletterMessage");
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const email = document
+            .getElementById("chocolateNewsletterEmail")
+            .value.trim();
+
+        if (!email) {
+            return;
+        }
+
+        message.style.display = "block";
+
+        message.textContent =
+            "Thank you for your interest! Newsletter registration needs to be connected to your email service.";
+
+    });
+
+})();
+</script>
+
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <!-- =====================================
+                 BRAND COLUMN
+            ====================================== -->
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="brand-logo"
+                   aria-label="Cacao & Cru Home">
+
+                    <span class="logo-icon">
+
+                        <svg viewBox="0 0 24 24"
+                             width="26"
+                             height="26"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+
+                            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+
+                            <path d="M12 2V22"></path>
+
+                            <path d="M8 9C10 11 14 11 16 9"></path>
+
+                            <path d="M7 15C10 17 14 17 17 15"></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="logo-text">
+
+                        <span class="logo-title">
+                            Cacao <span>&</span> Cru
+                        </span>
+
+                        <span class="logo-subtitle">
+                            Specialty Imports
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Purveyors of rare, climate-monitored single
+                    origin chocolates, artisanal truffles, and
+                    heritage confections flown directly from
+                    legendary master chocolatiers worldwide.
+
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+<div class="footer-socials">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       class="social-btn"
+       aria-label="Instagram"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"></circle>
+
+        </svg>
+    </a>
+
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/"
+       class="social-btn"
+       aria-label="Facebook"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M13.4 21V12.8h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- Pinterest -->
+    <a href="https://www.pinterest.com/"
+       class="social-btn"
+       aria-label="Pinterest"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M12 2a10 10 0 0 0-3.64 19.31c-.02-.78 0-1.72.19-2.57l1.35-5.72s-.34-.67-.34-1.65c0-1.55.9-2.71 2.02-2.71.95 0 1.41.71 1.41 1.56 0 .95-.61 2.37-.92 3.69-.26 1.1.55 2 1.63 2 1.95 0 3.46-2.06 3.46-5.04 0-2.64-1.9-4.48-4.61-4.48-3.14 0-4.98 2.35-4.98 4.78 0 .95.36 1.97.82 2.52.09.11.1.21.07.33l-.3 1.22c-.05.2-.16.25-.37.15-1.37-.64-2.22-2.65-2.22-4.27 0-3.48 2.53-6.68 7.3-6.68 3.83 0 6.8 2.73 6.8 6.38 0 3.81-2.4 6.87-5.73 6.87-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.89A10 10 0 1 0 12 2z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/"
+       class="social-btn"
+       aria-label="LinkedIn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3.5 9h3.4v11H3.5zM9 9h3.3v1.5h.05A3.65 3.65 0 0 1 15.6 8.7c3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V20H9z"></path>
+
+        </svg>
+    </a>
+
+</div>
+
+            </div>
+
+
+            <!-- =====================================
+                 NAVIGATION
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Navigation
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <span class="footer-arrow">›</span>
+                            Heritage Reserve (Home 1)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="home-atelier.html">
+                            <span class="footer-arrow">›</span>
+                            Artisan Atelier (Home 2)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Products by Origin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Luxury Gifting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Contact & Boutique
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 BOUTIQUE PAGES
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Boutique Pages
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Origin Catalog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Bespoke Hampers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="maintenance.html">
+                            <span class="footer-arrow">›</span>
+                            Maintenance Screen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="coming-soon.html">
+                            <span class="footer-arrow">›</span>
+                            Coming Soon Launch
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Wholesale Inquiries
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 CONTACT INFORMATION
+            ====================================== -->
+
+            <div class="footer-column footer-contact-column">
+
+                <h4 class="footer-title">
+                    Tasting Salon
+                </h4>
+
+
+                <!-- LOCATION -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+
+                        <circle cx="12" cy="10" r="2.5"></circle>
+
+                    </svg>
+
+                    <span>
+                        48 Grand Cru Boulevard, Suite 1200
+                        <br>
+                        San Francisco, CA 94104
+                    </span>
+
+                </p>
+
+
+                <!-- PHONE -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.25a2 2 0 0 1 2.1-.45c.9.35 1.84.58 2.8.7a2 2 0 0 1 1.8 2.1Z"></path>
+
+                    </svg>
+
+                    <a href="tel:+18005822226">
+                        +1 (800) 582-CACAO
+                    </a>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <rect x="2" y="4"
+                              width="20" height="16"
+                              rx="2"></rect>
+
+                        <path d="m22 7-10 6L2 7"></path>
+
+                    </svg>
+
+                    <a href="mailto:concierge@cacaoandcru.com">
+                        concierge@cacao&cru.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FOOTER BOTTOM
+        ====================================== -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+
+                &copy; 2026 Cacao & Cru Imports LLC.
+                All rights reserved.
+                Specialty Chocolate & Confectionery Import Specialists.
+
+            </div>
+
+
+            <div class="footer-badges">
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path>
+
+                        <path d="m9 12 2 2 4-4"></path>
+
+                    </svg>
+
+                    100% Cold-Chain Insured
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M11 20A7 7 0 0 1 4 13c0-5 8-11 8-11s8 6 8 11a7 7 0 0 1-9 7Z"></path>
+
+                        <path d="M8 14c2 0 4 2 4 5"></path>
+
+                    </svg>
+
+                    Direct Origin Trade
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 2 11 13"></path>
+
+                        <path d="M22 2 15 22l-4-9-9-4Z"></path>
+
+                    </svg>
+
+                    Direct Air Express
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+  <!-- Common Global JS -->
+  <script src="js/common.js"></script>
+</body>
+</html>
