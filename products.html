@@ -202,10 +202,7 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
             <span>Madagascar (Sambirano)</span>
           </a>
-          <a href="#japanSection" class="origin-pill">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-            <span>Japan & Asia</span>
-          </a>
+        
         </div>
       </div>
     </section>
@@ -223,57 +220,85 @@
           <span style="color: var(--text-muted); font-size: 0.9rem;">4 Artisanal Allocations</span>
         </div>
 
-        <div class="grid grid-3">
-          <div class="card product-card">
-            <div>
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=700&q=80" alt="Felchlin Maracaibo">
-                <span class="origin-tag">Schwyz, Switzerland</span>
-                <span class="badge-rarity">Best in World</span>
-              </div>
-              <div class="product-meta"><span>Maison Max Felchlin</span><span class="product-cacao-pct">65% Grand Cru</span></div>
-              <h4 class="product-title">Maracaibo Criollo Clasificado</h4>
-              <p class="product-notes">Voted Best Chocolate in the World at the Accademia del Maestri Pasticceri Italiani. Orange blossom, hazelnut, honey.</p>
-            </div>
-            <div class="product-footer">
-              <div class="product-price">$24.00</div>
-              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Felchlin Maracaibo 65%">Add to Card</button>
-            </div>
-          </div>
+      <div class="grid grid-3">
+  <!-- Item 1: Felchlin Maracaibo -->
+  <div class="card product-card">
+    <div>
+      <div class="card-image-wrap">
+        <img 
+          src="https://images.unsplash.com/photo-1614088685112-0a760b71a3c8?auto=format&fit=crop&w=700&q=80" 
+          alt="Felchlin Maracaibo Criollo 65% Grand Cru chocolate bar"
+          loading="lazy">
+        <span class="origin-tag"><i class="fa-solid fa-location-dot"></i> Schwyz, Switzerland</span>
+        <span class="badge-rarity"><i class="fa-solid fa-trophy"></i> Best in World</span>
+      </div>
+      <div class="product-meta">
+        <span>Maison Max Felchlin</span>
+        <span class="product-cacao-pct">65% Grand Cru</span>
+      </div>
+      <h4 class="product-title">Maracaibo Criollo Clasificado</h4>
+      <p class="product-notes">Voted Best Chocolate in the World at the Accademia del Maestri Pasticceri Italiani. Orange blossom, hazelnut, honey.</p>
+    </div>
+    <div class="product-footer">
+      <div class="product-price">$26.00</div>
+      <button class="btn btn-primary btn-sm btn-add-cart" data-product="Felchlin Maracaibo">
+        <i class="fa-solid fa-cart-plus"></i> Add to Cask
+      </button>
+    </div>
+  </div>
 
-          <div class="card product-card">
-            <div>
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=80" alt="Läderach FrischSchoggi">
-                <span class="origin-tag">Ennenda, Switzerland</span>
-              </div>
-              <div class="product-meta"><span>Läderach Chocolatier</span><span class="product-cacao-pct">Swiss Milk Crisp</span></div>
-              <h4 class="product-title">FrischSchoggi Roasted nut Slab</h4>
-              <p class="product-notes">Freshly broken thick artisan bark studded with whole caramelized hazelnuts from Piedmont in creamy Swiss Alpine milk chocolate.</p>
-            </div>
-            <div class="product-footer">
-              <div class="product-price">$26.50</div>
-              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Läderach FrischSchoggi Hazelnut">Add to Card</button>
-            </div>
-          </div>
+  <!-- Item 2: Läderach FrischSchoggi -->
+  <div class="card product-card">
+    <div>
+      <div class="card-image-wrap">
+        <img 
+          src="assets/images/mm3.jpg  " 
+          alt="Läderach FrischSchoggi thick milk chocolate slab with whole hazelnuts"
+          loading="lazy">
+        <span class="origin-tag"><i class="fa-solid fa-mountain"></i> Ennenda, Switzerland</span>
+        <span class="badge-rarity">Artisan Slab</span>
+      </div>
+      <div class="product-meta">
+        <span>Läderach Chocolatier</span>
+        <span class="product-cacao-pct">Swiss Milk Crisp</span>
+      </div>
+      <h4 class="product-title">FrischSchoggi Roasted Nut Slab</h4>
+      <p class="product-notes">Freshly broken thick artisan bark studded with whole caramelized hazelnuts from Piedmont in creamy Swiss Alpine milk chocolate.</p>
+    </div>
+    <div class="product-footer">
+      <div class="product-price">$24.50</div>
+      <button class="btn btn-primary btn-sm btn-add-cart" data-product="Läderach FrischSchoggi">
+        <i class="fa-solid fa-cart-plus"></i> Add to Cask
+      </button>
+    </div>
+  </div>
 
-          <div class="card product-card">
-            <div>
-              <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=700&q=80" alt="Sprüngli Truffes du Jour">
-                <span class="origin-tag">Paradeplatz, Zürich</span>
-                <span class="badge-rarity">Fresh Weekly Air</span>
-              </div>
-              <div class="product-meta"><span>Confiserie Sprüngli</span><span class="product-cacao-pct">Fresh Cream</span></div>
-              <h4 class="product-title">Truffes du Jour Dark Reserve</h4>
-              <p class="product-notes">Perishable fresh cream truffles with a strictly monitored 14-day shelf life. The pinnacle of Zürich confectionery art.</p>
-            </div>
-            <div class="product-footer">
-              <div class="product-price">$39.00</div>
-              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Sprüngli Truffes du Jour">Add to Card</button>
-            </div>
-          </div>
-        </div>
+  <!-- Item 3: Sprüngli Truffes du Jour -->
+  <div class="card product-card">
+    <div>
+      <div class="card-image-wrap">
+        <img 
+          src="https://images.unsplash.com/photo-1542843137-8791a6904d14?auto=format&fit=crop&w=700&q=80" 
+          alt="Confiserie Sprüngli cocoa-dusted fresh cream dark truffles"
+          loading="lazy">
+        <span class="origin-tag"><i class="fa-solid fa-paper-plane"></i> Paradeplatz, Zürich</span>
+        <span class="badge-rarity">Fresh Weekly Air</span>
+      </div>
+      <div class="product-meta">
+        <span>Confiserie Sprüngli</span>
+        <span class="product-cacao-pct">Fresh Cream Ganache</span>
+      </div>
+      <h4 class="product-title">Truffes du Jour Dark Reserve</h4>
+      <p class="product-notes">Perishable fresh cream truffles with a strictly monitored 14-day shelf life. The pinnacle of Zürich confectionery art.</p>
+    </div>
+    <div class="product-footer">
+      <div class="product-price">$38.00</div>
+      <button class="btn btn-primary btn-sm btn-add-cart" data-product="Sprüngli Truffes du Jour">
+        <i class="fa-solid fa-cart-plus"></i> Add to Cask
+      </button>
+    </div>
+  </div>
+</div>
       </div>
     </section>
 
@@ -292,7 +317,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80" alt="Neuhaus Ballotin Box">
+                <img src="assets/images/ps.jpg" alt="Neuhaus Ballotin Box">
                 <span class="origin-tag">Galerie de la Reine, Brussels</span>
               </div>
               <div class="product-meta"><span>Neuhaus Maître</span><span class="product-cacao-pct">24 Assorted Pralines</span></div>
@@ -308,7 +333,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=700&q=80" alt="Pierre Marcolini Ganaches">
+                <img src="assets/images/mm (1).jpg" alt="Pierre Marcolini Ganaches">
                 <span class="origin-tag">Sablon, Brussels</span>
                 <span class="badge-rarity">Haute Chocolaterie</span>
               </div>
@@ -325,7 +350,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1526081347589-7fa3cb41b4b2?auto=format&fit=crop&w=700&q=80" alt="Corné Port-Royal">
+                <img src="assets/images/mm (2).jpg" alt="Corné Port-Royal">
                 <span class="origin-tag">Royal Warrant</span>
               </div>
               <div class="product-meta"><span>Corné Port-Royal</span><span class="product-cacao-pct">Pecan & Gianduja</span></div>
@@ -356,7 +381,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=700&q=80" alt="Bonnat Puerto Cabello">
+                <img src="assets/images/psnew (5).jpg" alt="Bonnat Puerto Cabello">
                 <span class="origin-tag">Voiron, France</span>
               </div>
               <div class="product-meta"><span>Chocolat Bonnat</span><span class="product-cacao-pct">75% Pure Dark</span></div>
@@ -372,7 +397,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1575372587186-5012e96eb2a0?auto=format&fit=crop&w=700&q=80" alt="Bernachon Kalouga">
+                <img src="assets/images/product1 (5).jpg" alt="Bernachon Kalouga">
                 <span class="origin-tag">Cours Franklin, Lyon</span>
                 <span class="badge-rarity">Cult Icon</span>
               </div>
@@ -389,7 +414,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=80" alt="Pralus Pyramide">
+                <img src="assets/images/product1 (4).jpg" alt="Pralus Pyramide">
                 <span class="origin-tag">Roanne, France</span>
               </div>
               <div class="product-meta"><span>François Pralus</span><span class="product-cacao-pct">10 Terroir Flight</span></div>
@@ -420,7 +445,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=700&q=80" alt="Pacari Raw 100%">
+                <img src="assets/images/product1 (3).jpg" alt="Pacari Raw 100%">
                 <span class="origin-tag">Quito, Ecuador</span>
               </div>
               <div class="product-meta"><span>Pacari Biodynamic</span><span class="product-cacao-pct">100% Raw Unroasted</span></div>
@@ -436,7 +461,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=700&q=80" alt="Cacaosuyo Piura Blanco">
+                <img src="assets/images/product1 (2).jpg" alt="Cacaosuyo Piura Blanco">
                 <span class="origin-tag">Piura, Peru</span>
                 <span class="badge-rarity">Albino Cacao</span>
               </div>
@@ -453,7 +478,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80" alt="Maraná Cusco 80%">
+                <img src="assets/images/product1 (1).jpg" alt="Maraná Cusco 80%">
                 <span class="origin-tag">Sacred Valley, Peru</span>
               </div>
               <div class="product-meta"><span>Maraná Craft</span><span class="product-cacao-pct">80% Chuncho Cacao</span></div>
@@ -484,7 +509,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1575372587186-5012e96eb2a0?auto=format&fit=crop&w=700&q=80" alt="Akesson's Bejofo">
+                <img src="assets/images/psnew (3).jpg" alt="Akesson's Bejofo">
                 <span class="origin-tag">Ambanja, Madagascar</span>
               </div>
               <div class="product-meta"><span>Akesson's Organic</span><span class="product-cacao-pct">75% Trinitario</span></div>
@@ -500,7 +525,7 @@
           <div class="card product-card">
             <div>
               <div class="card-image-wrap">
-                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=700&q=80" alt="Menakao Salted Nib">
+                <img src="assets/images/nn (8).jpg" alt="Menakao Salted Nib">
                 <span class="origin-tag">Antananarivo, Madagascar</span>
               </div>
               <div class="product-meta"><span>Menakao 100% Local</span><span class="product-cacao-pct">72% with Sea Salt</span></div>
@@ -534,7 +559,7 @@
     </section>
 
     <!-- ==================== SECTION 7: JAPANESE MATCHA & ASIAN INFUSIONS ==================== -->
-    <section class="section section-alt" id="japanSection">
+    <!-- <section class="section section-alt" id="japanSection">
       <div class="container">
         <div class="flex-between align-center" style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-medium); padding-bottom: 1rem;">
           <div>
@@ -596,7 +621,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ==================== SECTION 8: PACKAGING & COLD-CHAIN INTEGRITY GUARANTEE ==================== -->
  <section class="section">
