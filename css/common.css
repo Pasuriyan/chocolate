@@ -2105,7 +2105,6 @@ iframe {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Optional subtle shadow for depth */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 /* 2. Prevent page content from hiding underneath the fixed header */
 body {
   padding-top: 85px; /* Adjust this value if your navbar is taller or shorter */
