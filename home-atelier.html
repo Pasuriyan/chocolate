@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Atelier (Home 2) | Cacao & Cru Specialty Imports</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- FontAwesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <!-- Website Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.ico.png">
+  <!-- Common Global CSS -->
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+
+  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <!-- Logo with Brand Icon (Guaranteed SVG) -->
+      <a href="index.html" class="brand-logo" aria-label="Cacao & Cru Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+            <path d="M12 2V22"></path>
+            <path d="M8 9C10 11 14 11 16 9"></path>
+            <path d="M7 15C10 17 14 17 17 15"></path>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">Cacao <span>&</span> Cru</span>
+          <span class="logo-subtitle">Specialty Imports</span>
+        </span>
+      </a>
+
+      <!-- Main Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Home Dropdown -->
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link active">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
+                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-atelier.html" class="dropdown-link active">
+                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
+                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products by Origin</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="gifting.html" class="nav-link">Luxury Gifting</a>
+          </li>
+ <li class="nav-item">
+            <a href="blog.html" class="nav-link">blog</a>
+          </li>
+          <!-- Pages Dropdown -->
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              <span>Pages</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="maintenance.html" class="dropdown-link">
+                  <span class="dropdown-title">Maintenance Mode</span>
+                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
+                </a>
+              </li>
+              <li>
+                <a href="coming-soon.html" class="dropdown-link">
+                  <span class="dropdown-title">Coming Soon Launch</span>
+                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact & Salon</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
+      <div class="navbar-actions">
+        <!-- RTL to LTR Capsule Pill Button -->
+        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
+          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
+        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navMoonGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFCA28" />
+                <stop offset="100%" stop-color="#FF9800" />
+              </linearGradient>
+            </defs>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGrad2)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
+            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
+            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
+          </svg>
+        </button>
+
+       
+
+        <!-- Mobile Navigation Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== SECTION 1: ATELIER HERO ==================== -->
+<section class="hero-wrapper">
+
+    <div class="hero-bg-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="grid grid-2 align-center">
+
+            <!-- LEFT CONTENT -->
+            <div>
+
+                <div class="hero-tag">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Home 2 • Modern Atelier Edition
+                </div>
+
+                <h1 class="hero-title">
+                    Haute Pâtisserie &
+                    <span>Sculpted Bonbons</span>
+                </h1>
+
+                <p class="hero-desc">
+                    Experience the bleeding edge of modern confectionery.
+                    Hand-painted cocoa butter gems, silk ganaches infused
+                    with rare botanical tinctures, and liquid-caramel domes
+                    imported fresh every week from Paris, Tokyo, and Turin.
+                </p>
+
+                <!-- CTA BUTTONS -->
+                <div class="hero-actions">
+
+                    <a href="#bonbonCollections" class="btn btn-primary">
+                        <i class="fa-solid fa-palette"></i>
+                        Explore Hand-Painted Gems
+                    </a>
+
+                    <a href="gifting.html" class="btn btn-outline-light">
+                        <i class="fa-solid fa-box-open"></i>
+                        Build Custom Box
+                    </a>
+
+                </div>
+
+                <!-- HERO STATISTICS -->
+                <div class="hero-stats">
+
+                    <div class="stat-item">
+                        <h4>24k</h4>
+                        <p>Edible Gold for Gold Leaf</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <h4>72h</h4>
+                        <p>From Paris Atelier to Door</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <h4>0%</h4>
+                        <p>Artificial Preservatives</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT PRODUCT CARD -->
+            <div>
+
+                <div class="card"
+                     style="
+                        border:2px solid var(--gold-primary);
+                        background:rgba(20,11,7,0.85);
+                        backdrop-filter:blur(8px);
+                        overflow:hidden;
+                     ">
+
+                    <!-- PRODUCT IMAGE -->
+                    <div class="card-image-wrap"
+                         style="
+                            position:relative;
+                            aspect-ratio:16/10;
+                            overflow:hidden;
+                         ">
+
+                        <img
+                            src="assets/images/in2 (1).jpg"
+                            alt="Luxury handcrafted chocolate bonbons"
+                            loading="lazy"
+                            style="
+                                width:100%;
+                                height:100%;
+                                object-fit:cover;
+                                display:block;
+                            ">
+
+                        <!-- LOCATION TAG -->
+                        <span class="origin-tag">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Atelier Saint-Germain, Paris
+                        </span>
+
+                        <!-- COLLECTION BADGE -->
+                        <span class="badge-rarity">
+                            16-Piece Box
+                        </span>
+
+                    </div>
+
+
+                    <!-- PRODUCT DETAILS -->
+                    <div style="padding:1.5rem;">
+
+                        <!-- PRODUCT META -->
+                        <div class="flex-between align-center"
+                             style="
+                                margin-bottom:0.75rem;
+                                gap:0.75rem;
+                                flex-wrap:wrap;
+                             ">
+
+                            <span style="
+                                color:var(--gold-light);
+                                font-weight:700;
+                                font-size:0.85rem;
+                            ">
+                                <i class="fa-solid fa-award"></i>
+                                Artisan Chocolate Collection
+                            </span>
+
+                            <span class="product-cacao-pct">
+                                74% Cacao
+                            </span>
+
+                        </div>
+
+
+                        <!-- PRODUCT TITLE -->
+                        <h3 style="
+                            color:#fff5e8;
+                            margin-bottom:0.75rem;
+                            line-height:1.3;
+                        ">
+                            The Celestial Galaxy Bonbon Flight
+                        </h3>
+
+
+                        <!-- PRODUCT DESCRIPTION -->
+                        <p class="product-notes"
+                           style="
+                                color:#d6c8bb;
+                                line-height:1.8;
+                                margin-bottom:1.25rem;
+                           ">
+                            Hand-painted chocolate domes filled with
+                            Calamondin citrus, silky ganache, and Madagascar
+                            bourbon vanilla caramel for an unforgettable
+                            luxury tasting experience.
+                        </p>
+
+
+                        <!-- PRICE -->
+                        <div class="product-footer"
+                             style="
+                                display:flex;
+                                justify-content:space-between;
+                                align-items:center;
+                                flex-wrap:wrap;
+                                gap:1rem;
+                             ">
+
+                            <div class="product-price"
+                                 style="
+                                    color:var(--gold-light);
+                                    font-size:1.8rem;
+                                    font-weight:800;
+                                 ">
+                                $68.00
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-sm btn-add-cart"
+                                data-product="Celestial Galaxy Bonbon Flight">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Claim Box
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==================== SECTION 2: BONBON & TRUFFLE ARTISTRY ==================== -->
+    <section class="section section-alt" id="bonbonCollections">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-gem"></i> Sculpted Confections</span>
+          <h2>The Four Modern Masterpiece Collections</h2>
+          <p>Every sphere is tempered by hand, airbrushed with organic fruit pigments, and filled with micro-emulsified ganache.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="card-image-wrap" style="aspect-ratio: 1;">
+              <img src="assets/images/in2 (2).jpg" alt="Botanical Ganache">
+              <span class="origin-tag">Botanicals</span>
+            </div>
+            <h4>Alpine Lavender & Honey</h4>
+            <p style="font-size: 0.88rem;">Wild Haute-Provence lavender blossoms infused into 66% Caribbean dark chocolate cream with mountain honey.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-image-wrap" style="aspect-ratio: 1;">
+              <img src="assets/images/indexfinal (3).jpg" alt="Smoked Caramel">
+              <span class="origin-tag">Caramels</span>
+            </div>
+            <h4>Smoked Salt& Oak Barrel</h4>
+            <p style="font-size: 0.88rem;">Liquid caramel steeped with charred French oak chips, finished with flaky Icelandic birch smoked salt.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-image-wrap" style="aspect-ratio: 1;">
+              <img src="assets/images/indexfinal (5).jpg" alt="Exotic Spices">
+              <span class="origin-tag">Exotics</span>
+            </div>
+            <h4>Yuzu & Shiso Crisp toasted</h4>
+            <p style="font-size: 0.88rem;"> Kochi Prefecture yuzu juice curd layered over crispy toasted sesame praline and red shiso leaves.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-image-wrap" style="aspect-ratio: 1;">
+              <img src="assets/images/indexfinal (1).jpg" alt="Single Malt">
+              <span class="origin-tag">Spirits</span>
+            </div>
+            <h4>Highland Peat Ganache</h4>
+            <p style="font-size: 0.88rem;">18-year cask scotch infused into 72% Venezuelan dark ganache with crushed cacao nib crunch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: REFRIGERATED COLD-CHAIN VAULT LOGISTICS ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2 align-center">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-temperature-low"></i> Zero-Melt Guarantee</span>
+            <h2>Active 16°C Microclimate Logistics</h2>
+            <p>
+              Artisanal chocolates and delicate fresh-cream ganaches perish under humidity swings and temperature spikes. Our import infrastructure preserves the crystalline structure of pure cocoa butter (Form V polymorph).
+            </p>
+            <ul style="list-style: none; margin: 1.5rem 0;">
+              <li style="margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fa-solid fa-circle-check" style="color: var(--gold-primary);"></i>
+                <span>Thermal insulated corn-starch biodegradable pods with organic phase-change gel pacs.</span>
+              </li>
+              <li style="margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fa-solid fa-circle-check" style="color: var(--gold-primary);"></i>
+                <span>Real-time digital RFID dataloggers monitoring parcel temperature from departure to your door.</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fa-solid fa-circle-check" style="color: var(--gold-primary);"></i>
+                <span>100% replacement guarantee if your confections show any thermal blooming or fracture.</span>
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline"><i class="fa-solid fa-truck-fast"></i> Learn More About Shipping</a>
+          </div>
+
+          <div>
+            <div class="card text-center" style="padding: 3rem 2rem; border: 1px solid var(--gold-primary); background: var(--bg-surface-elevated);">
+             <img src="assets/images/in2 (3).jpg" alt="">
+              <h3 style="margin-bottom: 0.5rem;">Form V Crystal Integrity</h3>
+              <p style="max-width: 420px; margin: 0 auto 1.5rem auto;">
+                Ensuring that iconic, crisp snap, mirror-like satin sheen, and velvety melt at body temperature (34°C).
+              </p>
+              <div class="flex-center gap-3">
+                <span class="dropdown-tag" style="padding: 0.5rem 1rem; font-size: 0.85rem;">< 16°C Fixed Ambient</span>
+                <span class="dropdown-tag" style="padding: 0.5rem 1rem; font-size: 0.85rem;"> &lt; 50% Humidity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: CHEF'S SEASONAL TASTING BOX SELECTOR ==================== -->
+   <section class="section section-alt">
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                Custom Curation
+            </span>
+
+            <h2>Bespoke Velvet Box Sizes</h2>
+
+            <p>
+                Choose your presentation tier. Every box arrives encased
+                in our signature copper foil and velvet ribbon.
+            </p>
+        </div>
+
+        <!-- BOX PRICING CARDS -->
+        <div class="grid grid-3"
+             style="align-items:stretch; gap:1.5rem;">
+
+            <!-- DISCOVERY BOX -->
+            <div class="card text-center"
+                 style="display:flex; flex-direction:column; align-items:center; height:100%; padding:2rem;">
+
+                <span class="dropdown-tag"
+                      style="display:inline-block; margin-bottom:1rem;">
+                    The Discovery
+                </span>
+
+                <h3 style="min-height:3.5rem; display:flex; align-items:center; justify-content:center; margin:0 0 1rem;">
+                    9-Piece Atelier Box
+                </h3>
+
+                <p style="line-height:1.8; margin:0; flex:1;">
+                    Curated selection featuring 3 signature caramels,
+                    3 single-origin dark chocolates, and 3 exotic fruit gems.
+                </p>
+
+                <div style="font-size:2rem; font-weight:800; color:var(--gold-light); margin:1.5rem 0;">
+                    $38.00
+                </div>
+
+                <a href="gifting.html"
+                   class="btn btn-outline btn-sm"
+                   style="width:100%; min-height:44px; display:flex; align-items:center; justify-content:center; margin-top:auto;">
+                    Select 9-Piece Box
+                </a>
+
+            </div>
+
+
+            <!-- MASTER FLIGHT -->
+          <div class="card text-center"
+     style="display:flex; flex-direction:column; align-items:center; height:100%; padding:2rem; border:1px solid var(--border-color, rgba(128,128,128,0.2)); transform:none;">
+
+    <span class="dropdown-tag"
+          style="display:inline-block; margin-bottom:1rem;">
+        Most Coveted
+    </span>
+
+    <h3 style="min-height:3.5rem; display:flex; align-items:center; justify-content:center; margin:0 0 1rem;">
+        16-Piece Master Flight
+    </h3>
+
+    <p style="line-height:1.8; margin:0; flex:1;">
+        A complete sensory journey covering all four flavor
+        hemispheres, accompanied by a sommelier tasting-notes booklet.
+    </p>
+
+    <div style="font-size:2rem; font-weight:800; color:var(--gold-light); margin:1.5rem 0;">
+        $64.00
+    </div>
+
+    <a href="gifting.html"
+       class="btn btn-outline btn-sm"
+       style="width:100%; min-height:44px; display:flex; align-items:center; justify-content:center; margin-top:auto;">
+        Select 16-Piece Box
+    </a>
+
+</div>
+
+
+            <!-- EMPEROR CHEST -->
+            <div class="card text-center"
+                 style="display:flex; flex-direction:column; align-items:center; height:100%; padding:2rem;">
+
+                <span class="dropdown-tag"
+                      style="display:inline-block; margin-bottom:1rem;">
+                    The Grand Treasury
+                </span>
+
+                <h3 style="min-height:3.5rem; display:flex; align-items:center; justify-content:center; margin:0 0 1rem;">
+                    32-Piece Emperor Chest
+                </h3>
+
+                <p style="line-height:1.8; margin:0; flex:1;">
+                    A double-tiered lacquered keepsake box featuring
+                    limited micro-lot infusions and edible 24k gold-leaf truffles.
+                </p>
+
+                <div style="font-size:2rem; font-weight:800; color:var(--gold-light); margin:1.5rem 0;">
+                    $125.00
+                </div>
+
+                <a href="gifting.html"
+                   class="btn btn-outline btn-sm"
+                   style="width:100%; min-height:44px; display:flex; align-items:center; justify-content:center; margin-top:auto;">
+                    Select 32-Piece Chest
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- ==================== SECTION 5: CONFECTIONERY MASTERCLASSES & VIRTUAL SALON ==================== -->
+  <section class="section">
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Sommelier Academy
+            </span>
+
+            <h2>Private Tastings &amp; Masterclasses</h2>
+
+            <p>
+                Join virtual live sessions with European chocolatiers
+                directly from their workshops.
+            </p>
+        </div>
+
+        <!-- MASTERCLASS CARDS -->
+        <div class="grid grid-3"
+             style="align-items:stretch; gap:1.5rem;">
+
+            <!-- CARD 1 -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; padding:0; overflow:hidden;">
+
+                <!-- IMAGE -->
+                <div class="card-image-wrap"
+                     style="position:relative; width:100%; height:230px; flex-shrink:0; overflow:hidden; margin:0;">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=800&q=85"
+                        alt="Handcrafted chocolate truffles for a Swiss chocolate masterclass"
+                        loading="lazy"
+                        style="width:100%; height:100%; object-fit:cover; display:block;">
+
+                    <span class="origin-tag"
+                          style="position:absolute; top:15px; left:15px; z-index:2;">
+                        <i class="fa-solid fa-video"></i>
+                        Live from Zürich
+                    </span>
+                </div>
+
+                <!-- CONTENT -->
+                <div style="padding:1.5rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.5; min-height:3rem;">
+                        Swiss Truffle Alchemy
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Learn the science of chocolate ganache, tempering,
+                        and water-in-fat emulsions with an expert chocolatier.
+                        A tasting kit is shipped three days in advance.
+                    </p>
+
+                    <div style="margin-top:auto; padding-top:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+
+                        <span style="font-size:0.82rem; color:var(--gold-primary); font-weight:700;">
+                            Every 2nd Saturday
+                        </span>
+
+                        <a href="contact.html"
+                           class="btn btn-outline btn-sm"
+                           style="white-space:nowrap;">
+                            Reserve Seat
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; padding:0; overflow:hidden;">
+
+                <!-- IMAGE -->
+                <div class="card-image-wrap"
+                     style="position:relative; width:100%; height:230px; flex-shrink:0; overflow:hidden; margin:0;">
+
+                    <img
+                        src="assets/images/in3last (2).jpg"
+                        alt="Premium dark chocolate and cocoa for a Grand Cru tasting"
+                        loading="lazy"
+                        style="width:100%; height:100%; object-fit:cover; display:block;">
+
+                    <span class="origin-tag"
+                          style="position:absolute; top:15px; left:15px; z-index:2;">
+                        <i class="fa-solid fa-video"></i>
+                        Live from Bordeaux
+                    </span>
+                </div>
+
+                <!-- CONTENT -->
+                <div style="padding:1.5rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.5; min-height:3rem;">
+                        Grand Cru Cacao &amp; Vintage Bordeaux
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Discover the art of pairing single-origin Madagascar
+                        dark chocolate with Bordeaux wines while learning
+                        how cocoa intensity and tannins complement each other.
+                    </p>
+
+                    <div style="margin-top:auto; padding-top:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+
+                        <span style="font-size:0.82rem; color:var(--gold-primary); font-weight:700;">
+                            Monthly Salon
+                        </span>
+
+                        <a href="contact.html"
+                           class="btn btn-outline btn-sm"
+                           style="white-space:nowrap;">
+                            Reserve Seat
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; padding:0; overflow:hidden;">
+
+                <!-- IMAGE -->
+                <div class="card-image-wrap"
+                     style="position:relative; width:100%; height:230px; flex-shrink:0; overflow:hidden; margin:0;">
+
+                    <img
+                        src="assets/images/in3 (1).jpg"
+                        alt="Japanese matcha tea for a matcha and white chocolate workshop"
+                        loading="lazy"
+                        style="width:100%; height:100%; object-fit:cover; display:block;">
+
+                    <span class="origin-tag"
+                          style="position:absolute; top:15px; left:15px; z-index:2;">
+                        <i class="fa-solid fa-video"></i>
+                        Live from Tokyo
+                    </span>
+                </div>
+
+                <!-- CONTENT -->
+                <div style="padding:1.5rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.5; min-height:3rem;">
+                        Matcha &amp; White Chocolate Masterclass
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Explore the delicate balance of stone-ground Japanese
+                        matcha, creamy white chocolate, and roasted rice
+                        flavours in this unique hands-on tasting session.
+                    </p>
+
+                    <div style="margin-top:auto; padding-top:1.5rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+
+                        <span style="font-size:0.82rem; color:var(--gold-primary); font-weight:700;">
+                            Seasonal Release
+                        </span>
+
+                        <a href="contact.html"
+                           class="btn btn-outline btn-sm"
+                           style="white-space:nowrap;">
+                            Reserve Seat
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ==================== SECTION 6: BEST-SELLING ATELIER IMPORTS GRID ==================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-award"></i> Connoisseur Favorites</span>
+          <h2>Best-Selling Atelier Imports</h2>
+          <p>The confections our members order repeatedly for personal tasting rituals.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card product-card">
+            <div>
+              <div class="card-image-wrap">
+                <img src="assets/images/indexlast (2).jpg" alt="Piedmont Hazelnut Truffles">
+                <span class="origin-tag">Turin, Italy</span>
+              </div>
+              <div class="product-meta">
+                <span>Guido Gobino</span>
+                <span class="product-cacao-pct">IGP Hazelnut</span>
+              </div>
+              <h4 class="product-title">Cremino Classico Quadrate</h4>
+              <p class="product-notes">Three delicate layers: two outer layers of gianduja with a silky almond paste center.</p>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">$29.00</div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Cremino Classico Quadrate">Add to Cask</button>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div>
+              <div class="card-image-wrap">
+                <img src="assets/images/indexlast (3).jpg" alt="Champagne Truffles">
+                <span class="origin-tag">Zürich, Switzerland</span>
+              </div>
+              <div class="product-meta">
+                <span>Confiserie Sprüngli</span>
+                <span class="product-cacao-pct">Perrier-Jouët</span>
+              </div>
+              <h4 class="product-title">Grand Cuvée Truffles</h4>
+              <p class="product-notes">Fresh cream ganache blended with vintage Champagne, enveloped in milk chocolate .</p>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">$38.50</div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Champagne Truffles Sprüngli">Add to Cask</button>
+            </div>
+          </div>
+
+          <div class="card product-card">
+            <div>
+              <div class="card-image-wrap">
+                <img src="assets/images/indexlast (4).jpg" alt="Breton Salted Butter Caramels">
+                <span class="origin-tag">Brittany, France</span>
+              </div>
+              <div class="product-meta">
+                <span>Maison Leroux</span>
+                <span class="product-cacao-pct">CBS® Original</span>
+              </div>
+              <h4 class="product-title">Caramels au Beurre Salé Enrobés</h4>
+              <p class="product-notes">The authentic Henri Le Roux salted butter caramel coated in bitter 70% dark chocolate.</p>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">$32.00</div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Maison Leroux Salted Butter Caramels">Add to Cask</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- ==================== SECTION 8: CORPORATE & BOUTIQUE PARTNER PERKS ==================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="grid grid-2 align-center">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Bespoke Enterprise Services</span>
+            <h2>Corporate Gifting & Private Atelier Accounts</h2>
+            <p>
+              Elevate your corporate relationships with bespoke confectionery gifting. From foil-stamped family crests to private tasting masterclasses for executive summits.
+            </p>
+            <div class="grid grid-2" style="margin-top: 1.5rem; gap: 1rem;">
+              <div class="card" style="padding: 1.25rem;">
+                <h5><i class="fa-solid fa-stamp" style="color: var(--gold-primary);"></i> Custom Wax Seals</h5>
+                <p style="font-size: 0.85rem; margin: 0;">Embossed with your corporate monogram in antique gold wax.</p>
+              </div>
+              <div class="card" style="padding: 1.25rem;">
+                <h5><i class="fa-solid fa-box" style="color: var(--gold-primary);"></i> Multi-Recipient Logistics</h5>
+                <p style="font-size: 0.85rem; margin: 0;">Direct climate-controlled shipping to 500+ client addresses simultaneously.</p>
+              </div>
+            </div>
+            <div style="margin-top: 2rem;">
+              <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-handshake"></i> Open Corporate Inquiry</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="background: var(--nav-footer-bg); color: #ffffff; padding: 2.5rem;">
+              <h3 style="color: #ffffff; margin-bottom: 1rem;"><i class="fa-solid fa-calendar-check" style="color: var(--gold-primary);"></i> Request a Private Tasting Flight</h3>
+              <p style="color: var(--nav-footer-muted); font-size: 0.92rem;">
+                We ship a complimentary 6-piece origin flight to corporate event planners and luxury directors considering our gifting program.
+              </p>
+              <form class="form-group" style="margin-top: 1.5rem;" onsubmit="event.preventDefault(); showToast('Private Tasting Flight Request Logged! Our Concierge will contact you within 24h.', 'success'); this.reset();">
+                <input type="text" class="form-control" placeholder="Company / Organization Name" style="margin-bottom: 0.75rem;" required>
+                <input type="email" class="form-control" placeholder="Corporate Email Address" style="margin-bottom: 0.75rem;" required>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Request Corporate Flight</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 9: VIP ATELIER REGISTRY ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="section-tag" style="background: rgba(212, 175, 55, 0.25);"><i class="fa-solid fa-bell"></i> Limited Micro-Batch Registry</span>
+          <h2 style="color: #ffffff; margin-top: 0.75rem;">Get Notified on Weekly Atelier Air Drops</h2>
+          <p style="color: #d1c3b8; max-width: 600px; margin: 0 auto 1.5rem auto;">
+            Our Tokyo and Paris bonbon flights arrive in limited batches of 150 boxes each Thursday. Register for SMS / Email drop alerts.
+          </p>
+
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your direct email address..." required>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-gem"></i> Subscribe to Atelier Drops
+            </button>
+          </form>
+
+          <div class="flex-center gap-3" style="margin-top: 1.5rem; font-size: 0.82rem; color: #a49488;">
+            <span><i class="fa-solid fa-check" style="color: var(--gold-primary);"></i> Early Thursday Alerts</span>
+            <span><i class="fa-solid fa-check" style="color: var(--gold-primary);"></i> Private Sommelier Tasting Notes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SYNCHRONIZED FOOTER ==================== -->
+ <footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <!-- =====================================
+                 BRAND COLUMN
+            ====================================== -->
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="brand-logo"
+                   aria-label="Cacao & Cru Home">
+
+                    <span class="logo-icon">
+
+                        <svg viewBox="0 0 24 24"
+                             width="26"
+                             height="26"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+
+                            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+
+                            <path d="M12 2V22"></path>
+
+                            <path d="M8 9C10 11 14 11 16 9"></path>
+
+                            <path d="M7 15C10 17 14 17 17 15"></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="logo-text">
+
+                        <span class="logo-title">
+                            Cacao <span>&</span> Cru
+                        </span>
+
+                        <span class="logo-subtitle">
+                            Specialty Imports
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Purveyors of rare, climate-monitored single
+                    origin chocolates, artisanal truffles, and
+                    heritage confections flown directly from
+                    legendary master chocolatiers worldwide.
+
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+<div class="footer-socials">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       class="social-btn"
+       aria-label="Instagram"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"></circle>
+
+        </svg>
+    </a>
+
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/"
+       class="social-btn"
+       aria-label="Facebook"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M13.4 21V12.8h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- Pinterest -->
+    <a href="https://www.pinterest.com/"
+       class="social-btn"
+       aria-label="Pinterest"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M12 2a10 10 0 0 0-3.64 19.31c-.02-.78 0-1.72.19-2.57l1.35-5.72s-.34-.67-.34-1.65c0-1.55.9-2.71 2.02-2.71.95 0 1.41.71 1.41 1.56 0 .95-.61 2.37-.92 3.69-.26 1.1.55 2 1.63 2 1.95 0 3.46-2.06 3.46-5.04 0-2.64-1.9-4.48-4.61-4.48-3.14 0-4.98 2.35-4.98 4.78 0 .95.36 1.97.82 2.52.09.11.1.21.07.33l-.3 1.22c-.05.2-.16.25-.37.15-1.37-.64-2.22-2.65-2.22-4.27 0-3.48 2.53-6.68 7.3-6.68 3.83 0 6.8 2.73 6.8 6.38 0 3.81-2.4 6.87-5.73 6.87-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.89A10 10 0 1 0 12 2z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/"
+       class="social-btn"
+       aria-label="LinkedIn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3.5 9h3.4v11H3.5zM9 9h3.3v1.5h.05A3.65 3.65 0 0 1 15.6 8.7c3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V20H9z"></path>
+
+        </svg>
+    </a>
+
+</div>
+
+            </div>
+
+
+            <!-- =====================================
+                 NAVIGATION
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Navigation
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <span class="footer-arrow">›</span>
+                            Heritage Reserve (Home 1)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="home-atelier.html">
+                            <span class="footer-arrow">›</span>
+                            Artisan Atelier (Home 2)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Products by Origin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Luxury Gifting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Contact & Boutique
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 BOUTIQUE PAGES
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Boutique Pages
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Origin Catalog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Bespoke Hampers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="maintenance.html">
+                            <span class="footer-arrow">›</span>
+                            Maintenance Screen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="coming-soon.html">
+                            <span class="footer-arrow">›</span>
+                            Coming Soon Launch
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Wholesale Inquiries
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 CONTACT INFORMATION
+            ====================================== -->
+
+            <div class="footer-column footer-contact-column">
+
+                <h4 class="footer-title">
+                    Tasting Salon
+                </h4>
+
+
+                <!-- LOCATION -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+
+                        <circle cx="12" cy="10" r="2.5"></circle>
+
+                    </svg>
+
+                    <span>
+                        48 Grand Cru Boulevard, Suite 1200
+                        <br>
+                        San Francisco, CA 94104
+                    </span>
+
+                </p>
+
+
+                <!-- PHONE -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.25a2 2 0 0 1 2.1-.45c.9.35 1.84.58 2.8.7a2 2 0 0 1 1.8 2.1Z"></path>
+
+                    </svg>
+
+                    <a href="tel:+18005822226">
+                        +1 (800) 582-CACAO
+                    </a>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <rect x="2" y="4"
+                              width="20" height="16"
+                              rx="2"></rect>
+
+                        <path d="m22 7-10 6L2 7"></path>
+
+                    </svg>
+
+                    <a href="mailto:concierge@cacaoandcru.com">
+                        concierge@cacao&cru.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FOOTER BOTTOM
+        ====================================== -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+
+                &copy; 2026 Cacao & Cru Imports LLC.
+                All rights reserved.
+                Specialty Chocolate & Confectionery Import Specialists.
+
+            </div>
+
+
+            <div class="footer-badges">
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path>
+
+                        <path d="m9 12 2 2 4-4"></path>
+
+                    </svg>
+
+                    100% Cold-Chain Insured
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M11 20A7 7 0 0 1 4 13c0-5 8-11 8-11s8 6 8 11a7 7 0 0 1-9 7Z"></path>
+
+                        <path d="M8 14c2 0 4 2 4 5"></path>
+
+                    </svg>
+
+                    Direct Origin Trade
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 2 11 13"></path>
+
+                        <path d="M22 2 15 22l-4-9-9-4Z"></path>
+
+                    </svg>
+
+                    Direct Air Express
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+  <!-- Common Global JS -->
+  <script src="js/common.js"></script>
+</body>
+</html>

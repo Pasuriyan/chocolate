@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Calibration | Cacao & Cru Specialty Imports</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- FontAwesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <!-- Website Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.ico.png">
+  <!-- Common Global CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .maintenance-wrapper {
+      min-height: calc(100vh - var(--header-height) - 280px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .maintenance-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2.5rem;
+      max-width: 720px;
+      width: 100%;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    .dial-animation {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 1.5rem auto;
+      border-radius: 50%;
+      border: 3px dashed var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: var(--gold-light);
+      animation: spinDial 12s linear infinite;
+    }
+    @keyframes spinDial {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .progress-bar-wrap {
+      width: 100%;
+      height: 8px;
+      background: var(--bg-surface-elevated);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin: 2rem 0;
+      border: 1px solid var(--border-medium);
+    }
+    .progress-bar-fill {
+      width: 78%;
+      height: 100%;
+      background: var(--gold-gradient);
+      border-radius: var(--radius-full);
+      animation: pulseBar 2s ease-in-out infinite alternate;
+    }
+    @keyframes pulseBar {
+      from { width: 72%; }
+      to { width: 84%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="Cacao & Cru Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+            <path d="M12 2V22"></path>
+            <path d="M8 9C10 11 14 11 16 9"></path>
+            <path d="M7 15C10 17 14 17 17 15"></path>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">Cacao <span>&</span> Cru</span>
+          <span class="logo-subtitle">Specialty Imports</span>
+        </span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
+                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-atelier.html" class="dropdown-link">
+                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
+                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products by Origin</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="gifting.html" class="nav-link">Luxury Gifting</a>
+          </li>
+            <li class="nav-item">
+            <a href="blog.html" class="nav-link">blog</a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link active">
+              <span>Pages</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="maintenance.html" class="dropdown-link active">
+                  <span class="dropdown-title">Maintenance Mode</span>
+                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
+                </a>
+              </li>
+              <li>
+                <a href="coming-soon.html" class="dropdown-link">
+                  <span class="dropdown-title">Coming Soon Launch</span>
+                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact & Salon</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
+      <div class="navbar-actions">
+        <!-- RTL to LTR Capsule Pill Button -->
+        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
+          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
+        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navMoonGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFCA28" />
+                <stop offset="100%" stop-color="#FF9800" />
+              </linearGradient>
+            </defs>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGrad6)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
+            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
+            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
+          </svg>
+        </button>
+
+
+        <!-- Mobile Navigation Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="maintenance-wrapper">
+    <div class="maintenance-card">
+      <div class="dial-animation">
+        <i class="fa-solid fa-temperature-low"></i>
+      </div>
+
+      <span class="section-tag"><i class="fa-solid fa-gears"></i> Vault Maintenance</span>
+      <h1 style="font-size: 2.2rem; margin: 1rem 0 0.75rem 0;">Cold-Chain Vault Calibration in Progress</h1>
+      <p style="max-width: 540px; margin: 0 auto; color: var(--text-secondary);">
+        Our automated climate-controlled chambers and inventory customs verification are undergoing scheduled biannual 16°C thermal precision tuning. We will resume boutique orders shortly.
+      </p>
+
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill"></div>
+      </div>
+      <div class="flex-between align-center" style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem;">
+        <span><i class="fa-solid fa-check" style="color: var(--gold-primary);"></i> Sensors Calibrated</span>
+        <span style="color: var(--gold-light); font-weight: 700;">80% Complete</span>
+        <span>Estimated Finish: 45 Mins</span>
+      </div>
+
+      <form class="newsletter-form" style="max-width: 480px; margin: 0 auto;" onsubmit="event.preventDefault(); showToast('Notification set! We will alert you the moment the vault reopens.', 'success'); this.reset();">
+        <input type="email" class="form-control" placeholder="Enter email for instant reopen alert..." required style="border-radius: var(--radius-sm) 0 0 var(--radius-sm);">
+        <button type="submit" class="btn btn-primary" style="border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+          Notify Me
+        </button>
+      </form>
+
+      <div class="flex-center gap-2" style="margin-top: 2rem; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-outline btn-sm">
+          <i class="fa-solid fa-house"></i> Return to Homepage
+        </a>
+        <a href="contact.html" class="btn btn-outline btn-sm">
+          <i class="fa-solid fa-envelope"></i> Contact Concierge Desk
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== SYNCHRONIZED FOOTER ==================== -->
+ <footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <!-- =====================================
+                 BRAND COLUMN
+            ====================================== -->
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="brand-logo"
+                   aria-label="Cacao & Cru Home">
+
+                    <span class="logo-icon">
+
+                        <svg viewBox="0 0 24 24"
+                             width="26"
+                             height="26"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+
+                            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+
+                            <path d="M12 2V22"></path>
+
+                            <path d="M8 9C10 11 14 11 16 9"></path>
+
+                            <path d="M7 15C10 17 14 17 17 15"></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="logo-text">
+
+                        <span class="logo-title">
+                            Cacao <span>&</span> Cru
+                        </span>
+
+                        <span class="logo-subtitle">
+                            Specialty Imports
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Purveyors of rare, climate-monitored single
+                    origin chocolates, artisanal truffles, and
+                    heritage confections flown directly from
+                    legendary master chocolatiers worldwide.
+
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+<div class="footer-socials">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       class="social-btn"
+       aria-label="Instagram"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"></circle>
+
+        </svg>
+    </a>
+
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/"
+       class="social-btn"
+       aria-label="Facebook"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M13.4 21V12.8h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- Pinterest -->
+    <a href="https://www.pinterest.com/"
+       class="social-btn"
+       aria-label="Pinterest"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M12 2a10 10 0 0 0-3.64 19.31c-.02-.78 0-1.72.19-2.57l1.35-5.72s-.34-.67-.34-1.65c0-1.55.9-2.71 2.02-2.71.95 0 1.41.71 1.41 1.56 0 .95-.61 2.37-.92 3.69-.26 1.1.55 2 1.63 2 1.95 0 3.46-2.06 3.46-5.04 0-2.64-1.9-4.48-4.61-4.48-3.14 0-4.98 2.35-4.98 4.78 0 .95.36 1.97.82 2.52.09.11.1.21.07.33l-.3 1.22c-.05.2-.16.25-.37.15-1.37-.64-2.22-2.65-2.22-4.27 0-3.48 2.53-6.68 7.3-6.68 3.83 0 6.8 2.73 6.8 6.38 0 3.81-2.4 6.87-5.73 6.87-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.89A10 10 0 1 0 12 2z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/"
+       class="social-btn"
+       aria-label="LinkedIn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3.5 9h3.4v11H3.5zM9 9h3.3v1.5h.05A3.65 3.65 0 0 1 15.6 8.7c3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V20H9z"></path>
+
+        </svg>
+    </a>
+
+</div>
+
+            </div>
+
+
+            <!-- =====================================
+                 NAVIGATION
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Navigation
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <span class="footer-arrow">›</span>
+                            Heritage Reserve (Home 1)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="home-atelier.html">
+                            <span class="footer-arrow">›</span>
+                            Artisan Atelier (Home 2)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Products by Origin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Luxury Gifting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Contact & Boutique
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 BOUTIQUE PAGES
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Boutique Pages
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Origin Catalog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Bespoke Hampers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="maintenance.html">
+                            <span class="footer-arrow">›</span>
+                            Maintenance Screen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="coming-soon.html">
+                            <span class="footer-arrow">›</span>
+                            Coming Soon Launch
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Wholesale Inquiries
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 CONTACT INFORMATION
+            ====================================== -->
+
+            <div class="footer-column footer-contact-column">
+
+                <h4 class="footer-title">
+                    Tasting Salon
+                </h4>
+
+
+                <!-- LOCATION -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+
+                        <circle cx="12" cy="10" r="2.5"></circle>
+
+                    </svg>
+
+                    <span>
+                        48 Grand Cru Boulevard, Suite 1200
+                        <br>
+                        San Francisco, CA 94104
+                    </span>
+
+                </p>
+
+
+                <!-- PHONE -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.25a2 2 0 0 1 2.1-.45c.9.35 1.84.58 2.8.7a2 2 0 0 1 1.8 2.1Z"></path>
+
+                    </svg>
+
+                    <a href="tel:+18005822226">
+                        +1 (800) 582-CACAO
+                    </a>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <rect x="2" y="4"
+                              width="20" height="16"
+                              rx="2"></rect>
+
+                        <path d="m22 7-10 6L2 7"></path>
+
+                    </svg>
+
+                    <a href="mailto:concierge@cacaoandcru.com">
+                        concierge@cacao&cru.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FOOTER BOTTOM
+        ====================================== -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+
+                &copy; 2026 Cacao & Cru Imports LLC.
+                All rights reserved.
+                Specialty Chocolate & Confectionery Import Specialists.
+
+            </div>
+
+
+            <div class="footer-badges">
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path>
+
+                        <path d="m9 12 2 2 4-4"></path>
+
+                    </svg>
+
+                    100% Cold-Chain Insured
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M11 20A7 7 0 0 1 4 13c0-5 8-11 8-11s8 6 8 11a7 7 0 0 1-9 7Z"></path>
+
+                        <path d="M8 14c2 0 4 2 4 5"></path>
+
+                    </svg>
+
+                    Direct Origin Trade
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 2 11 13"></path>
+
+                        <path d="M22 2 15 22l-4-9-9-4Z"></path>
+
+                    </svg>
+
+                    Direct Air Express
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+  <script src="js/common.js"></script>
+</body>
+</html>
