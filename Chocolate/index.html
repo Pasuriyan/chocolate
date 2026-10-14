@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cacao & Cru | Specialty Chocolate & Confectionery Imports</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+ <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      referrerpolicy="no-referrer">
+  <!-- Common Global CSS -->
+   <!-- Website Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.ico.png">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+
+  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <!-- Logo with Brand Icon (Guaranteed SVG) -->
+      <a href="index.html" class="brand-logo" aria-label="Cacao & Cru Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+            <path d="M12 2V22"></path>
+            <path d="M8 9C10 11 14 11 16 9"></path>
+            <path d="M7 15C10 17 14 17 17 15"></path>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">Cacao <span>&</span> Cru</span>
+          <span class="logo-subtitle">Specialty Imports</span>
+        </span>
+      </a>
+
+      <!-- Main Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Home Dropdown (Home 1 & Home 2 with Custom Names) -->
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link active">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link active">
+                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
+                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-atelier.html" class="dropdown-link">
+                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
+                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products by Origin</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="gifting.html" class="nav-link">Luxury Gifting</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">blog</a>
+          </li>
+          <!-- Pages Dropdown (Maintenance & Coming Soon) -->
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              <span>Pages</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="maintenance.html" class="dropdown-link">
+                  <span class="dropdown-title">Maintenance Mode</span>
+                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
+                </a>
+              </li>
+              <li>
+                <a href="coming-soon.html" class="dropdown-link">
+                  <span class="dropdown-title">Coming Soon Launch</span>
+                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact & Salon</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
+      <div class="navbar-actions">
+        <!-- RTL to LTR Capsule Pill Button with Horizontal Double-Ended Arrow -->
+        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
+          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
+        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navMoonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFCA28" />
+                <stop offset="100%" stop-color="#FF9800" />
+              </linearGradient>
+            </defs>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGrad)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
+            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
+            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
+          </svg>
+        </button>
+
+      
+
+        <!-- Mobile Navigation Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== SECTION 1: HERO OVERVIEW ==================== -->
+    <section class="hero-wrapper">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-content">
+        <div class="grid grid-2 align-center">
+          <div>
+            <div class="hero-tag">
+              <i class="fa-solid fa-earth-americas"></i> Direct Importer • Micro-Batch Reserve
+            </div>
+            <h1 class="hero-title">Rare Single-Origin Cacao & <span>Master Confections</span></h1>
+            <p class="hero-desc">
+              Sourced directly from century-old ateliers in Switzerland, Belgium, Ecuador, and France. Flown under climate-sealed 16°C cold-chains to preserve unadulterated botanical aromas and pure cocoa butter richness.
+            </p>
+            <div class="hero-actions">
+              <a href="products.html" class="btn btn-primary">
+                <i class="fa-solid fa-compass"></i> Explore Grand Crus
+              </a>
+              <a href="gifting.html" class="btn btn-outline-light">
+                <i class="fa-solid fa-gift"></i> Curated Gift Vault
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>18+</h4>
+                <p>Nations of Origin</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Cold-Chain Verified</p>
+              </div>
+              <div class="stat-item">
+                <h4>64</h4>
+                <p> Chocolatiers</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="border: 2px solid var(--gold-primary); background: rgba(20, 11, 7, 0.7); backdrop-filter: blur(8px);">
+              <div class="card-image-wrap" style="aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=900&q=80" alt="Master Imported Dark Chocolate Bar">
+                <span class="origin-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Zürich, Switzerland
+                </span>
+                <span class="badge-rarity">Harvest 2026</span>
+              </div>
+              <div class="flex-between align-center" style="margin-bottom: 0.5rem;">
+                <span style="color: var(--gold-light); font-weight: 700; font-size: 0.85rem;"><i class="fa-solid fa-award"></i> International Chocolate Awards Gold</span>
+                <span class="product-cacao-pct">78% Cacao</span>
+              </div>
+             <h3 style="color: var(--bs-body-color);">
+    Maison Felchlin Grand Cru Maracaibo
+</h3>
+
+<p class="product-notes" style="color: var(--bs-secondary-color);">
+    Wild Criollo beans with delicate orange blossom, roasted hazelnut, and dark plum bouquet.
+</p>
+
+<div class="product-footer">
+    <div class="product-price" style="color: var(--bs-body-color);">
+        $28.00
+        <small style="color: var(--bs-secondary-color); text-decoration: line-through;">
+            $34.00
+        </small>
+    </div>
+</div>
+                
+                <button class="btn btn-primary btn-sm btn-add-cart" data-product="Maison Felchlin Maracaibo 78%">
+                  <i class="fa-solid fa-cart-plus"></i> Import Allocation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: IMPORT CREDENTIALS & PILLARS ==================== -->
+ <section class="section section-alt">
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="section-header">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-shield-halved"></i>
+                The Importer's Promise
+            </span>
+
+            <h2>The Four Tenets of Specialty Confectionery Import</h2>
+
+            <p>
+                We bridge the gulf between inaccessible European artisan
+                ateliers and discerning palates, guaranteeing pristine freshness.
+            </p>
+
+        </div>
+
+
+        <!-- FEATURE CARDS -->
+        <div class="grid grid-4"
+             style="align-items:stretch; gap:1.5rem;">
+
+            <!-- CARD 1: ACTIVE COLD-CHAIN -->
+            <div class="card feature-card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=700&q=85"
+                    alt="Premium chocolate products"
+                    loading="lazy"
+                    style="width:100%; height:200px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.4;">
+                        Active Cold-Chain
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Monitored 16°C sealed thermal chambers from Zürich
+                        and Brussels airport tarmac straight to our vaults.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2: SINGLE-TERROIR PURITY -->
+            <div class="card feature-card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=85"
+                    alt="Rich dark chocolate and cocoa ingredients"
+                    loading="lazy"
+                    style="width:100%; height:200px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.4;">
+                        Single-Terroir Purity
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        100% trace beans from heirloom varietals—Nacional,
+                        Criollo, and Porcelana—free from artificial lecithin.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3: EXCLUSIVE ALLOCATION -->
+            <div class="card feature-card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548907040-4d42bfc9e6a7?auto=format&fit=crop&w=700&q=85"
+                    alt="Luxury artisan chocolate bars"
+                    loading="lazy"
+                    style="width:100%; height:200px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.4;">
+                        Exclusive Allocation
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Official North American &amp; Asian import agent
+                        for micro-batch chocolatiers producing under
+                        5,000 bars annually.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4: DIRECT FAIR BOUNTY -->
+            <div class="card feature-card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=700&q=85"
+                    alt="Lush tropical cacao-growing region"
+                    loading="lazy"
+                    style="width:100%; height:200px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.4;">
+                        Direct Fair Bounty
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Paying 3.8x Fairtrade floor prices directly to
+                        indigenous cacao farmer collectives in
+                        Esmeraldas and Chuncho.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <!-- ==================== SECTION 3: SIGNATURE IMPORTED BRANDS SHOWCASE ==================== -->
+  <section class="section">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-tag">
+                Heritage Maisons
+            </span>
+
+            <h2>Direct Import Master Chocolatiers</h2>
+
+            <p>
+                Handpicked heritage houses steeped in centuries of conching,
+                roasting, and praline alchemy.
+            </p>
+        </div>
+
+        <!-- Equal Height Grid -->
+        <div class="grid grid-3"
+             style="align-items: stretch;">
+
+            <!-- CARD 1 -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%;">
+
+                <div class="card-image-wrap"
+                     style="position:relative; flex-shrink:0;">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80"
+                        alt="Maison Bonnat France"
+                        style="width:100%; height:230px; object-fit:cover; display:block;"
+                    >
+
+                    <span class="origin-tag">
+                        <i class="fa-solid fa-flag"></i> Voiron, France
+                    </span>
+
+                    <span class="badge-rarity">Est. 1884</span>
+
+                </div>
+
+                <h4 style="margin-top:1.25rem;">
+                    Maison Bonnat
+                </h4>
+
+                <p>
+                    Pioneers of single-origin dark chocolate. Still roasting
+                    beans in vintage cast-iron cylinders using century-old
+               
+                </p>
+
+                <ul style="list-style:none; margin:1rem 0; font-size:0.88rem; color:var(--text-secondary);">
+
+                    <li style="margin-bottom:0.6rem;">
+                        <i class="fa-solid fa-check"
+                           style="color:var(--gold-primary); margin-inline-end:0.5rem;"></i>
+                        Specialty: Pure 75% Dark Grands Crus
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"
+                           style="color:var(--gold-primary); margin-inline-end:0.5rem;"></i>
+                        Exclusive Import Allocation: 420 Bars/Mo
+                    </li>
+
+                </ul>
+
+                <a href="products.html"
+                   class="btn btn-outline btn-sm"
+                   style="width:100%; margin-top:auto;">
+                    View Bonnat Cellar
+                </a>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%;">
+
+                <div class="card-image-wrap"
+                     style="position:relative; flex-shrink:0;">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=700&q=80"
+                        alt="Neuhaus Brussels"
+                        style="width:100%; height:230px; object-fit:cover; display:block;"
+                    >
+
+                    <span class="origin-tag">
+                        <i class="fa-solid fa-flag"></i> Brussels, Belgium
+                    </span>
+
+                    <span class="badge-rarity">Est. 1857</span>
+
+                </div>
+
+                <h4 style="margin-top:1.25rem;">
+                    Neuhaus Royal Pralines
+                </h4>
+
+                <p>
+                    Inventors of the filled Belgian praline and the iconic
+                    ballotin box. Official Purveyor to the Royal Court
+                    of Belgium.
+                </p>
+
+                <ul style="list-style:none; margin:1rem 0; font-size:0.88rem; color:var(--text-secondary);">
+
+                    <li style="margin-bottom:0.6rem;">
+                        <i class="fa-solid fa-check"
+                           style="color:var(--gold-primary); margin-inline-end:0.5rem;"></i>
+                        Specialty: Hazelnut Gianduja &amp; Truffes
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"
+                           style="color:var(--gold-primary); margin-inline-end:0.5rem;"></i>
+                        Direct Weekly Air-Freight
+                    </li>
+
+                </ul>
+
+                <a href="products.html"
+                   class="btn btn-outline btn-sm"
+                   style="width:100%; margin-top:auto;">
+                    View Neuhaus Cellar
+                </a>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%;">
+
+                <div class="card-image-wrap"
+                     style="position:relative; flex-shrink:0;">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1526081347589-7fa3cb41b4b2?auto=format&fit=crop&w=700&q=80"
+                        alt="Pacari Ecuador"
+                        style="width:100%; height:230px; object-fit:cover; display:block;"
+                    >
+
+                    <span class="origin-tag">
+                        <i class="fa-solid fa-flag"></i> Quito, Ecuador
+                    </span>
+
+                    <span class="badge-rarity">Biodynamic</span>
+
+                </div>
+
+                <h4 style="margin-top:1.25rem;">
+                    Pacari Organics
+                </h4>
+
+                <p>
+                    Tree-to-bar regenerative pioneer crafting with wild
+                    Arriba Nacional beans grown under the Amazonian canopy.
+                </p>
+
+                <ul style="list-style:none; margin:1rem 0; font-size:0.88rem; color:var(--text-secondary);">
+
+                    <li style="margin-bottom:0.6rem;">
+                        <i class="fa-solid fa-check"
+                           style="color:var(--gold-primary); margin-inline-end:0.5rem;"></i>
+                        Specialty: Andean Lemongrass &amp; Raw 
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"
+                           style="color:var(--gold-primary); margin-inline-end:0.5rem;"></i>
+                        300+ World Chocolate Medals
+                    </li>
+
+                </ul>
+
+                <a href="products.html"
+                   class="btn btn-outline btn-sm"
+                   style="width:100%; margin-top:auto;">
+                    View Pacari Cellar
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ==================== SECTION 4: FEATURED SINGLE-ORIGIN GRAND CRUS ==================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-star"></i> Curated Selection</span>
+          <h2>Single-Origin Grand Cru Bars</h2>
+          <p>Unrivaled complexity. Each bar tells the geological and climatic story of its micro-climate.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Item 1 -->
+          <div class="card product-card">
+            <div>
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=700&q=80" alt="Swiss Alpine Gianduja">
+                <span class="origin-tag"><i class="fa-solid fa-mountain"></i> Swiss Alps</span>
+                <span class="badge-rarity">Rare Harvest</span>
+              </div>
+              <div class="product-meta">
+                <span>Laderach Reserve</span>
+                <span class="product-cacao-pct">68% Cacao</span>
+              </div>
+              <h4 class="product-title">Alpine Gianduja Piemonte Crisp</h4>
+              <p class="product-notes">Slow-conched Swiss mountain milk blended with roasted IGP Piedmont hazelnuts and caramel crystals.</p>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">$22.50</div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Alpine Gianduja Piemonte">
+                <i class="fa-solid fa-cart-plus"></i> Add to Cask
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="card product-card">
+            <div>
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=700&q=80" alt="Chuao Venezuela">
+                <span class="origin-tag"><i class="fa-solid fa-leaf"></i> Chuao, Venezuela</span>
+                <span class="badge-rarity">Ultra Vintage</span>
+              </div>
+              <div class="product-meta">
+                <span>Domori Atelier</span>
+                <span class="product-cacao-pct">70% Criollo</span>
+              </div>
+              <h4 class="product-title">Chuao Criollo Ancestral</h4>
+              <p class="product-notes">The world's most mythological terroir: dried fig, red currant, bergamot, and buttery cocoa finish.</p>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">$31.00</div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Chuao Criollo Ancestral">
+                <i class="fa-solid fa-cart-plus"></i> Add to Cask
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="card product-card">
+            <div>
+              <div class="card-image-wrap">
+                <img src="istockphoto-174904969-612x612.jpg">
+                <span class="origin-tag"><i class="fa-solid fa-sun"></i>  Madagascar</span>
+                <span class="badge-rarity">Single Estate</span>
+              </div>
+              <div class="product-meta">
+                <span>Akesson's Estate</span>
+                <span class="product-cacao-pct">75% Trinitario</span>
+              </div>
+              <h4 class="product-title">Sambirano Valley Wild Pink Pepper</h4>
+              <p class="product-notes">Electric raspberry tartness balanced with wild estate-grown baies roses peppercorn warmth.</p>
+            </div>
+            <div class="product-footer">
+              <div class="product-price">$19.50</div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-product="Sambirano Pink Pepper">
+                <i class="fa-solid fa-cart-plus"></i> Add to Cask
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="products.html" class="btn btn-outline">
+            <i class="fa-solid fa-layer-group"></i> View Entire 48+ Import Catalog
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: INTERACTIVE CACAO TERROIR EXPEDITION ==================== -->
+   <section class="section">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fa-solid fa-compass"></i> Terroir & Origin
+            </span>
+
+            <h2>The Global Cacao Belt Explorer</h2>
+
+            <p>
+                Discover how latitude, volcanic soil, and elevation sculpt
+                the world's most aromatic confections.
+            </p>
+        </div>
+
+        <div class="grid grid-3" style="margin-top: 2rem; align-items: stretch;">
+
+            <!-- SOUTH AMERICA -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; border-inline-start:4px solid var(--gold-primary); padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=85"
+                    alt="Lush tropical cacao-growing region"
+                    loading="lazy"
+                    style="width:100%; height:220px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <div class="flex-between align-center"
+                         style="margin-bottom:0.75rem; gap:0.75rem; flex-wrap:wrap;">
+
+                        <h4 style="margin:0;">
+                            South America (Ecuador & Peru)
+                        </h4>
+
+                        <span class="dropdown-tag">Arriba Nacional</span>
+
+                    </div>
+
+                    <p>
+                        Volcanic soils along the Andes slope yield intoxicating
+                        jasmine florals, crushed blackberry, and green wood notes.
+                    </p>
+
+                    <span style="font-size:0.82rem; color:var(--gold-light); font-weight:700; margin-top:auto; padding-top:1rem;">
+                        Featured Ateliers: Pacari, Cacaosuyo, Maraná
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- WESTERN EUROPE -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; border-inline-start:4px solid var(--gold-primary); padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=85"
+                    alt="Luxury artisan chocolates and pralines"
+                    loading="lazy"
+                    style="width:100%; height:220px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <div class="flex-between align-center"
+                         style="margin-bottom:0.75rem; gap:0.75rem; flex-wrap:wrap;">
+
+                        <h4 style="margin:0;">
+                            Western Europe (Belgium & Swiss)
+                        </h4>
+
+                        <span class="dropdown-tag">Grand Praline Masters</span>
+
+                    </div>
+
+                    <p>
+                        Masters of velvet micro-milling, Alpine grass-fed dairy
+                        reduction, and slow copper kettle hazelnut roasting.
+                    </p>
+
+                    <span style="font-size:0.82rem; color:var(--gold-light); font-weight:700; margin-top:auto; padding-top:1rem;">
+                        Featured Ateliers: Neuhaus, Sprüngli, Marcolini
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- JAPAN & SOUTHEAST ASIA -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; border-inline-start:4px solid var(--gold-primary); padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=85"
+                    alt="Japanese green tea and natural ingredients"
+                    loading="lazy"
+                    style="width:100%; height:220px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.25rem; display:flex; flex-direction:column; flex:1;">
+
+                    <div class="flex-between align-center"
+                         style="margin-bottom:0.75rem; gap:0.75rem; flex-wrap:wrap;">
+
+                        <h4 style="margin:0;">
+                            Japan & Southeast Asia
+                        </h4>
+
+                        <span class="dropdown-tag">Uji Matcha & Tiền Giang</span>
+
+                    </div>
+
+                    <p>
+                        Harmonizing ceremonial grade shade-grown green tea,
+                        yuzu zest, and fermented Vietnamese Trinitario beans.
+                    </p>
+
+                    <span style="font-size:0.82rem; color:var(--gold-light); font-weight:700; margin-top:auto; padding-top:1rem;">
+                        Featured Ateliers: Marou Saigon, Royce Kyoto, Minimal
+                    </span>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ==================== SECTION 6: SOMMELIER PAIRING GUIDE ==================== -->
+ 
+<section class="section section-alt">
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="section-header">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-wine-glass"></i>
+                Epicurean Harmony
+            </span>
+
+            <h2>The Master Chocolatier Pairing Ritual</h2>
+
+            <p>
+                Curated by our resident Grand Cru Sommelier for unforgettable sensory evenings.
+            </p>
+
+        </div>
+
+
+        <!-- PAIRING CARDS -->
+        <div class="grid grid-3"
+             style="align-items:stretch; gap:1.5rem;">
+
+            <!-- CARD 1: COFFEE & CHOCOLATE -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=85"
+                    alt="Freshly brewed Ethiopian coffee"
+                    loading="lazy"
+                    style="width:100%; height:220px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.5rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.5;">
+                        Ethiopian Yirgacheffe &amp; 70% Chuao
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        The jasmine florals and citrus bergamot of heirloom
+                        Yirgacheffe coffee elevate the delicate fruity acidity
+                        of wild Venezuelan Criollo chocolate.
+                    </p>
+
+                    <div style="font-size:0.82rem; color:var(--gold-primary); font-weight:700; margin-top:auto; padding-top:1.5rem; line-height:1.7;">
+                        Recommended Temp: 68°C Pour-Over
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2: SCOTCH & CHOCOLATE -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=85"
+                    alt="Elegant evening drink pairing"
+                    loading="lazy"
+                    style="width:100%; height:220px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.5rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.5;">
+                        Islay Peated Scotch &amp; 85% Ecuador
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Smoky maritime salinity of cask-strength single malt
+                        cuts cleanly through intense Arriba cocoa butter,
+                        leaving roasted leather and dark honey.
+                    </p>
+
+                    <div style="font-size:0.82rem; color:var(--gold-primary); font-weight:700; margin-top:auto; padding-top:1.5rem; line-height:1.7;">
+                        Recommended Serving: Neat with 2 Drops Water
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3: CHEESE & CHOCOLATE -->
+            <div class="card"
+                 style="display:flex; flex-direction:column; height:100%; overflow:hidden; padding:0;">
+
+                <img
+                    src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=800&q=85"
+                    alt="Selection of premium aged cheese"
+                    loading="lazy"
+                    style="width:100%; height:220px; object-fit:cover; display:block;"
+                >
+
+                <div style="padding:1.5rem; display:flex; flex-direction:column; flex:1;">
+
+                    <h4 style="margin:0 0 1rem; line-height:1.5;">
+                        Aged Comté &amp; Dark Truffle Praline
+                    </h4>
+
+                    <p style="margin:0; line-height:1.8;">
+                        Nutty tyrosine crystals in aged French Alpine cheese
+                        harmonize sublimely with caramelized hazelnut praline
+                        and dark cocoa nibs.
+                    </p>
+
+                    <div style="font-size:0.82rem; color:var(--gold-primary); font-weight:700; margin-top:auto; padding-top:1.5rem; line-height:1.7;">
+                        Recommended Occasion: Post-Dinner Digestif
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+  
+
+    <!-- ==================== SECTION 9: VIP TASTING SOCIETY NEWSLETTER ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="section-tag" style="background: rgba(212, 175, 55, 0.25);"> Private Allocation Access</span>
+          <h2 style="color: #ffffff; margin-top: 0.75rem;">Join the Grand Cru Tasting Society</h2>
+          <p style="color: #d1c3b8; max-width: 600px; margin: 0 auto 1.5rem auto;">
+            Receive advance invitations for seasonal European holiday drops, private importer auctions, and rare harvest releases before public availability.
+          </p>
+
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your connoisseur email address..." required>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Request Invitation
+            </button>
+          </form>
+
+          <div class="flex-center gap-3" style="margin-top: 1.5rem; font-size: 0.82rem; color: #a49488;">
+            <span><i  "></i> Zero Spam</span>
+            <span><i style="color: var(--gold-primary);"></i> Priority Cold-Chain Air Freight</span>
+            <span><i style="color: var(--gold-primary);"></i> Unsubscribe Anytime</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SYNCHRONIZED FOOTER ==================== -->
+ <!-- =========================================
+     CACAO & CRU FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <!-- =====================================
+                 BRAND COLUMN
+            ====================================== -->
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                   class="brand-logo"
+                   aria-label="Cacao & Cru Home">
+
+                    <span class="logo-icon">
+
+                        <svg viewBox="0 0 24 24"
+                             width="26"
+                             height="26"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+
+                            <path d="M12 2C7 5 5 10 6 16C7 19 9 21 12 22C15 21 17 19 18 16C19 10 17 5 12 2Z"></path>
+
+                            <path d="M12 2V22"></path>
+
+                            <path d="M8 9C10 11 14 11 16 9"></path>
+
+                            <path d="M7 15C10 17 14 17 17 15"></path>
+
+                        </svg>
+
+                    </span>
+
+
+                    <span class="logo-text">
+
+                        <span class="logo-title">
+                            Cacao <span>&</span> Cru
+                        </span>
+
+                        <span class="logo-subtitle">
+                            Specialty Imports
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Purveyors of rare, climate-monitored single
+                    origin chocolates, artisanal truffles, and
+                    heritage confections flown directly from
+                    legendary master chocolatiers worldwide.
+
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+<div class="footer-socials">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       class="social-btn"
+       aria-label="Instagram"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"></circle>
+
+        </svg>
+    </a>
+
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/"
+       class="social-btn"
+       aria-label="Facebook"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M13.4 21V12.8h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- Pinterest -->
+    <a href="https://www.pinterest.com/"
+       class="social-btn"
+       aria-label="Pinterest"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M12 2a10 10 0 0 0-3.64 19.31c-.02-.78 0-1.72.19-2.57l1.35-5.72s-.34-.67-.34-1.65c0-1.55.9-2.71 2.02-2.71.95 0 1.41.71 1.41 1.56 0 .95-.61 2.37-.92 3.69-.26 1.1.55 2 1.63 2 1.95 0 3.46-2.06 3.46-5.04 0-2.64-1.9-4.48-4.61-4.48-3.14 0-4.98 2.35-4.98 4.78 0 .95.36 1.97.82 2.52.09.11.1.21.07.33l-.3 1.22c-.05.2-.16.25-.37.15-1.37-.64-2.22-2.65-2.22-4.27 0-3.48 2.53-6.68 7.3-6.68 3.83 0 6.8 2.73 6.8 6.38 0 3.81-2.4 6.87-5.73 6.87-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.89A10 10 0 1 0 12 2z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/"
+       class="social-btn"
+       aria-label="LinkedIn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3.5 9h3.4v11H3.5zM9 9h3.3v1.5h.05A3.65 3.65 0 0 1 15.6 8.7c3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V20H9z"></path>
+
+        </svg>
+    </a>
+
+</div>
+
+            </div>
+
+
+            <!-- =====================================
+                 NAVIGATION
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Navigation
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <span class="footer-arrow">›</span>
+                            Heritage Reserve (Home 1)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="home-atelier.html">
+                            <span class="footer-arrow">›</span>
+                            Artisan Atelier (Home 2)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Products by Origin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Luxury Gifting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Contact & Boutique
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 BOUTIQUE PAGES
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Boutique Pages
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Origin Catalog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Bespoke Hampers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="maintenance.html">
+                            <span class="footer-arrow">›</span>
+                            Maintenance Screen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="coming-soon.html">
+                            <span class="footer-arrow">›</span>
+                            Coming Soon Launch
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Wholesale Inquiries
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 CONTACT INFORMATION
+            ====================================== -->
+
+            <div class="footer-column footer-contact-column">
+
+                <h4 class="footer-title">
+                    Tasting Salon
+                </h4>
+
+
+                <!-- LOCATION -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+
+                        <circle cx="12" cy="10" r="2.5"></circle>
+
+                    </svg>
+
+                    <span>
+                        48 Grand Cru Boulevard, Suite 1200
+                        <br>
+                        San Francisco, CA 94104
+                    </span>
+
+                </p>
+
+
+                <!-- PHONE -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.25a2 2 0 0 1 2.1-.45c.9.35 1.84.58 2.8.7a2 2 0 0 1 1.8 2.1Z"></path>
+
+                    </svg>
+
+                    <a href="tel:+18005822226">
+                        +1 (800) 582-CACAO
+                    </a>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <rect x="2" y="4"
+                              width="20" height="16"
+                              rx="2"></rect>
+
+                        <path d="m22 7-10 6L2 7"></path>
+
+                    </svg>
+
+                    <a href="mailto:concierge@cacaoandcru.com">
+                        concierge@cacao&cru.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FOOTER BOTTOM
+        ====================================== -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+
+                &copy; 2026 Cacao & Cru Imports LLC.
+                All rights reserved.
+                Specialty Chocolate & Confectionery Import Specialists.
+
+            </div>
+
+
+            <div class="footer-badges">
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path>
+
+                        <path d="m9 12 2 2 4-4"></path>
+
+                    </svg>
+
+                    100% Cold-Chain Insured
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M11 20A7 7 0 0 1 4 13c0-5 8-11 8-11s8 6 8 11a7 7 0 0 1-9 7Z"></path>
+
+                        <path d="M8 14c2 0 4 2 4 5"></path>
+
+                    </svg>
+
+                    Direct Origin Trade
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 2 11 13"></path>
+
+                        <path d="M22 2 15 22l-4-9-9-4Z"></path>
+
+                    </svg>
+
+                    Direct Air Express
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+  <!-- Common Global JS -->
+  <script src="js/common.js"></script>
+</body>
+</html>
