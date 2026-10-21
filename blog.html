@@ -143,6 +143,8 @@
       </div>
     </div>
   </header>
+
+  
 <!-- ================================
      CHOCOLATE BLOG HERO SECTION
 ================================= -->
@@ -276,6 +278,156 @@
     </div>
 
 </section>
+
+<section id="chocolateBlogCategories"
+    style="padding:65px 0;background:var(--bs-body-bg);">
+
+    <div style="width:92%;max-width:1260px;margin:auto;">
+
+        <div style="text-align:center;margin-bottom:35px;">
+
+            <span style="
+                color:var(--gold-primary,#b38b24);
+                font-size:12px;
+                font-weight:700;
+                letter-spacing:3px;
+                text-transform:uppercase;
+            ">
+                Explore the Journal
+            </span>
+
+            <h2 style="
+                color:var(--bs-body-color);
+                font-size:clamp(28px,4vw,40px);
+                font-weight:700;
+                margin:15px 0;
+            ">
+                Discover Your Next Read
+            </h2>
+
+            <p style="
+                max-width:650px;
+                margin:0 auto;
+                color:var(--bs-secondary-color);
+                font-size:15px;
+                line-height:1.8;
+            ">
+                From cacao origins to tasting techniques, explore
+                the subjects that make the world of fine chocolate special.
+            </p>
+
+        </div>
+
+        <div style="
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:12px;
+        ">
+
+            <button type="button" data-blog-filter="all"
+                style="padding:12px 22px;border:1px solid var(--gold-primary,#b38b24);border-radius:30px;background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));color:#fff;font-size:13px;font-weight:700;cursor:pointer;">
+                All Stories
+            </button>
+
+            <button type="button" data-blog-filter="Chocolate Craft"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Chocolate Craft
+            </button>
+
+            <button type="button" data-blog-filter="Cacao Origins"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Cacao Origins
+            </button>
+
+            <button type="button" data-blog-filter="Tasting Guide"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Tasting Guides
+            </button>
+
+            <button type="button" data-blog-filter="Gift Inspiration"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Luxury Gifting
+            </button>
+
+            <button type="button" data-blog-filter="Pairing Guide"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Pairing Guides
+            </button>
+
+            <button type="button" data-blog-filter="Recipes"
+                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
+                Recipes
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+(function () {
+
+    const categorySection = document.getElementById("chocolateBlogCategories");
+
+    if (!categorySection || categorySection.dataset.ready === "true") {
+        return;
+    }
+
+    categorySection.dataset.ready = "true";
+
+    const buttons = categorySection.querySelectorAll("[data-blog-filter]");
+
+    buttons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedCategory = button.dataset.blogFilter;
+
+            const cards = document.querySelectorAll("#cacaoBlog .cb-card");
+
+            cards.forEach(function (card) {
+
+                const label = card.querySelector(".cb-image-label");
+
+                const matches =
+                    selectedCategory === "all" ||
+                    (label && label.textContent.trim() === selectedCategory);
+
+                card.style.display = matches ? "flex" : "none";
+
+            });
+
+            buttons.forEach(function (item) {
+
+                const active = item === button;
+
+                item.style.background = active
+                    ? "var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16))"
+                    : "var(--bg-surface-elevated,#fff)";
+
+                item.style.color = active
+                    ? "#fff"
+                    : "var(--bs-body-color)";
+
+                item.style.borderColor = active
+                    ? "var(--gold-primary,#b38b24)"
+                    : "var(--border-medium,#ddd)";
+
+            });
+
+            document.getElementById("cacaoBlog").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    });
+
+})();
+</script>
  <!-- =========================================================
      CACAO & CRU — COMPLETE BLOG SECTION
      HTML + CSS + JAVASCRIPT IN ONE SECTION
@@ -761,14 +913,35 @@
                     CACAO &amp; CRU — THE JOURNAL
                 </p>
 
-                <button
-                    type="button"
-                    class="cb-close"
-                    id="cbCloseTop"
-                    aria-label="Close article"
-                >
-                    &times;
-                </button>
+   <button
+    type="button"
+    id="cbCloseTop"
+    aria-label="Close article"
+    style="
+        width: 48px;
+        height: 48px;
+        border: 1px solid #d8d0c7;
+        border-radius: 50%;
+        background: #fffaf5;
+        color: #111;
+        font-size: 28px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+        text-align: center;
+        box-sizing: border-box;
+    "
+>
+    <span style="
+        display: block;
+        line-height: 1;
+        transform: translateY(-1px);
+    ">&times;</span>
+</button>
 
             </div>
 
@@ -1366,155 +1539,7 @@
      EXPLORE BLOG CATEGORIES
 ====================================================== -->
 
-<section id="chocolateBlogCategories"
-    style="padding:65px 0;background:var(--bs-body-bg);">
 
-    <div style="width:92%;max-width:1260px;margin:auto;">
-
-        <div style="text-align:center;margin-bottom:35px;">
-
-            <span style="
-                color:var(--gold-primary,#b38b24);
-                font-size:12px;
-                font-weight:700;
-                letter-spacing:3px;
-                text-transform:uppercase;
-            ">
-                Explore the Journal
-            </span>
-
-            <h2 style="
-                color:var(--bs-body-color);
-                font-size:clamp(28px,4vw,40px);
-                font-weight:700;
-                margin:15px 0;
-            ">
-                Discover Your Next Read
-            </h2>
-
-            <p style="
-                max-width:650px;
-                margin:0 auto;
-                color:var(--bs-secondary-color);
-                font-size:15px;
-                line-height:1.8;
-            ">
-                From cacao origins to tasting techniques, explore
-                the subjects that make the world of fine chocolate special.
-            </p>
-
-        </div>
-
-        <div style="
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:12px;
-        ">
-
-            <button type="button" data-blog-filter="all"
-                style="padding:12px 22px;border:1px solid var(--gold-primary,#b38b24);border-radius:30px;background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));color:#fff;font-size:13px;font-weight:700;cursor:pointer;">
-                All Stories
-            </button>
-
-            <button type="button" data-blog-filter="Chocolate Craft"
-                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
-                Chocolate Craft
-            </button>
-
-            <button type="button" data-blog-filter="Cacao Origins"
-                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
-                Cacao Origins
-            </button>
-
-            <button type="button" data-blog-filter="Tasting Guide"
-                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
-                Tasting Guides
-            </button>
-
-            <button type="button" data-blog-filter="Gift Inspiration"
-                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
-                Luxury Gifting
-            </button>
-
-            <button type="button" data-blog-filter="Pairing Guide"
-                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
-                Pairing Guides
-            </button>
-
-            <button type="button" data-blog-filter="Recipes"
-                style="padding:12px 22px;border:1px solid var(--border-medium,#ddd);border-radius:30px;background:var(--bg-surface-elevated,#fff);color:var(--bs-body-color);font-size:13px;font-weight:600;cursor:pointer;">
-                Recipes
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<script>
-(function () {
-
-    const categorySection = document.getElementById("chocolateBlogCategories");
-
-    if (!categorySection || categorySection.dataset.ready === "true") {
-        return;
-    }
-
-    categorySection.dataset.ready = "true";
-
-    const buttons = categorySection.querySelectorAll("[data-blog-filter]");
-
-    buttons.forEach(function (button) {
-
-        button.addEventListener("click", function () {
-
-            const selectedCategory = button.dataset.blogFilter;
-
-            const cards = document.querySelectorAll("#cacaoBlog .cb-card");
-
-            cards.forEach(function (card) {
-
-                const label = card.querySelector(".cb-image-label");
-
-                const matches =
-                    selectedCategory === "all" ||
-                    (label && label.textContent.trim() === selectedCategory);
-
-                card.style.display = matches ? "flex" : "none";
-
-            });
-
-            buttons.forEach(function (item) {
-
-                const active = item === button;
-
-                item.style.background = active
-                    ? "var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16))"
-                    : "var(--bg-surface-elevated,#fff)";
-
-                item.style.color = active
-                    ? "#fff"
-                    : "var(--bs-body-color)";
-
-                item.style.borderColor = active
-                    ? "var(--gold-primary,#b38b24)"
-                    : "var(--border-medium,#ddd)";
-
-            });
-
-            document.getElementById("cacaoBlog").scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    });
-
-})();
-</script>
 
 <!-- =====================================================
      CHOCOLATE OF THE MONTH
