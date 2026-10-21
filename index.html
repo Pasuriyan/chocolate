@@ -146,83 +146,353 @@
 
   <main>
     <!-- ==================== SECTION 1: HERO OVERVIEW ==================== -->
-    <section class="hero-wrapper">
-      <div class="hero-bg-overlay"></div>
-      <div class="container hero-content">
-        <div class="grid grid-2 align-center">
-          <div>
-            <div class="hero-tag">
-              <i class="fa-solid fa-earth-americas"></i> Direct Importer • Micro-Batch Reserve
-            </div>
-            <h1 class="hero-title">Rare Single-Origin Cacao & <span>Master Confections</span></h1>
-            <p class="hero-desc">
-              Sourced directly from century-old ateliers in Switzerland, Belgium, Ecuador, and France. Flown under climate-sealed 16°C cold-chains to preserve unadulterated botanical aromas and pure cocoa butter richness.
-            </p>
-            <div class="hero-actions">
-              <a href="products.html" class="btn btn-primary">
-                <i class="fa-solid fa-compass"></i> Explore Grand Crus
-              </a>
-              <a href="gifting.html" class="btn btn-outline-light">
-                <i class="fa-solid fa-gift"></i> Curated Gift Vault
-              </a>
-            </div>
+   <!-- HOMEPAGE HERO SECTION -->
+<section
+    id="chocolateHomeHero"
+    style="
+        position: relative;
+        width: 100%;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: #24140f;
+        color: #ffffff;
+        text-align: center;
+        box-sizing: border-box;
+    "
+>
 
-            <div class="hero-stats">
-              <div class="stat-item">
-                <h4>18+</h4>
-                <p>Nations of Origin</p>
-              </div>
-              <div class="stat-item">
-                <h4>100%</h4>
-                <p>Cold-Chain Verified</p>
-              </div>
-              <div class="stat-item">
-                <h4>64</h4>
-                <p> Chocolatiers</p>
-              </div>
-            </div>
-          </div>
+    <!-- BACKGROUND IMAGE AND OVERLAY -->
+    <div
+        class="hero-bg-overlay"
+        style="
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(
+                    rgba(25, 12, 7, 0.65),
+                    rgba(25, 12, 7, 0.75)
+                ),
+                url('assets/images/heros (4).jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        "
+    ></div>
 
-          <div>
-            <div class="card" style="border: 2px solid var(--gold-primary); background: rgba(20, 11, 7, 0.7); backdrop-filter: blur(8px);">
-              <div class="card-image-wrap" style="aspect-ratio: 16/10;">
-                <img src="assets/images/heros (4).jpg" alt="Master Imported Dark Chocolate Bar">
-                <span class="origin-tag">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                  Zürich, Switzerland
-                </span>
-                <span class="badge-rarity">Harvest 2026</span>
-              </div>
-              <div class="flex-between align-center" style="margin-bottom: 0.5rem;">
-                <span style="color: var(--gold-light); font-weight: 700; font-size: 0.85rem;"><i class="fa-solid fa-award"></i> International Chocolate Awards Gold</span>
-                <span class="product-cacao-pct">78% Cacao</span>
-              </div>
-             <h3 style="color: var(--bs-body-color);">
-    Maison Felchlin Grand Cru Maracaibo
-</h3>
+    <!-- HERO CONTENT -->
+    <div
+        class="container hero-content"
+        style="
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            box-sizing: border-box;
+        "
+    >
 
-<p class="product-notes" style="color: var(--bs-secondary-color);">
-    Wild Criollo beans with delicate orange blossom, roasted hazelnut, and dark plum bouquet.
-</p>
+        <!-- EYEBROW -->
+        <div
+            style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 28px;
+                color: #e5bc69;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            "
+        >
 
-<div class="product-footer">
-    <div class="product-price" style="color: var(--bs-body-color);">
-        $28.00
-        <small style="color: var(--bs-secondary-color); text-decoration: line-through;">
-            $34.00
-        </small>
-    </div>
-</div>
-                
-                <button class="btn btn-primary btn-sm btn-add-cart" data-product="Maison Felchlin Maracaibo 78%">
-                  <i class="fa-solid fa-cart-plus"></i> Import Allocation
-                </button>
-              </div>
-            </div>
-          </div>
+            Direct Importer · Micro-Batch Reserve
         </div>
-      </div>
-    </section>
+
+        <!-- MAIN HEADING -->
+        <h1
+            style="
+                max-width: 1000px;
+                margin: 0 auto 26px;
+                color: #ffffff;
+                font-size: clamp(40px, 6vw, 76px);
+                font-weight: 800;
+                line-height: 1.15;
+                letter-spacing: -1.5px;
+            "
+        >
+            Rare Single-Origin Cacao &amp;
+
+            <span
+                style="
+                    display: block;
+                    margin-top: 8px;
+                    color: #e5bc69;
+                "
+            >
+                Master Confections
+            </span>
+        </h1>
+
+        <!-- DESCRIPTION -->
+        <p
+            style="
+                max-width: 850px;
+                margin: 0 auto 35px;
+                color: #eee1d5;
+                font-size: clamp(16px, 2vw, 20px);
+                font-weight: 400;
+                line-height: 1.9;
+            "
+        >
+            Sourced directly from century-old ateliers in Switzerland,
+            Belgium, Ecuador, and France. Flown under climate-sealed
+            16°C cold-chains to preserve unadulterated botanical aromas
+            and pure cocoa butter richness.
+        </p>
+
+        <!-- ACTION BUTTONS -->
+        <div
+            style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 16px;
+                margin-bottom: 45px;
+            "
+        >
+
+            <!-- EXPLORE PRODUCTS -->
+            <a
+                href="products.html"
+                class="btn btn-primary"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 15px 26px;
+                    border: 1px solid #e5bc69;
+                    border-radius: 50px;
+                    background: #e5bc69;
+                    color: #24140f;
+                    font-size: 15px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                "
+                onmouseover="
+                    this.style.background='#f3d493';
+                    this.style.transform='translateY(-3px)';
+                "
+                onmouseout="
+                    this.style.background='#e5bc69';
+                    this.style.transform='translateY(0)';
+                "
+            >
+                <i class="fa-solid fa-compass"></i>
+                Explore Grand Crus
+            </a>
+
+            <!-- GIFTING -->
+            <a
+                href="gifting.html"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 15px 26px;
+                    border: 1px solid rgba(255, 255, 255, 0.75);
+                    border-radius: 50px;
+                    background: rgba(255, 255, 255, 0.04);
+                    color: #ffffff;
+                    font-size: 15px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                "
+                onmouseover="
+                    this.style.background='rgba(255,255,255,0.15)';
+                    this.style.transform='translateY(-3px)';
+                "
+                onmouseout="
+                    this.style.background='rgba(255,255,255,0.04)';
+                    this.style.transform='translateY(0)';
+                "
+            >
+                <i class="fa-solid fa-gift"></i>
+                Curated Gift Vault
+            </a>
+
+        </div>
+
+        <!-- STATISTICS -->
+        <div
+            style="
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                flex-wrap: wrap;
+                gap: 0;
+                max-width: 750px;
+                margin: 0 auto;
+                padding-top: 28px;
+                border-top: 1px solid rgba(229, 188, 105, 0.35);
+            "
+        >
+
+            <!-- STAT 1 -->
+            <div
+                style="
+                    flex: 1 1 160px;
+                    padding: 10px 20px;
+                "
+            >
+                <h4
+                    style="
+                        margin: 0 0 8px;
+                        color: #e5bc69;
+                        font-size: 32px;
+                        font-weight: 800;
+                    "
+                >
+                    18+
+                </h4>
+
+                <p
+                    style="
+                        margin: 0;
+                        color: #eee1d5;
+                        font-size: 14px;
+                    "
+                >
+                    Nations of Origin
+                </p>
+            </div>
+
+            <!-- STAT 2 -->
+            <div
+                style="
+                    flex: 1 1 160px;
+                    padding: 10px 20px;
+                    border-left: 1px solid rgba(229, 188, 105, 0.3);
+                    border-right: 1px solid rgba(229, 188, 105, 0.3);
+                "
+            >
+                <h4
+                    style="
+                        margin: 0 0 8px;
+                        color: #e5bc69;
+                        font-size: 32px;
+                        font-weight: 800;
+                    "
+                >
+                    100%
+                </h4>
+
+                <p
+                    style="
+                        margin: 0;
+                        color: #eee1d5;
+                        font-size: 14px;
+                    "
+                >
+                    Cold-Chain Verified
+                </p>
+            </div>
+
+            <!-- STAT 3 -->
+            <div
+                style="
+                    flex: 1 1 160px;
+                    padding: 10px 20px;
+                "
+            >
+                <h4
+                    style="
+                        margin: 0 0 8px;
+                        color: #e5bc69;
+                        font-size: 32px;
+                        font-weight: 800;
+                    "
+                >
+                    64
+                </h4>
+
+                <p
+                    style="
+                        margin: 0;
+                        color: #eee1d5;
+                        font-size: 14px;
+                    "
+                >
+                    Chocolatiers
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESPONSIVE DESIGN -->
+<style>
+    @media (max-width: 767px) {
+        #chocolateHomeHero {
+            min-height: auto !important;
+        }
+
+        #chocolateHomeHero > .container {
+            padding: 60px 20px !important;
+        }
+
+        #chocolateHomeHero h1 {
+            font-size: clamp(36px, 9vw, 48px) !important;
+            line-height: 1.2 !important;
+            letter-spacing: -0.8px !important;
+        }
+
+        #chocolateHomeHero p {
+            font-size: 15px !important;
+            line-height: 1.8 !important;
+        }
+
+        #chocolateHomeHero > .container > div > div:last-child {
+            gap: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #chocolateHomeHero > .container {
+            padding: 45px 16px !important;
+        }
+
+        #chocolateHomeHero h1 {
+            font-size: 34px !important;
+        }
+
+        #chocolateHomeHero > .container > div > div:nth-of-type(2) > div {
+            flex-basis: 100%;
+        }
+
+        #chocolateHomeHero > .container > div > div:nth-of-type(2) > div:nth-child(2) {
+            border-left: none !important;
+            border-right: none !important;
+            border-top: 1px solid rgba(229, 188, 105, 0.3);
+            border-bottom: 1px solid rgba(229, 188, 105, 0.3);
+        }
+    }
+</style>
 
     <!-- ==================== SECTION 2: IMPORT CREDENTIALS & PILLARS ==================== -->
  <section class="section section-alt">

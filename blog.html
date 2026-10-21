@@ -149,142 +149,195 @@
      CHOCOLATE BLOG HERO SECTION
 ================================= -->
 
-<section id="chocolateBlogHero"
-    style="
-        position:relative;
-        width:100%;
-        min-height:520px;
-        display:flex;
-        align-items:center;
-        overflow:hidden;
-        background:#24140f;
-        color:#ffffff;
-    ">
 
-    <!-- BACKGROUND IMAGE -->
+
+
+<!-- BLOG HERO SECTION -->
+<section
+    id="chocolateBlogHero"
+    style="
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #24140f;
+        color: #ffffff;
+        text-align: center;
+        box-sizing: border-box;
+    "
+>
+
+    <!-- BACKGROUND IMAGE + DARK OVERLAY -->
     <div
         style="
-            position:absolute;
-            inset:0;
+            position: absolute;
+            inset: 0;
             background-image:
-                linear-gradient(90deg,
-                    rgba(28,15,10,0.96) 0%,
-                    rgba(28,15,10,0.86) 35%,
-                    rgba(28,15,10,0.35) 70%,
-                    rgba(28,15,10,0.12) 100%
+                linear-gradient(
+                    rgba(25, 12, 7, 0.62),
+                    rgba(25, 12, 7, 0.72)
                 ),
                 url('https://images.pexels.com/photos/6036018/pexels-photo-6036018.jpeg');
-            background-size:cover;
-            background-position:center;
-        ">
-    </div>
-
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+        "
+    ></div>
 
     <!-- HERO CONTENT -->
-    <div class="container position-relative"
-        style="z-index:2; padding-top:75px; padding-bottom:75px;">
+    <div
+        class="container"
+        style="
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            box-sizing: border-box;
+        "
+    >
 
-        <div class="row align-items-center">
-
-            <!-- LEFT CONTENT -->
-            <div class="col-12 col-lg-7 col-xl-6">
-
-                <!-- EYEBROW -->
-                <div class="d-flex align-items-center gap-3 mb-4">
-
-                  
-
-                    <span
-                        style="
-                            color:#e3bd70;
-                            font-size:12px;
-                            letter-spacing:3px;
-                            font-weight:600;
-                        ">
-                          PURE · NATURAL · PREMIUM
-                    </span>
-
-                </div>
-
-
-                <!-- TITLE -->
-                <h1
-                    style="
-                        color:#ffffff;
-                        font-size:clamp(38px, 5.5vw, 68px);
-                        font-weight:700;
-                        line-height:1.12;
-                        letter-spacing:-1.5px;
-                        margin-bottom:24px;
-                    ">
-
-                    The World of
-                    <span
-                        style="
-                            display:block;
-                            color:#e5bc69;
-                        ">
-                        Fine Chocolate
-                    </span>
-
-                </h1>
-
-
-                <!-- DESCRIPTION -->
-                <p
-                    style="
-                        max-width:530px;
-                        color:#e4d8cc;
-                        font-size:16px;
-                        line-height:1.9;
-                        margin-bottom:30px;
-                    ">
-
-                    From carefully selected cacao beans to handcrafted
-                    creations, discover the journey, passion, and tradition
-                    behind every bite.
-
-                </p>
-
-
-                <!-- BUTTON -->
-                <a
-                    href="#cacaoBlog"
-                    style="
-                        display:inline-flex;
-                        align-items:center;
-                        justify-content:center;
-                        gap:12px;
-                        padding:15px 27px;
-                        background:#e5bc69;
-                        color:#24140f;
-                        text-decoration:none;
-                        font-size:15px;
-                        font-weight:600;
-                        border-radius:50px;
-                        transition:all 0.3s ease;
-                    "
-                    onmouseover="this.style.background='#f3d493'; this.style.transform='translateY(-3px)'"
-                    onmouseout="this.style.background='#e5bc69'; this.style.transform='translateY(0)'">
-
-                    Explore Our Blog
-                </a>
-
-
-             
-
+        <!-- EYEBROW -->
+        <div
+            style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 28px;
+                color: #e5bc69;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 2px;
+            "
+        >
+            <i class="fa-solid fa-cookie-bite"></i>
+            PURE · NATURAL · PREMIUM
         </div>
+
+        <!-- HEADING -->
+        <h1
+            style="
+                margin: 0 0 26px;
+                color: #ffffff;
+                font-size: clamp(42px, 6vw, 78px);
+                font-weight: 800;
+                line-height: 1.12;
+                letter-spacing: -1.5px;
+            "
+        >
+            The World of
+
+            <span
+                style="
+                    display: block;
+                    color: #e5bc69;
+                    margin-top: 5px;
+                "
+            >
+                Fine Chocolate
+            </span>
+        </h1>
+
+        <!-- DESCRIPTION -->
+        <p
+            style="
+                max-width: 850px;
+                margin: 0 auto 32px;
+                color: #f0e7df;
+                font-size: clamp(16px, 2vw, 21px);
+                line-height: 1.8;
+                font-weight: 400;
+            "
+        >
+            From carefully selected cacao beans to handcrafted creations,
+            discover the journey, passion, and tradition behind every bite.
+        </p>
+
+        <!-- BUTTON -->
+        <a
+            href="#cacaoBlog"
+            style="
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 16px 30px;
+                background: #e5bc69;
+                color: #24140f;
+                border: 1px solid #e5bc69;
+                border-radius: 50px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            "
+            onmouseover="
+                this.style.background='#f3d493';
+                this.style.transform='translateY(-3px)';
+            "
+            onmouseout="
+                this.style.background='#e5bc69';
+                this.style.transform='translateY(0)';
+            "
+        >
+            Explore Our Blog
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
     </div>
 
 </section>
 
-<section id="chocolateBlogCategories"
-    style="padding:65px 0;background:var(--bs-body-bg);">
+<!-- RESPONSIVE STYLES -->
+<style>
+    @media (max-width: 767px) {
+        #chocolateBlogHero {
+            min-height: 500px !important;
+        }
 
-    <div style="width:92%;max-width:1260px;margin:auto;">
+        #chocolateBlogHero > .container {
+            padding: 65px 20px !important;
+        }
 
-        <div style="text-align:center;margin-bottom:35px;">
+        #chocolateBlogHero h1 {
+            font-size: clamp(38px, 9vw, 52px) !important;
+            letter-spacing: -0.8px !important;
+        }
+
+        #chocolateBlogHero p {
+            font-size: 16px !important;
+            line-height: 1.8 !important;
+        }
+    }
+
+    @media (max-width: 400px) {
+        #chocolateBlogHero {
+            min-height: 460px !important;
+        }
+
+        #chocolateBlogHero h1 {
+            font-size: 36px !important;
+        }
+
+        #chocolateBlogHero > .container {
+            padding: 50px 16px !important;
+        }
+    }
+</style>
+
+<!-- BLOG CATEGORIES SECTION -->
+<section id="chocolateBlogCategories" style="padding: 60px 0;">
+
+    <div style="width:92%; max-width:1260px; margin:auto;">
+
+        <!-- SECTION HEADING -->
+        <div style="text-align:center; margin-bottom:35px;">
 
             <span style="
                 color:var(--gold-primary,#b38b24);
@@ -318,6 +371,7 @@
 
         </div>
 
+        <!-- CATEGORY FILTER BUTTONS -->
         <div style="
             display:flex;
             flex-wrap:wrap;
@@ -362,43 +416,71 @@
 
         </div>
 
+        <!-- FILTER MESSAGE -->
+        <p id="blogFilterMessage"
+           style="text-align:center;margin-top:20px;color:var(--bs-secondary-color);font-size:14px;"
+           aria-live="polite">
+        </p>
+
     </div>
 
 </section>
 
+
+<!-- BLOG FILTER JAVASCRIPT -->
 <script>
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     const categorySection = document.getElementById("chocolateBlogCategories");
+    const blogSection = document.getElementById("cacaoBlog");
 
-    if (!categorySection || categorySection.dataset.ready === "true") {
+    if (!categorySection || !blogSection) {
+        console.error("Blog category section or #cacaoBlog section was not found.");
         return;
     }
 
-    categorySection.dataset.ready = "true";
-
     const buttons = categorySection.querySelectorAll("[data-blog-filter]");
+
+    // Find the blog cards
+    const cards = blogSection.querySelectorAll(".cb-card");
+
+    if (cards.length === 0) {
+        console.error("No .cb-card elements found inside #cacaoBlog.");
+        return;
+    }
+
+    console.log("Blog filters initialized. Cards found:", cards.length);
 
     buttons.forEach(function (button) {
 
         button.addEventListener("click", function () {
 
-            const selectedCategory = button.dataset.blogFilter;
-
-            const cards = document.querySelectorAll("#cacaoBlog .cb-card");
+            const selectedCategory = button.dataset.blogFilter.trim();
+            let visibleCount = 0;
 
             cards.forEach(function (card) {
 
+                // Read the category from the card label
                 const label = card.querySelector(".cb-image-label");
 
-                const matches =
-                    selectedCategory === "all" ||
-                    (label && label.textContent.trim() === selectedCategory);
+                const cardCategory = label
+                    ? label.textContent.trim()
+                    : "";
 
-                card.style.display = matches ? "flex" : "none";
+                // Match category names exactly, ignoring case
+                const matches =
+                    selectedCategory.toLowerCase() === "all" ||
+                    cardCategory.toLowerCase() === selectedCategory.toLowerCase();
+
+                card.style.display = matches ? "" : "none";
+
+                if (matches) {
+                    visibleCount++;
+                }
 
             });
 
+            // Update active button styling
             buttons.forEach(function (item) {
 
                 const active = item === button;
@@ -415,9 +497,23 @@
                     ? "var(--gold-primary,#b38b24)"
                     : "var(--border-medium,#ddd)";
 
+                item.style.fontWeight = active ? "700" : "600";
+
             });
 
-            document.getElementById("cacaoBlog").scrollIntoView({
+            // Show the number of matching articles
+            const message = document.getElementById("blogFilterMessage");
+
+            if (message) {
+                message.textContent = visibleCount === 0
+                    ? "No articles found in this category."
+                    : visibleCount + (visibleCount === 1
+                        ? " article found."
+                        : " articles found.");
+            }
+
+            // Scroll to the blog articles
+            blogSection.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
@@ -426,7 +522,7 @@
 
     });
 
-})();
+});
 </script>
  <!-- =========================================================
      CACAO & CRU — COMPLETE BLOG SECTION
@@ -1684,26 +1780,7 @@
 
                 </div>
 
-                <button
-                    type="button"
-                    onclick="document.querySelector('#cacaoBlog .cb-read-more[data-blog-index=&quot;5&quot;]').click()"
-                    style="
-                        display:inline-flex;
-                        align-items:center;
-                        justify-content:center;
-                        gap:12px;
-                        padding:14px 25px;
-                        background:var(--gold-gradient,linear-gradient(110deg,#f4df96,#a77b16));
-                        color:#fff;
-                        border:0;
-                        border-radius:8px;
-                        font-size:14px;
-                        font-weight:700;
-                        cursor:pointer;
-                    "
-                >
-                    Read the Cocoa Guide →
-                </button>
+               
 
             </div>
 
