@@ -1,0 +1,3862 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Maison | Cacao & Cru Specialty Imports</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.png">
+<!-- Common Global CSS moved into this page -->
+  <style>
+/* ==========================================================================
+   CACAO & CRU - SPECIALTY CHOCOLATE & CONFECTIONERY IMPORTS
+   COMMON.CSS - Unified Global Stylesheet
+   - Single Unified Font Family across all elements
+   - Synchronized Navbar & Footer Background Colors
+   - Comprehensive Dark & Light Mode Theme Support
+   - Native & Class-based RTL / LTR Directional System
+   - Fully Responsive Flex/Grid Layouts & Alignments (Down to 320px)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+/* --- Root Variables & Theme Palettes --- */
+:root {
+  /* Unified Font Family */
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Synchronized Nav & Footer Colors (Always Identical in Both Modes) */
+  --nav-footer-bg: #140b07;
+  --nav-footer-bg-surface: #1d110b;
+  --nav-footer-text: #f7efe6;
+  --nav-footer-muted: #b8a69a;
+  --nav-footer-border: rgba(212, 175, 55, 0.22);
+  --nav-footer-accent: #d4af37;
+  
+  /* Brand Luxury Accents */
+  --gold-primary: #d4af37;
+  --gold-light: #f1d78a;
+  --gold-dark: #a67c1e;
+  --gold-gradient: linear-gradient(135deg, #f3df9f 0%, #d4af37 50%, #9e741a 100%);
+  --gold-glow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  
+  /* Status Colors */
+  --success: #2e7d32;
+  --warning: #ed6c02;
+  --info: #0288d1;
+  
+  /* Transitions & Radii */
+  --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.16);
+  
+  /* Layout */
+  --container-max: 1240px;
+  --header-height: 82px;
+}
+
+/* Light Theme Variables (Default) */
+[data-theme="light"], :root {
+  --bg-body: #faf7f2;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f4eee5;
+  --bg-subtle: #f0e8dc;
+  
+  --text-main: #24140d;
+  --text-secondary: #635046;
+  --text-muted: #8c786e;
+  --text-light: #ffffff;
+  
+  --border-light: rgba(61, 35, 20, 0.1);
+  --border-medium: rgba(61, 35, 20, 0.18);
+  --card-shadow: 0 10px 30px rgba(61, 35, 20, 0.07);
+  --badge-bg: rgba(212, 175, 55, 0.15);
+  --badge-text: #8c6314;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --bg-body: #0d0705;
+  --bg-surface: #180e0a;
+  --bg-surface-elevated: #22150f;
+  --bg-subtle: #2b1b14;
+  
+  --text-main: #fbf5ef;
+  --text-secondary: #cbbeb4;
+  --text-muted: #9c8b80;
+  --text-light: #ffffff;
+  
+  --border-light: rgba(212, 175, 55, 0.14);
+  --border-medium: rgba(212, 175, 55, 0.24);
+  --card-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  --badge-bg: rgba(212, 175, 55, 0.22);
+  --badge-text: #f0d588;
+}
+
+/* --- Base & Unified Typography --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary) !important;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.8vw, 2.75rem); }
+h3 { font-size: clamp(1.3rem, 2.4vw, 1.85rem); }
+h4 { font-size: 1.25rem; font-weight: 600; }
+h5 { font-size: 1.05rem; font-weight: 600; }
+h6 { font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--gold-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Common Container & Grid Utility --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-sm {
+  padding: 3rem 0;
+}
+
+.section-alt {
+  background-color: var(--bg-surface-elevated);
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-header .section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-medium);
+}
+
+.section-header p {
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.align-center { align-items: center; }
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+.gap-3 { gap: 1.5rem; }
+.gap-4 { gap: 2rem; }
+
+/* ==========================================================================
+   NAVIGATION BAR (SYNCHRONIZED COLOR WITH FOOTER)
+   ========================================================================== */
+.site-navbar {
+  background-color: var(--nav-footer-bg) !important;
+  border-bottom: 1px solid var(--nav-footer-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: var(--transition);
+}
+
+.navbar-inner {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand Logo (Used in Navbar and Footer) */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--nav-footer-text);
+  text-decoration: none;
+  user-select: none;
+}
+
+.brand-logo .logo-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--gold-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #140b07;
+  font-size: 1.25rem;
+  box-shadow: var(--gold-glow);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover .logo-icon {
+  transform: rotate(15deg) scale(1.05);
+}
+
+.brand-logo .logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo .logo-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.brand-logo .logo-title span {
+  color: var(--gold-primary);
+}
+
+.brand-logo .logo-subtitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--nav-footer-muted);
+  text-transform: uppercase;
+}
+
+/* Navbar Navigation Links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.95rem;
+  color: var(--nav-footer-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.nav-link .dropdown-arrow {
+  transition: transform 0.25s ease;
+}
+
+.nav-item:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  inset-inline-start: 0;
+  min-width: 260px;
+  background-color: var(--nav-footer-bg-surface);
+  border: 1px solid var(--nav-footer-border);
+  border-radius: var(--radius-md);
+  padding: 0.6rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 1010;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  flex-direction: column;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  color: var(--nav-footer-text);
+  transition: var(--transition);
+}
+
+.dropdown-link .dropdown-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-link .dropdown-tag {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--gold-light);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.dropdown-link .dropdown-desc {
+  font-size: 0.75rem;
+  color: var(--nav-footer-muted);
+  margin-top: 0.2rem;
+}
+
+.dropdown-link:hover {
+  background: rgba(212, 175, 55, 0.14);
+}
+
+.dropdown-link:hover .dropdown-title {
+  color: var(--gold-light);
+}
+
+/* Navbar Controls (RTL, Dark/Light Mode, Mobile Toggle) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Capsule / Pill Switch Buttons (As requested in reference) */
+.pill-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 38px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  outline: none;
+  padding: 0;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .pill-toggle-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.pill-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+.pill-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.pill-toggle-btn svg {
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.pill-toggle-btn:hover svg {
+  transform: scale(1.12);
+}
+
+.pill-toggle-btn.active-pill {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.16);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+.pill-toggle-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #140b07;
+  color: #ffffff;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  pointer-events: none;
+  border: 1px solid var(--gold-primary);
+  z-index: 10;
+}
+
+.pill-toggle-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.action-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--nav-footer-border);
+  color: var(--nav-footer-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.action-icon-btn:hover {
+  background: var(--gold-primary);
+  color: #140b07;
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.action-icon-btn svg {
+  display: block;
+}
+
+.action-icon-btn .badge-pill {
+  position: absolute;
+  top: -4px;
+  inset-inline-end: -4px;
+  background: var(--gold-primary);
+  color: #140b07;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--nav-footer-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+/* ==========================================================================
+   BUTTONS & CTAs
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--gold-gradient);
+  color: #140b07;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.28);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #f7e6b0 0%, #dfbd4a 50%, #ae8422 100%);
+  color: #0d0705;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+.btn-outline:hover {
+  background: var(--gold-primary);
+  color: #140b07;
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.btn-outline-light:hover {
+  background: #ffffff;
+  color: #140b07;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+}
+
+.btn-lg {
+  padding: 1.05rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   CARDS & LUXURY CONTAINERS
+   ========================================================================== */
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-image-wrap {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: -2rem -2rem 1.5rem -2rem;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-surface-elevated);
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-image-wrap img {
+  transform: scale(1.06);
+}
+
+.origin-tag {
+  position: absolute;
+  top: 1rem;
+  inset-inline-start: 1rem;
+  background: rgba(20, 11, 7, 0.88);
+  backdrop-filter: blur(6px);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  z-index: 2;
+}
+
+.badge-rarity {
+  position: absolute;
+  top: 1rem;
+  inset-inline-end: 1rem;
+  background: var(--gold-gradient);
+  color: #140b07;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   PRODUCT / CONFECTIONERY CARDS
+   ========================================================================== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.product-cacao-pct {
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.product-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-notes {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.product-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.product-price small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-inline-start: 0.35rem;
+}
+
+/* ==========================================================================
+   HERO BANNER BASICS
+   ========================================================================== */
+.hero-wrapper {
+  position: relative;
+  background-color: #140b07;
+  color: #ffffff;
+  padding: 6.5rem 0 5.5rem 0;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 15% 80%, rgba(77, 38, 22, 0.35) 0%, transparent 50%),
+              linear-gradient(180deg, rgba(20, 11, 7, 0.85) 0%, rgba(20, 11, 7, 0.98) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-full);
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title span {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  color: #d1c3b8;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stat-item h4 {
+  font-size: 2rem;
+  color: var(--gold-light);
+  margin-bottom: 0.25rem;
+}
+
+.stat-item p {
+  color: #a49488;
+  font-size: 0.85rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   INTERACTIVE ORIGIN MAP & BADGES
+   ========================================================================== */
+.origin-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+}
+
+.origin-pill {
+  padding: 0.6rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.origin-pill:hover, .origin-pill.active {
+  background: var(--gold-primary);
+  color: #140b07;
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================================================
+   FEATURE & VALUE PROP BLOCKS
+   ========================================================================== */
+.feature-card {
+  text-align: center;
+  padding: 2.5rem 1.75rem;
+}
+
+.feature-icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--gold-primary);
+  transition: var(--transition);
+}
+
+.feature-card:hover .feature-icon-box {
+  background: var(--gold-gradient);
+  color: #140b07;
+  transform: scale(1.1) rotate(6deg);
+}
+
+/* ==========================================================================
+   TESTIMONIALS & REVIEWS
+   ========================================================================== */
+.testimonial-card {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars {
+  color: #f5a623;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--gold-primary);
+  overflow: hidden;
+}
+
+.author-info h5 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.author-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   NEWSLETTER & TASTING CLUB STRIP
+   ========================================================================== */
+.newsletter-card {
+  background: linear-gradient(135deg, #24140d 0%, #150a06 100%);
+  border: 1px solid var(--nav-footer-border);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 540px;
+  margin: 2rem auto 0 auto;
+  gap: 0.5rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.newsletter-input:focus {
+  border-color: var(--gold-primary);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ==========================================================================
+   FORMS & INPUTS (CONTACT & INQUIRY)
+   ========================================================================== */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.form-control, .form-select {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+textarea.form-control {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* ==========================================================================
+   FOOTER (SYNCHRONIZED COLOR WITH NAVBAR)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--nav-footer-bg) !important;
+  color: var(--nav-footer-text);
+  border-top: 1px solid var(--nav-footer-border);
+  padding: 4.5rem 0 2rem 0;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-brand p {
+  color: var(--nav-footer-muted);
+  margin-top: 1rem;
+  max-width: 320px;
+  font-size: 0.92rem;
+}
+
+.footer-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  position: relative;
+  letter-spacing: 0.04em;
+}
+
+.footer-title::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--gold-primary);
+  margin-top: 0.4rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--nav-footer-muted);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a:hover {
+  color: var(--gold-light);
+  transform: translateX(4px);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--nav-footer-border);
+  color: var(--nav-footer-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social-btn:hover {
+  background: var(--gold-primary);
+  color: #140b07;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--nav-footer-muted);
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-badges {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION & QUICK VIEW MODAL
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  inset-inline-end: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast-box {
+  background: var(--nav-footer-bg);
+  border: 1px solid var(--gold-primary);
+  color: #ffffff;
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  pointer-events: auto;
+  animation: slideToast 0.3s ease forwards;
+}
+
+@keyframes slideToast {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  max-width: 700px;
+  width: 100%;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.95);
+  transition: var(--transition);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  inset-inline-end: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  color: var(--gold-primary);
+}
+
+/* ==========================================================================
+   RTL SPECIFIC OVERRIDES & LOGICAL MIRRORING
+   ========================================================================== */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-menu {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .footer-title::after {
+  margin-inline-start: 0;
+}
+
+[dir="rtl"] .action-icon-btn#rtlToggle i {
+  transform: scaleX(-1);
+}
+
+/* Tooltip for Icon Buttons */
+.action-icon-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #140b07;
+  color: #ffffff;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  pointer-events: none;
+  border: 1px solid var(--gold-primary);
+  z-index: 10;
+}
+
+.action-icon-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================================================================
+   ABOUT PAGE LUXURY COMPONENTS
+   ========================================================================== */
+.about-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.15rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-light);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.story-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.story-image-mosaic {
+  position: relative;
+}
+
+.story-image-main {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.story-image-floating {
+  position: absolute;
+  bottom: -2rem;
+  inset-inline-end: -1.5rem;
+  width: 48%;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.story-stat-card {
+  position: absolute;
+  top: -1.5rem;
+  inset-inline-start: -1rem;
+  background: var(--nav-footer-bg);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+
+.story-stat-card .stat-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.story-stat-card .stat-label {
+  font-size: 0.72rem;
+  color: var(--nav-footer-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.founder-quote-banner {
+  background: linear-gradient(135deg, rgba(20, 11, 7, 0.95) 0%, rgba(35, 18, 11, 0.98) 100%);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  margin: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-quote-banner::before {
+  content: '“';
+  position: absolute;
+  top: -2rem;
+  inset-inline-start: 1.5rem;
+  font-size: 10rem;
+  line-height: 1;
+  font-family: Georgia, serif !important;
+  color: rgba(212, 175, 55, 0.1);
+  pointer-events: none;
+}
+
+.founder-quote-banner blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #f7efe6;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.founder-signature-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.founder-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary);
+  object-fit: cover;
+}
+
+.founder-meta h5 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.founder-meta span {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.timeline-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-year {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.cold-chain-detail-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cold-chain-detail-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cold-chain-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  margin-bottom: 1.25rem;
+}
+
+.cert-badge-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.cert-badge-card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.cert-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1.5px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+}
+
+.salon-feature-box {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.salon-feature-box:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+}
+
+.salon-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.salon-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.salon-feature-box:hover .salon-img-wrap img {
+  transform: scale(1.06);
+}
+
+.salon-body {
+  padding: 1.75rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES & MOBILE VIEWPORTS (320px, 375px, 480px, 768px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+  .timeline-grid { grid-template-columns: repeat(2, 1fr); }
+  .story-split-grid { gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar-inner {
+    height: 64px;
+    gap: 0.5rem;
+  }
+
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .story-split-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .story-image-floating { position: static; width: 100%; margin-top: 1rem; }
+  .timeline-grid { grid-template-columns: 1fr; }
+  .founder-quote-banner { padding: 2rem 1.5rem; }
+  .founder-quote-banner blockquote { font-size: 1.05rem; }
+  
+  .mobile-nav-toggle { display: block; }
+  
+  .nav-menu {
+    position: fixed;
+    top: 64px;
+    inset-inline-start: 0;
+    width: 100%;
+    background-color: var(--nav-footer-bg);
+    border-bottom: 2px solid var(--nav-footer-border);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1rem;
+    gap: 0.5rem;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-menu.mobile-open {
+    display: flex;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    margin-top: 0.5rem;
+    padding-inline-start: 1rem;
+    display: none;
+  }
+  
+  .nav-item.dropdown-open .dropdown-menu {
+    display: block;
+  }
+  
+  .hero-stats { grid-template-columns: 1fr; gap: 1rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-card { padding: 2.5rem 1.5rem; }
+}
+
+/* Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .navbar-inner {
+    height: 58px;
+    gap: 0.35rem;
+  }
+
+  .brand-logo {
+    gap: 0.45rem;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .brand-logo .logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-logo .logo-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .brand-logo .logo-title {
+    font-size: 0.98rem;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  .brand-logo .logo-subtitle {
+    font-size: 0.52rem;
+    letter-spacing: 0.1em;
+  }
+
+  .navbar-actions {
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
+
+  .pill-toggle-btn {
+    width: 44px;
+    height: 30px;
+  }
+
+  .pill-toggle-btn svg.icon-bidirectional {
+    width: 17px;
+    height: 11px;
+  }
+
+  .pill-toggle-btn svg.icon-moon,
+  .pill-toggle-btn svg.icon-sun {
+    width: 16px;
+    height: 16px;
+  }
+
+  .action-icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .action-icon-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .mobile-nav-toggle {
+    padding: 0.2rem;
+  }
+
+  .mobile-nav-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .origin-pill-group {
+    gap: 0.4rem;
+  }
+
+  .origin-pill {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .product-filter-bar {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-search-box {
+    min-width: 100%;
+  }
+
+  .hero-wrapper {
+    padding: 3.5rem 0 3rem 0;
+  }
+}
+
+/* 375px and 320px Precision Breakpoints */
+@media (max-width: 375px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .navbar-inner {
+    height: 54px;
+    gap: 0.2rem;
+  }
+
+  .brand-logo {
+    gap: 0.35rem;
+  }
+
+  .brand-logo .logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .brand-logo .logo-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .brand-logo .logo-title {
+    font-size: 0.88rem;
+  }
+
+  .brand-logo .logo-subtitle {
+    display: none; /* Hide subtitle to preserve clean horizontal alignment */
+  }
+
+  .navbar-actions {
+    gap: 0.25rem;
+  }
+
+  .pill-toggle-btn {
+    width: 38px;
+    height: 28px;
+  }
+
+  .pill-toggle-btn svg.icon-bidirectional {
+    width: 15px;
+    height: 10px;
+  }
+
+  .pill-toggle-btn svg.icon-moon,
+  .pill-toggle-btn svg.icon-sun {
+    width: 14px;
+    height: 14px;
+  }
+
+  .action-icon-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .action-icon-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mobile-nav-toggle {
+    padding: 0.15rem;
+  }
+
+  .mobile-nav-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .origin-pill {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+}
+/* =========================================
+   MOBILE RESPONSIVE FIX – 320px & 375px
+========================================= */
+
+@media (max-width: 375px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container,
+    .container-custom,
+    .about-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Navbar */
+    .navbar,
+    .main-navbar,
+    .site-header {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .navbar-brand,
+    .logo,
+    .site-logo {
+        max-width: 70%;
+        min-width: 0;
+    }
+
+    .navbar-brand img,
+    .logo img,
+    .site-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Timeline section */
+    .timeline,
+    .milestones,
+    .timeline-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .timeline-item,
+    .milestone-card,
+    .timeline-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Headings */
+    h1,
+    .section-title {
+        max-width: 100%;
+        font-size: clamp(24px, 7vw, 30px);
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+    /* Prevent oversized elements */
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .container,
+    .container-custom,
+    .about-container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .timeline,
+    .milestones,
+    .timeline-container {
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+
+    .navbar-brand,
+    .logo,
+    .site-logo {
+        max-width: 65%;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <!-- Logo with Brand Icon (Inline SVG) -->
+    <a href="index.html"
+   aria-label="Cacao & Cru Home"
+   style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      text-decoration: none;
+      flex-shrink: 0;
+   ">
+
+    <span style="
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        flex-shrink: 0;
+    ">
+        <img src="assets/images/logo.png"
+             alt="Cacao & Cru"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+                background: transparent;
+             ">
+    </span>
+
+    <span style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+    ">
+
+        <span style="
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            color: #ffffff;
+            white-space: nowrap;
+        ">
+            CACAO <span style="color: #d4af37;">&amp;</span> CRU
+        </span>
+
+        <span style="
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            line-height: 1.3;
+            color: #b8a99a;
+            white-space: nowrap;
+        ">
+            Specialty Imports
+        </span>
+
+    </span>
+</a>
+
+      <!-- Main Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Home Dropdown (Home 1 & Home 2) -->
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
+                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-atelier.html" class="dropdown-link">
+                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
+                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+<li class="nav-item">
+            <a href="products.html" class="nav-link">Products </a>
+          </li>
+          <!-- About Us (Active) -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About </a>
+          </li>
+
+          
+
+          <li class="nav-item">
+            <a href="gifting.html" class="nav-link">Gifting</a>
+          </li>
+           <li class="nav-item">
+            <a href="blog.html" class="nav-link">blog</a>
+          </li>
+
+          <!-- Pages Dropdown -->
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              <span>Pages</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="maintenance.html" class="dropdown-link">
+                  <span class="dropdown-title">Maintenance Mode</span>
+                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
+                </a>
+              </li>
+              <li>
+                <a href="coming-soon.html" class="dropdown-link">
+                  <span class="dropdown-title">Coming Soon Launch</span>
+                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
+      <div class="navbar-actions">
+        <!-- RTL to LTR Capsule Pill Button -->
+        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
+          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
+        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navMoonGradAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFCA28" />
+                <stop offset="100%" stop-color="#FF9800" />
+              </linearGradient>
+            </defs>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGradAbout)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
+            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
+            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
+          </svg>
+        </button>
+
+       
+
+        <!-- Mobile Navigation Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== SECTION 1: THE IMPORTER'S GENESIS & FOUNDING VISION ==================== -->
+  <!-- ================= HERO SECTION ================= -->
+<section class="cacao-about-hero"
+    style="
+        position: relative;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 7%;
+        overflow: hidden;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(20, 11, 7, 0.92) 0%,
+                rgba(35, 19, 12, 0.78) 45%,
+                rgba(25, 13, 8, 0.30) 100%
+            ),
+            url('https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=2000&q=90');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #24150f;
+    ">
+
+    <!-- CONTENT -->
+    <div class="cacao-hero-content"
+        style="
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 800px;
+            color: #ffffff;
+        ">
+
+        <!-- BADGE -->
+        <span class="cacao-hero-badge"
+            style="
+                display: inline-block;
+                color: #d9b47c;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+            ">
+            ✦ Our Founding Heritage • Est. 2018
+        </span>
+
+        <!-- HEADING -->
+        <h1
+            style="
+                font-size: clamp(38px, 5vw, 68px);
+                line-height: 1.15;
+                font-weight: 600;
+                color: #ffffff;
+                margin: 0 0 25px;
+            ">
+
+            Dedicated to the Art of
+
+            <span
+                style="
+                    display: block;
+                    color: #d9b47c;
+                    margin-top: 8px;
+                ">
+                Pure Heirloom Cacao
+            </span>
+
+        </h1>
+
+        <!-- DESCRIPTION -->
+        <p
+            style="
+                max-width: 620px;
+                font-size: 17px;
+                line-height: 1.9;
+                color: #e8ded4;
+                margin-bottom: 35px;
+            ">
+
+            Discover the extraordinary world of premium European
+            confectionery and rare South American cacao.
+            Crafted through heritage, passion, and uncompromising quality.
+
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="cacao-hero-buttons"
+            style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                align-items: center;
+            ">
+
+            <a href="products.html"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 16px 28px;
+                    background: #b88a52;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    border: 1px solid #b88a52;
+                    transition: 0.3s ease;
+                ">
+                Explore Terroir Imports →
+            </a>
+
+            <a href="contact.html"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 16px 28px;
+                    background: transparent;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border: 1px solid #d9b47c;
+                    transition: 0.3s ease;
+                ">
+                Visit Our Tasting Salon
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESPONSIVE CSS -->
+<style>
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .cacao-about-hero {
+        min-height: 580px !important;
+        padding: 85px 30px !important;
+        background-position: 60% center !important;
+    }
+
+    .cacao-hero-content {
+        max-width: 100% !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 46px !important;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .cacao-about-hero {
+        min-height: 620px !important;
+        padding: 75px 20px !important;
+        background-position: 58% center !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 36px !important;
+        line-height: 1.2 !important;
+    }
+
+    .cacao-hero-content p {
+        font-size: 15px !important;
+        line-height: 1.8 !important;
+    }
+
+    .cacao-hero-badge {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .cacao-hero-buttons {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .cacao-hero-buttons a {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+    .cacao-about-hero {
+        padding: 65px 16px !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 32px !important;
+    }
+
+}
+
+</style>
+
+<style>
+
+/* ABOUT HERO BACKGROUND */
+
+.cacao-about-hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 12, 8, 0.92) 0%,
+            rgba(35, 20, 13, 0.78) 48%,
+            rgba(25, 15, 10, 0.35) 100%
+        ),
+        url('https://images.pexels.com/photos/20074173/pexels-photo-20074173.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* OVERLAY */
+
+.cacao-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(20, 12, 8, 0.35),
+        transparent
+    );
+}
+
+/* CONTENT */
+
+.cacao-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 850px;
+    margin-right: auto;
+    color: #fff;
+}
+
+.cacao-hero-badge {
+    display: inline-block;
+    color: #d9b47c;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.cacao-hero-content h1 {
+    font-size: clamp(38px, 5vw, 68px);
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.cacao-hero-content h1 span {
+    display: block;
+    color: #d9b47c;
+}
+
+.cacao-hero-content p {
+    max-width: 620px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #e6ded5;
+    margin-bottom: 35px;
+}
+
+/* BUTTONS */
+
+.cacao-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cacao-btn-primary,
+.cacao-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cacao-btn-primary {
+    background: #b88a52;
+    color: #fff;
+}
+
+.cacao-btn-primary:hover {
+    background: #d0a66f;
+    color: #1b110b;
+}
+
+.cacao-btn-outline {
+    border: 1px solid #d9b47c;
+    color: #fff;
+}
+
+.cacao-btn-outline:hover {
+    background: #d9b47c;
+    color: #1b110b;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .cacao-about-hero {
+        min-height: 580px;
+        padding: 85px 25px;
+        background-position: 60% center;
+    }
+
+    .cacao-hero-content {
+        margin: 0;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .cacao-about-hero {
+        min-height: 600px;
+        padding: 75px 20px;
+        background-position: 60% center;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .cacao-hero-content p {
+        font-size: 15px;
+    }
+
+    .cacao-hero-buttons {
+        flex-direction: column;
+    }
+
+    .cacao-btn-primary,
+    .cacao-btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+
+<!-- ================= OUR STORY SECTION ================= -->
+<section class="cacao-story-section">
+
+    <div class="container">
+
+        <div class="cacao-story-heading">
+
+            <span>OUR JOURNEY</span>
+
+            <h2>
+                A Legacy Built on
+                <span>Passion & Craftsmanship</span>
+            </h2>
+
+            <p>
+                Cacao & Cru was conceived by a small consortium of
+                French-Swiss chocolatiers and agronomists with a
+                singular mission: to preserve extraordinary
+                confectionery creations and rare cacao traditions.
+            </p>
+
+        </div>
+
+
+        <!-- STORY CONTENT -->
+
+        <div class="cacao-story-grid">
+
+            <!-- IMAGES -->
+
+            <div class="cacao-people-gallery">
+
+                <div class="cacao-person-main">
+                    <img
+                        src="https://images.pexels.com/photos/28146801/pexels-photo-28146801.jpeg"
+                        alt="Professional chocolatier preparing chocolate">
+
+                    <div class="cacao-image-caption">
+                        <h4>Master Craftsmanship</h4>
+                        <p>Passion behind every creation</p>
+                    </div>
+                </div>
+
+
+                <div class="cacao-person-small">
+                    <img
+                        src="https://images.pexels.com/photos/8093394/pexels-photo-8093394.jpeg"
+                        alt="Professional chef working in a kitchen">
+                </div>
+
+
+                <div class="cacao-person-small">
+                    <img
+                        src="https://images.pexels.com/photos/38151879/pexels-photo-38151879.jpeg"
+                        alt="Artisan food preparation">
+                </div>
+
+                
+
+            </div>
+
+
+            <!-- STORY TEXT -->
+
+            <div class="cacao-story-text">
+
+                <span class="cacao-small-label">
+                    OUR PHILOSOPHY
+                </span>
+
+                <h3>
+                    Preserving the Art of
+                    Extraordinary Chocolate
+                </h3>
+
+                <p>
+                    While mass-produced confections often compromise
+                    on ingredients and craftsmanship, we operate
+                    differently. We work directly with family-held
+                    ateliers and ancestral cacao estates.
+                </p>
+
+                <p>
+                    Our approach preserves the delicate floral aromas,
+                    authentic flavours, and exceptional quality
+                    intended by master makers.
+                </p>
+
+                <p>
+                    From carefully selected cacao beans to handcrafted
+                    European confectionery, every creation represents
+                    our commitment to authenticity and excellence.
+                </p>
+
+                <a href="contact.html" class="cacao-story-link">
+                    Discover Our Story →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MILESTONES -->
+
+        <div class="cacao-timeline-heading">
+
+            <span>OUR HISTORY</span>
+
+            <h2>Milestones Along the Way</h2>
+
+        </div>
+
+
+        <div class="cacao-timeline-grid">
+
+            <div class="cacao-timeline-card">
+
+                <span>2018</span>
+
+                <h4>Genesis in Geneva</h4>
+
+                <p>
+                    Established our first refrigerated air-consignment
+                    connecting European ateliers
+                    with private collectors.
+                </p>
+
+            </div>
+
+
+            <div class="cacao-timeline-card">
+
+                <span>2020</span>
+
+                <h4>Heirloom Cacao Pact</h4>
+
+                <p>
+                    Formed direct purchasing alliances with
+                    Arriba Nacional and Chuncho farmer collectives
+                     Peru.
+                </p>
+
+            </div>
+
+
+            <div class="cacao-timeline-card">
+
+                <span>2023</span>
+
+                <h4>Flagship Salon Launch</h4>
+
+                <p>
+                    Opened our Grand Cru Tasting Salon 
+                    premium chocolate collections and
+                    private tasting experiences.
+                </p>
+
+            </div>
+
+
+            <div class="cacao-timeline-card">
+
+                <span>2026</span>
+
+                <h4>Global Grand Cru Guild</h4>
+
+                <p>
+                    Expanding our international network of
+                    master chocolatiers transparent
+                    tree-to-door traceability.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INLINE CSS ================= -->
+
+<style>
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.cacao-about-hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 25px;
+    background:
+        url('https://images.unsplash.com/photo-1548907040-4d42bfc2b8f4?auto=format&fit=crop&w=2000&q=90')
+        center 48% / cover no-repeat;
+    text-align: center;
+    color: #fff;
+}
+
+.cacao-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 10, 7, 0.94),
+        rgba(25, 12, 8, 0.72),
+        rgba(20, 10, 7, 0.65)
+    );
+}
+
+.cacao-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: auto;
+}
+
+.cacao-hero-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(218, 177, 129, 0.5);
+    border-radius: 30px;
+    color: #e0b98f;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.cacao-hero-content h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.15;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.cacao-hero-content h1 span {
+    display: block;
+    color: #d9ae7c;
+}
+
+.cacao-hero-content > p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #e2d6cd;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.cacao-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cacao-btn-primary,
+.cacao-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 27px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cacao-btn-primary {
+    background: #bd8958;
+    color: #fff;
+    border: 1px solid #bd8958;
+}
+
+.cacao-btn-primary:hover {
+    background: #a66e40;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.cacao-btn-outline {
+    border: 1px solid #d9ae7c;
+    color: #fff;
+}
+
+.cacao-btn-outline:hover {
+    background: #d9ae7c;
+    color: #21140e;
+}
+
+
+/* =========================================
+   STORY SECTION - COMMON STYLES
+========================================= */
+
+.cacao-story-section {
+    padding: 100px 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cacao-story-heading {
+    max-width: 750px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.cacao-story-heading > span,
+.cacao-timeline-heading > span {
+    color: #bd8958;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.cacao-story-heading h2,
+.cacao-timeline-heading h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    margin: 18px 0;
+}
+
+.cacao-story-heading h2 span {
+    color: #bd8958;
+}
+
+.cacao-story-heading p {
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   STORY GRID
+========================================= */
+
+.cacao-story-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 65px;
+    align-items: center;
+}
+
+
+/* =========================================
+   PEOPLE GALLERY
+========================================= */
+
+.cacao-people-gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding-bottom: 45px;
+}
+
+.cacao-person-main {
+    grid-column: span 2;
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.cacao-person-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.cacao-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 25px 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.cacao-image-caption h4 {
+    color: #fff !important;
+    margin-bottom: 5px;
+}
+
+.cacao-image-caption p {
+    color: #e0c5a8 !important;
+    margin: 0;
+    font-size: 13px;
+}
+
+.cacao-person-small {
+    height: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.cacao-person-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.cacao-person-small:hover img,
+.cacao-person-main:hover img {
+    transform: scale(1.04);
+}
+
+.cacao-story-stat {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    background: #bd8958;
+    padding: 18px 30px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cacao-story-stat h3 {
+    font-size: 30px;
+    color: #fff !important;
+    margin: 0;
+}
+
+.cacao-story-stat p {
+    font-size: 12px;
+    color: #fff !important;
+    margin: 3px 0 0;
+}
+
+
+/* =========================================
+   STORY TEXT
+========================================= */
+
+.cacao-small-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #bd8958;
+    font-weight: 700;
+}
+
+.cacao-story-text h3 {
+    font-size: 34px;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.cacao-story-text p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.cacao-story-link {
+    display: inline-block;
+    color: #bd8958;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.cacao-story-link:hover {
+    color: #a66e40;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.cacao-timeline-heading {
+    text-align: center;
+    margin: 100px 0 45px;
+}
+
+.cacao-timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cacao-timeline-card {
+    padding: 30px 23px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.cacao-timeline-card:hover {
+    transform: translateY(-7px);
+    border-color: #bd8958;
+}
+
+.cacao-timeline-card span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #bd8958;
+}
+
+.cacao-timeline-card h4 {
+    font-size: 17px;
+    margin: 15px 0 10px;
+}
+
+.cacao-timeline-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+html[data-theme="dark"] .cacao-story-section {
+    background: #211713;
+    color: #f5e9dc;
+}
+
+html[data-theme="dark"] .cacao-story-heading h2,
+html[data-theme="dark"] .cacao-timeline-heading h2,
+html[data-theme="dark"] .cacao-story-text h3 {
+    color: #f6e9dc;
+}
+
+html[data-theme="dark"] .cacao-story-heading p,
+html[data-theme="dark"] .cacao-story-text p {
+    color: #c5b3a5;
+}
+
+html[data-theme="dark"] .cacao-timeline-card {
+    background: #2d201a;
+    border: 1px solid rgba(201,154,108,0.2);
+}
+
+html[data-theme="dark"] .cacao-timeline-card h4 {
+    color: #f5e9dc;
+}
+
+html[data-theme="dark"] .cacao-timeline-card p {
+    color: #c5b3a5;
+}
+
+html[data-theme="dark"] .cacao-timeline-card:hover {
+    background: #35251d;
+    border-color: #bd8958;
+}
+
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+html[data-theme="light"] .cacao-story-section {
+    background: #f8f3ec;
+    color: #35251c;
+}
+
+html[data-theme="light"] .cacao-story-heading h2,
+html[data-theme="light"] .cacao-timeline-heading h2,
+html[data-theme="light"] .cacao-story-text h3 {
+    color: #35251c;
+}
+
+html[data-theme="light"] .cacao-story-heading p,
+html[data-theme="light"] .cacao-story-text p {
+    color: #716052;
+}
+
+html[data-theme="light"] .cacao-timeline-card {
+    background: #fffaf4;
+    border: 1px solid #e8d8c6;
+    box-shadow: 0 5px 20px rgba(75,45,25,0.06);
+}
+
+html[data-theme="light"] .cacao-timeline-card h4 {
+    color: #35251c;
+}
+
+html[data-theme="light"] .cacao-timeline-card p {
+    color: #716052;
+}
+
+html[data-theme="light"] .cacao-timeline-card:hover {
+    background: #fff;
+    border-color: #bd8958;
+}
+
+html[data-theme="light"] .cacao-story-link {
+    color: #a66e40;
+}
+
+html[data-theme="light"] .cacao-story-link:hover {
+    color: #704323;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .cacao-story-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .cacao-timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .cacao-about-hero {
+        min-height: 570px;
+        padding: 85px 18px;
+        background-position: center;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .cacao-hero-content > p {
+        font-size: 14px;
+    }
+
+    .cacao-hero-buttons {
+        flex-direction: column;
+    }
+
+    .cacao-btn-primary,
+    .cacao-btn-outline {
+        width: 100%;
+    }
+
+    .cacao-story-section {
+        padding: 65px 0;
+    }
+
+    .cacao-story-heading {
+        margin-bottom: 45px;
+        padding: 0 15px;
+    }
+
+    .cacao-person-main {
+        height: 260px;
+    }
+
+    .cacao-person-small {
+        height: 135px;
+    }
+
+    .cacao-story-stat {
+        right: 5px;
+        padding: 12px 20px;
+    }
+
+    .cacao-story-stat h3 {
+        font-size: 23px;
+    }
+
+    .cacao-story-text h3 {
+        font-size: 28px;
+    }
+
+    .cacao-timeline-heading {
+        margin: 65px 0 30px;
+    }
+
+    .cacao-timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+    <!-- ==================== SECTION 2: THE FOUR SOURCING PILLARS & BUSINESS MODEL ==================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Our Business Model
+          </span>
+          <h2>The Four Inviolable Tenets of Our Sourcing Standard</h2>
+          <p>Every imported bar, praline ballotin, and pastry chef block in our inventory must satisfy all four rigorous criteria.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 7.1"></path></svg>
+            </div>
+            <h4>1. Unadulterated and Purity</h4>
+            <p style="font-size: 0.9rem;">100% pure cocoa butter. Zero palm oils, hydrogenated fats, artificial vanillin, or chemical soy emulsifiers ever enter our warehouse.</p>
+            <span class="dropdown-tag">Zero Synthetics</span>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5z"></path></svg>
+            </div>
+            <h4>2. Royal & Atelier Exclusives</h4>
+            <p style="font-size: 0.9rem;">Exclusive North American and Asian distribution allocations for historic European royal purveyors and micro-batch artisan masters.</p>
+            <span class="dropdown-tag">Direct Allocation</span>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+            </div>
+            <h4>3. Living Terroir Traceability</h4>
+            <p style="font-size: 0.9rem;">From Esmeraldas cloud forests to Ambanja valleys, each bar carries verified harvest vintage years, tree varietals, and fermentation curves.</p>
+            <span class="dropdown-tag">Single Estate</span>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+            </div>
+            <h4>4. 3.8x Living Wage Premium</h4>
+            <p style="font-size: 0.9rem;">We bypass commodity exchanges entirely, paying nearly four times Fairtrade minimums directly to heirloom cacao farmer families.</p>
+            <span class="dropdown-tag">Regenerative Bounty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- ==================== SECTION 5: THE TASTING SALON & CACAO SOMMELIER GUILD ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            Hospitality & Sensory Education
+          </span>
+          <h2>The Flagship Tasting Salon & Private Lockers</h2>
+          <p>Experience imported confections within our climate-regulated sensory chamber guided by Certified Master Cacao Sommeliers.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="salon-feature-box">
+            <div class="salon-img-wrap">
+              <img src="assets/images/A Luxurious Chocolate Terroir Tasting Flight.png" alt="Private Chocolate Tasting Masterclass">
+            </div>
+            <div class="salon-body">
+              <h4>8-Terroir Flight Tastings</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Taste through four flavor hemispheres in our soundproof tasting salon. Learn to detect aromatic markers of dried fig, volcanic earth, jasmine blossom, and Alpine honey.
+              </p>
+              <a href="contact.html" class="btn btn-outline btn-sm">Reserve Flight</a>
+            </div>
+          </div>
+
+          <div class="salon-feature-box">
+            <div class="salon-img-wrap">
+              <img src="assets/images/Luxury Chocolate Vault 007.png" alt="Private Climate-Controlled Lockers">
+            </div>
+            <div class="salon-body">
+              <h4>Private Cellar Lockers</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Connoisseurs and Michelin restaurant pastry chefs store reserved vintage tablets and seasonal air allocations in private, biometric 16°C mahogany cellar lockers.
+              </p>
+              <a href="contact.html" class="btn btn-outline btn-sm">Inquire Locker</a>
+            </div>
+          </div>
+
+          <div class="salon-feature-box">
+            <div class="salon-img-wrap">
+              <img src="https://images.pexels.com/photos/17262454/pexels-photo-17262454.jpeg" alt="Custom Wax-Sealed Gifting Workshop">
+            </div>
+            <div class="salon-body">
+              <h4>Bespoke Atelier Bindery</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                Personalize luxury ballotins and emperor hampers with hand-poured custom sealing wax, antique gold calligraphy, and Florentine woven double-faced ribbons.
+              </p>
+              <a href="gifting.html" class="btn btn-outline btn-sm">Explore Gifting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: ETHICS, CERTIFICATIONS & WHOLESALE ALLOCATIONS ==================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            Trust & Accolades
+          </span>
+          <h2>Certified Ethics, Michelin Partners & Grand Cru Accolades</h2>
+          <p>Our commitment to transparent agronomy, farmer sovereignty, and gastronomic excellence.</p>
+        </div>
+
+        <div class="grid grid-4" style="margin-bottom: 3.5rem;">
+          <div class="cert-badge-card">
+            <div class="cert-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h4>B-Corp Candidate</h4>
+            <p style="font-size: 0.85rem; margin: 0; color: var(--text-secondary);">Verified social, environmental, and transparent trade performance standards across all supply lines.</p>
+          </div>
+
+          <div class="cert-badge-card">
+            <div class="cert-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <h4>Michelin Partner</h4>
+            <p style="font-size: 0.85rem; margin: 0; color: var(--text-secondary);">Direct supplier of grand cru couverture blocks to 34 three-star and two-star Michelin establishments.</p>
+          </div>
+
+          <div class="cert-badge-card">
+            <div class="cert-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <h4>Direct Fairtrade 3.8x</h4>
+            <p style="font-size: 0.85rem; margin: 0; color: var(--text-secondary);">All farm-gate contracts guaranteed at nearly 400% of the world cocoa market floor benchmark.</p>
+          </div>
+
+          <div class="cert-badge-card">
+            <div class="cert-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+            </div>
+            <h4>Heirloom Preserved</h4>
+            <p style="font-size: 0.85rem; margin: 0; color: var(--text-secondary);">Active support of the Heirloom Cacao Preservation Fund (HCP) safeguarding wild Andean varieties.</p>
+          </div>
+        </div>
+
+        <!-- Closing Invitation Box -->
+        <div class="newsletter-card" style="padding: 3.5rem 2.5rem;">
+          <h2 style="color: #ffffff; margin-bottom: 1rem;">Experience the Master Importer Difference</h2>
+          <p style="color: #d1c3b8; max-width: 620px; margin: 0 auto 2rem auto;">
+            Explore our curated selection of direct-import grand cru bars, sculpted atelier bonbons, and luxury presentation hampers.
+          </p>
+          <div class="flex-center gap-3" style="flex-wrap: wrap;">
+            <a href="products.html" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              Browse Products by Origin
+            </a>
+            <a href="gifting.html" class="btn btn-outline-light btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+              View Luxury Hampers
+            </a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Contact Salon Concierge
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SYNCHRONIZED FOOTER ==================== -->
+ <footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <!-- =====================================
+                 BRAND COLUMN
+            ====================================== -->
+
+            <div class="footer-brand">
+
+      <a href="index.html"
+   aria-label="Cacao & Cru Home"
+   style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      text-decoration: none;
+      flex-shrink: 0;
+   ">
+
+    <span style="
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        flex-shrink: 0;
+    ">
+        <img src="assets/images/logo.png"
+             alt="Cacao & Cru"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+                background: transparent;
+             ">
+    </span>
+
+    <span style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+    ">
+
+        <span style="
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            color: #ffffff;
+            white-space: nowrap;
+        ">
+            CACAO <span style="color: #d4af37;">&amp;</span> CRU
+        </span>
+
+        <span style="
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            line-height: 1.3;
+            color: #b8a99a;
+            white-space: nowrap;
+        ">
+            Specialty Imports
+        </span>
+
+    </span>
+</a>
+
+
+                <p class="footer-description">
+
+                   Purveyors of rare, climate-monitored single origin chocolates, artisanal truffles, and heritage confections flown directly from legendary master chocolatiers worldwide. We celebrate exceptional craftsmanship. Every creation is carefully curated to deliver an extraordinary chocolate experience.
+                </p>
+
+
+                <!-- SOCIAL MEDIA -->
+<div class="footer-socials">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       class="social-btn"
+       aria-label="Instagram"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"></circle>
+
+        </svg>
+    </a>
+
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/"
+       class="social-btn"
+       aria-label="Facebook"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M13.4 21V12.8h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- Pinterest -->
+    <a href="https://www.pinterest.com/"
+       class="social-btn"
+       aria-label="Pinterest"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M12 2a10 10 0 0 0-3.64 19.31c-.02-.78 0-1.72.19-2.57l1.35-5.72s-.34-.67-.34-1.65c0-1.55.9-2.71 2.02-2.71.95 0 1.41.71 1.41 1.56 0 .95-.61 2.37-.92 3.69-.26 1.1.55 2 1.63 2 1.95 0 3.46-2.06 3.46-5.04 0-2.64-1.9-4.48-4.61-4.48-3.14 0-4.98 2.35-4.98 4.78 0 .95.36 1.97.82 2.52.09.11.1.21.07.33l-.3 1.22c-.05.2-.16.25-.37.15-1.37-.64-2.22-2.65-2.22-4.27 0-3.48 2.53-6.68 7.3-6.68 3.83 0 6.8 2.73 6.8 6.38 0 3.81-2.4 6.87-5.73 6.87-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.89A10 10 0 1 0 12 2z"></path>
+
+        </svg>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/"
+       class="social-btn"
+       aria-label="LinkedIn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <svg viewBox="0 0 24 24"
+             width="20"
+             height="20"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3.5 9h3.4v11H3.5zM9 9h3.3v1.5h.05A3.65 3.65 0 0 1 15.6 8.7c3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V20H9z"></path>
+
+        </svg>
+    </a>
+
+</div>
+
+            </div>
+
+
+            <!-- =====================================
+                 NAVIGATION
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Navigation
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            <span class="footer-arrow">›</span>
+                            Heritage  (Home 1)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="home-atelier.html">
+                            <span class="footer-arrow">›</span>
+                            Artisan Atelier (Home 2)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Products by Origin
+                        </a>
+                    </li>
+                     <li>
+                        <a href="about.html">
+                            <span class="footer-arrow">›</span>
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Luxury Gifting
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Contact & Boutique
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 BOUTIQUE PAGES
+            ====================================== -->
+
+            <div class="footer-column">
+
+                <h4 class="footer-title">
+                    Boutique Pages
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="products.html">
+                            <span class="footer-arrow">›</span>
+                            Origin Catalog
+                        </a>
+                    </li>
+                      <li>
+                        <a href="blog.html">
+                            <span class="footer-arrow">›</span>
+                            Blog Details
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gifting.html">
+                            <span class="footer-arrow">›</span>
+                            Bespoke Hampers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="maintenance.html">
+                            <span class="footer-arrow">›</span>
+                            Maintenance Screen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="coming-soon.html">
+                            <span class="footer-arrow">›</span>
+                            Coming Soon Launch
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <span class="footer-arrow">›</span>
+                            Wholesale Inquiries
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 CONTACT INFORMATION
+            ====================================== -->
+
+            <div class="footer-column footer-contact-column">
+
+                <h4 class="footer-title">
+                    Tasting Salon
+                </h4>
+
+
+                <!-- LOCATION -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+
+                        <circle cx="12" cy="10" r="2.5"></circle>
+
+                    </svg>
+
+                    <span>
+                        48 Grand Cru Boulevard, Suite 1200
+                        <br>
+                        San Francisco, CA 94104
+                    </span>
+
+                </p>
+
+
+                <!-- PHONE -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.25a2 2 0 0 1 2.1-.45c.9.35 1.84.58 2.8.7a2 2 0 0 1 1.8 2.1Z"></path>
+
+                    </svg>
+
+                    <a href="tel:+18005822226">
+                        +1 (800) 582-CACAO
+                    </a>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p class="footer-contact">
+
+                    <svg viewBox="0 0 24 24"
+                         width="18"
+                         height="18"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <rect x="2" y="4"
+                              width="20" height="16"
+                              rx="2"></rect>
+
+                        <path d="m22 7-10 6L2 7"></path>
+
+                    </svg>
+
+                    <a href="mailto:concierge@cacaoandcru.com">
+                        concierge@cacao&cru.com
+                    </a>
+                     <!-- OPENING HOURS -->
+<p class="footer-contact">
+
+    <svg viewBox="0 0 24 24"
+         width="18"
+         height="18"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.8"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         aria-hidden="true">
+
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 6v6l4 2"></path>
+
+    </svg>
+
+    <span>
+        Mon – Sat: 10:00 AM – 7:00 PM
+        <br>
+        Sunday: 11:00 AM – 5:00 PM
+    </span>
+
+</p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FOOTER BOTTOM
+        ====================================== -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+
+                &copy; 2026 Cacao & Cru Imports LLC.
+                All rights reserved.
+                Specialty Chocolate & Confectionery Import Specialists.
+
+            </div>
+
+
+            <div class="footer-badges">
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path>
+
+                        <path d="m9 12 2 2 4-4"></path>
+
+                    </svg>
+
+                    100% Cold-Chain Insured
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M11 20A7 7 0 0 1 4 13c0-5 8-11 8-11s8 6 8 11a7 7 0 0 1-9 7Z"></path>
+
+                        <path d="M8 14c2 0 4 2 4 5"></path>
+
+                    </svg>
+
+                    Direct Origin Trade
+
+                </span>
+
+
+                <span class="footer-badge-item">
+
+                    <svg viewBox="0 0 24 24"
+                         width="16"
+                         height="16"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <path d="M22 2 11 13"></path>
+
+                        <path d="M22 2 15 22l-4-9-9-4Z"></path>
+
+                    </svg>
+
+                    Direct Air Express
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+  <!-- Common Global JS -->
+  <script src="js/common.js"></script>
+</body>
+</html>
