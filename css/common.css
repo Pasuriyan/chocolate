@@ -2422,3 +2422,93 @@ html[data-theme="dark"] body:has(#chocolateHomeHero) .card {
     object-fit: contain;
     display: block;
 }
+/* ==========================================
+   TABLET NAVBAR - 769px TO 1100px
+   Keep Desktop Navigation
+========================================== */
+
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+
+    .site-navbar {
+        overflow: visible !important;
+    }
+
+    .navbar-inner {
+        height: 68px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        gap: 8px !important;
+        justify-content: space-between !important;
+    }
+
+    /* Logo */
+    .brand-logo {
+        flex-shrink: 1 !important;
+        min-width: 0 !important;
+        gap: 7px !important;
+    }
+
+    .brand-logo .logo-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .brand-logo .logo-title {
+        font-size: 1rem !important;
+        letter-spacing: 0.02em !important;
+    }
+
+    .brand-logo .logo-subtitle {
+        font-size: 0.5rem !important;
+        letter-spacing: 0.1em !important;
+    }
+
+    /* Keep Desktop Menu */
+    .site-navbar nav {
+        display: block !important;
+        flex-shrink: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .nav-menu {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0 !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .nav-link {
+        padding: 8px 7px !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Navbar Controls */
+    .navbar-actions {
+        flex-shrink: 0 !important;
+        gap: 5px !important;
+    }
+
+    .pill-toggle-btn {
+        width: 34px !important;
+        height: 32px !important;
+    }
+
+    .pill-toggle-btn svg {
+        width: 17px !important;
+        height: 14px !important;
+    }
+
+    /* Hide Hamburger */
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+
+    /* Preserve CTA if present */
+    .navbar-actions .btn {
+        display: inline-flex !important;
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+}

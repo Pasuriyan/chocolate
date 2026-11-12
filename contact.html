@@ -145,16 +145,67 @@
 
   <main>
     <!-- ==================== SECTION 1: CONTACT HERO ==================== -->
-    <section class="hero-wrapper" style="padding: 4.5rem 0 3.5rem 0;">
-      <div class="hero-bg-overlay"></div>
-      <div class="container hero-content text-center">
-        <span class="hero-tag"> Direct Concierge Desk</span>
-        <h1 class="hero-title">Connect with Our <span>Master Importers</span></h1>
-        <p class="hero-desc" style="margin: 0 auto;">
-          Whether inquiring about rare harvest allocations, private tasting salon bookings, corporate gifting contracts, or pastry chef wholesale couverture, our team is at your disposal.
+<section class="hero-wrapper"
+    style="
+        position: relative;
+        padding: 100px 20px 90px;
+        background-image: url('assets/images/contact\ hero.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    ">
+
+    <!-- Dark Background Overlay -->
+    <div class="hero-bg-overlay"
+        style="
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(15, 7, 4, 0.88),
+                rgba(30, 15, 10, 0.72),
+                rgba(10, 5, 3, 0.88)
+            );
+            z-index: 1;
+        ">
+    </div>
+
+    <!-- Hero Content -->
+    <div class="container hero-content text-center"
+        style="
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        ">
+
+        <span class="hero-tag">
+            Direct Concierge Desk
+        </span>
+
+        <h1 class="hero-title">
+            Connect with Our
+            <span>Master Importers</span>
+        </h1>
+
+        <p class="hero-desc"
+            style="
+                margin: 0 auto;
+                max-width: 750px;
+                color: #e8ded5;
+                line-height: 1.8;
+            ">
+            Whether inquiring about rare harvest allocations,
+            private tasting salon bookings, corporate gifting
+            contracts, or pastry chef wholesale couverture,
+            our team is at your disposal.
         </p>
-      </div>
-    </section>
+
+    </div>
+</section>
+
 
     <!-- ==================== SECTION 2: MULTI-PURPOSE ENQUIRY FORM ==================== -->
     <section class="section" id="enquiryFormSection">
@@ -1055,7 +1106,7 @@
           <div class="flex-center gap-3" style="flex-wrap: wrap;">
             <a href="tel:+18005822226" class="btn btn-primary"> Call +1 (800) 582-CACAO</a>
             <button class="btn btn-outline-light" onclick="showToast('Connecting to WhatsApp Concierge (+1-415-555-0199)...', 'info')">
-              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+               Chat on WhatsApp
             </button>
           </div>
         </div>

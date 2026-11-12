@@ -1909,336 +1909,334 @@ textarea.form-control {
         max-width: 65%;
     }
 }
+
   </style>
-</head>
-<body>
+  <style>
 
-  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
-  <header class="site-navbar">
-    <div class="container navbar-inner">
-      <!-- Logo with Brand Icon (Inline SVG) -->
-    <a href="index.html"
-   aria-label="Cacao & Cru Home"
-   style="
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 14px;
-      text-decoration: none;
-      flex-shrink: 0;
-   ">
+/* ============================================
+   CACAO & CRU - ABOUT PAGE RESPONSIVE FIX
+   320px | 375px | 425px | 480px
+============================================ */
 
-    <span style="
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        border-radius: 0;
-        flex-shrink: 0;
-    ">
-        <img src="assets/images/logo.png"
-             alt="Cacao & Cru"
-             style="
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                display: block;
-                background: transparent;
-             ">
-    </span>
+/* GLOBAL MOBILE FIX */
 
-    <span style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2px;
-    ">
+@media screen and (max-width: 480px) {
 
-        <span style="
-            font-size: 25px;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: 1px;
-            color: #ffffff;
-            white-space: nowrap;
-        ">
-            CACAO <span style="color: #d4af37;">&amp;</span> CRU
-        </span>
+    html,
+    body {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
 
-        <span style="
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            line-height: 1.3;
-            color: #b8a99a;
-            white-space: nowrap;
-        ">
-            Specialty Imports
-        </span>
+    /* NAVBAR */
 
-    </span>
-</a>
+    .site-navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 
-      <!-- Main Navigation Menu -->
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <!-- Home Dropdown (Home 1 & Home 2) -->
-          <li class="nav-item has-dropdown">
-            <a href="index.html" class="nav-link">
-              <span>Home</span>
-              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="index.html" class="dropdown-link">
-                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
-                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
-                </a>
-              </li>
-              <li>
-                <a href="home-atelier.html" class="dropdown-link">
-                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
-                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-<li class="nav-item">
-            <a href="products.html" class="nav-link">Products </a>
-          </li>
-          <!-- About Us (Active) -->
-          <li class="nav-item">
-            <a href="about.html" class="nav-link active">About </a>
-          </li>
+    .navbar-inner {
+        width: 100% !important;
+        height: 60px !important;
+        padding: 0 8px !important;
+        gap: 5px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
 
-          
+    .brand-logo {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        gap: 7px !important;
+        overflow: hidden !important;
+    }
 
-          <li class="nav-item">
-            <a href="gifting.html" class="nav-link">Gifting</a>
-          </li>
-           <li class="nav-item">
-            <a href="blog.html" class="nav-link">blog</a>
-          </li>
+    .brand-logo .logo-icon {
+        width: 34px !important;
+        height: 34px !important;
+        flex-shrink: 0 !important;
+    }
 
-          <!-- Pages Dropdown -->
-          <li class="nav-item has-dropdown">
-            <a href="#" class="nav-link">
-              <span>Pages</span>
-              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="maintenance.html" class="dropdown-link">
-                  <span class="dropdown-title">Maintenance Mode</span>
-                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
-                </a>
-              </li>
-              <li>
-                <a href="coming-soon.html" class="dropdown-link">
-                  <span class="dropdown-title">Coming Soon Launch</span>
-                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
-                </a>
-              </li>
-            </ul>
-          </li>
+    .brand-logo .logo-icon img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
 
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    .brand-logo .logo-title {
+        font-size: 17px !important;
+        letter-spacing: 0.02em !important;
+        white-space: nowrap !important;
+    }
 
-      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
-      <div class="navbar-actions">
-        <!-- RTL to LTR Capsule Pill Button -->
-        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
-          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </button>
+    .brand-logo .logo-subtitle {
+        font-size: 8px !important;
+        letter-spacing: 0.12em !important;
+        white-space: nowrap !important;
+    }
 
-        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
-        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="navMoonGradAbout" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FFE082" />
-                <stop offset="50%" stop-color="#FFCA28" />
-                <stop offset="100%" stop-color="#FF9800" />
-              </linearGradient>
-            </defs>
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGradAbout)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
-            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
-            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
-          </svg>
-        </button>
+    .navbar-actions {
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+    }
 
-       
+    .pill-toggle-btn {
+        width: 34px !important;
+        height: 32px !important;
+    }
 
-        <!-- Mobile Navigation Drawer Toggle -->
-        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
+    .mobile-nav-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 20px !important;
+        padding: 4px !important;
+        flex-shrink: 0 !important;
+    }
 
-  <main>
-    <!-- ==================== SECTION 1: THE IMPORTER'S GENESIS & FOUNDING VISION ==================== -->
-  <!-- ================= HERO SECTION ================= -->
-<section class="cacao-about-hero"
-    style="
-        position: relative;
-        min-height: 650px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 100px 7%;
-        overflow: hidden;
-        background-image:
-            linear-gradient(
-                90deg,
-                rgba(20, 11, 7, 0.92) 0%,
-                rgba(35, 19, 12, 0.78) 45%,
-                rgba(25, 13, 8, 0.30) 100%
-            ),
-            url('https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=2000&q=90');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-color: #24150f;
-    ">
+    /* ABOUT HERO */
 
-    <!-- CONTENT -->
-    <div class="cacao-hero-content"
-        style="
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 800px;
-            color: #ffffff;
-        ">
+    .cacao-about-hero {
+        position: relative !important;
 
-        <!-- BADGE -->
-        <span class="cacao-hero-badge"
-            style="
-                display: inline-block;
-                color: #d9b47c;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: 2px;
-                margin-bottom: 25px;
-                text-transform: uppercase;
-            ">
-            ✦ Our Founding Heritage • Est. 2018
-        </span>
+        width: 100vw !important;
+        max-width: none !important;
+        min-width: 0 !important;
 
-        <!-- HEADING -->
-        <h1
-            style="
-                font-size: clamp(38px, 5vw, 68px);
-                line-height: 1.15;
-                font-weight: 600;
-                color: #ffffff;
-                margin: 0 0 25px;
-            ">
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
 
-            Dedicated to the Art of
+        min-height: auto !important;
 
-            <span
-                style="
-                    display: block;
-                    color: #d9b47c;
-                    margin-top: 8px;
-                ">
-                Pure Heirloom Cacao
-            </span>
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
 
-        </h1>
+        padding: 65px 18px 45px !important;
 
-        <!-- DESCRIPTION -->
-        <p
-            style="
-                max-width: 620px;
-                font-size: 17px;
-                line-height: 1.9;
-                color: #e8ded4;
-                margin-bottom: 35px;
-            ">
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
 
-            Discover the extraordinary world of premium European
-            confectionery and rare South American cacao.
-            Crafted through heritage, passion, and uncompromising quality.
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
 
-        </p>
+    /* HERO CONTENT */
 
-        <!-- BUTTONS -->
-        <div class="cacao-hero-buttons"
-            style="
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px;
-                align-items: center;
-            ">
+    .cacao-hero-content {
+        position: relative !important;
+        z-index: 2 !important;
 
-            <a href="products.html"
-                style="
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 16px 28px;
-                    background: #b88a52;
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-size: 14px;
-                    font-weight: 600;
-                    letter-spacing: 0.5px;
-                    border: 1px solid #b88a52;
-                    transition: 0.3s ease;
-                ">
-                Explore Terroir Imports →
-            </a>
+        width: 100% !important;
+        max-width: 100% !important;
 
-            <a href="contact.html"
-                style="
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 16px 28px;
-                    background: transparent;
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-size: 14px;
-                    font-weight: 600;
-                    border: 1px solid #d9b47c;
-                    transition: 0.3s ease;
-                ">
-                Visit Our Tasting Salon
-            </a>
+        margin: 0 auto !important;
+        padding: 0 !important;
 
-        </div>
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
 
-    </div>
+    /* BADGE */
 
-</section>
+    .cacao-hero-badge {
+        display: inline-block !important;
 
-<!-- RESPONSIVE CSS -->
+        max-width: 100% !important;
+        width: auto !important;
+
+        padding: 10px 12px !important;
+
+        font-size: 11px !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.7px !important;
+
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+
+        margin-bottom: 25px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* HEADING */
+
+    .cacao-hero-content h1 {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: clamp(29px, 8vw, 36px) !important;
+        line-height: 1.2 !important;
+
+        font-weight: 600 !important;
+
+        margin: 0 auto 25px !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .cacao-hero-content h1 span {
+        display: block !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+    }
+
+    /* DESCRIPTION */
+
+    .cacao-hero-content p {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 15px !important;
+        line-height: 1.8 !important;
+
+        margin: 0 auto 28px !important;
+        padding: 0 3px !important;
+
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* BUTTONS */
+
+    .cacao-hero-buttons {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+        justify-content: center !important;
+
+        gap: 12px !important;
+    }
+
+    .cacao-btn-primary,
+    .cacao-btn-outline {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        min-height: 46px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 12px 10px !important;
+
+        font-size: 13px !important;
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
+
+
+/* ============================================
+   SMALL MOBILE - 320px
+============================================ */
+
+@media screen and (max-width: 340px) {
+
+    .navbar-inner {
+        padding: 0 5px !important;
+        gap: 3px !important;
+    }
+
+    .brand-logo {
+        gap: 5px !important;
+    }
+
+    .brand-logo .logo-icon {
+        width: 29px !important;
+        height: 29px !important;
+    }
+
+    .brand-logo .logo-title {
+        font-size: 14px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .brand-logo .logo-subtitle {
+        font-size: 6px !important;
+        letter-spacing: 0.1em !important;
+    }
+
+    .navbar-actions {
+        gap: 3px !important;
+    }
+
+    .pill-toggle-btn {
+        width: 29px !important;
+        height: 29px !important;
+    }
+
+    .cacao-about-hero {
+        padding: 55px 14px 40px !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 29px !important;
+    }
+
+    .cacao-hero-content p {
+        font-size: 14px !important;
+    }
+
+    .cacao-hero-badge {
+        font-size: 10px !important;
+        padding: 9px 7px !important;
+    }
+
+}
+
+
+/* ============================================
+   375px - 425px
+============================================ */
+
+@media screen and (min-width: 341px) and (max-width: 425px) {
+
+    .cacao-about-hero {
+        padding: 65px 18px 45px !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 34px !important;
+    }
+
+}
+
+
+/* ============================================
+   MOBILE OVERFLOW PROTECTION
+============================================ */
+
+@media screen and (max-width: 480px) {
+
+    .cacao-about-hero,
+    .cacao-hero-content,
+    .cacao-hero-buttons {
+        min-width: 0 !important;
+    }
+
+    .cacao-about-hero img,
+    .cacao-about-hero video {
+        max-width: 100% !important;
+    }
+
+}
+
+</style>
+  <!-- RESPONSIVE CSS -->
 <style>
 
 /* TABLET */
@@ -2477,8 +2475,938 @@ textarea.form-control {
     }
 
 }
+@media (max-width: 320px) {
 
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .cacao-about-hero {
+        width: 100%;
+        min-height: auto;
+        padding: 65px 12px 40px;
+        overflow: hidden;
+    }
+
+    .cacao-hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .cacao-hero-badge {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.6;
+        padding: 10px 8px;
+        white-space: normal;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    .cacao-hero-content p {
+        font-size: 15px;
+        line-height: 1.8;
+        padding: 0 5px;
+    }
+
+    .cacao-hero-content button,
+    .cacao-hero-content .btn {
+        width: 100%;
+        max-width: 100%;
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+
+}
+/* ==========================================
+   ABOUT PAGE - MOBILE RESPONSIVE FIX
+   320px - 360px
+========================================== */
+
+@media screen and (max-width: 360px) {
+
+    /* Prevent horizontal overflow */
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* NAVBAR */
+    .site-navbar {
+        width: 100% !important;
+        padding: 8px 5px !important;
+    }
+
+    .site-navbar .navbar-inner {
+        width: 100% !important;
+        padding: 0 5px !important;
+        gap: 5px !important;
+        justify-content: space-between !important;
+    }
+
+    .brand-logo {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        gap: 7px !important;
+    }
+
+    .logo-icon img {
+        width: 35px !important;
+        height: 35px !important;
+        object-fit: contain !important;
+    }
+
+    .logo-title {
+        font-size: 17px !important;
+        line-height: 1.2 !important;
+    }
+
+    .logo-subtitle {
+        font-size: 7px !important;
+        letter-spacing: 1.5px !important;
+    }
+
+    .navbar-actions {
+        flex-shrink: 0 !important;
+        gap: 4px !important;
+    }
+
+    .pill-toggle-btn {
+        width: 34px !important;
+        height: 32px !important;
+        padding: 3px !important;
+        font-size: 13px !important;
+    }
+
+    .mobile-nav-toggle {
+        display: flex !important;
+    }
+
+    /* HERO SECTION */
+    .cacao-about-hero {
+        width: 100% !important;
+        min-height: 0 !important;
+        padding: 75px 12px 45px !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .cacao-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .cacao-hero-badge {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 9px 6px !important;
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+        box-sizing: border-box !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 29px !important;
+        line-height: 1.2 !important;
+        margin: 25px 0 !important;
+        padding: 0 !important;
+        word-break: normal !important;
+    }
+
+    .cacao-hero-content h1 span {
+        font-size: inherit !important;
+    }
+
+    .cacao-hero-content p {
+        font-size: 14px !important;
+        line-height: 1.8 !important;
+        margin: 15px 0 25px !important;
+        padding: 0 3px !important;
+    }
+
+    /* HERO BUTTONS */
+    .cacao-hero-buttons {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+    }
+
+    .cacao-btn-primary,
+    .cacao-btn-outline {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 12px 10px !important;
+        font-size: 12px !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
+    }
+
+}
+/* =====================================
+   ABOUT PAGE - EXACT 320px FIX
+===================================== */
+
+@media screen and (max-width: 320px) {
+
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Navbar */
+    .navbar-inner {
+        width: 100% !important;
+        padding: 0 5px !important;
+        gap: 3px !important;
+    }
+
+    .brand-logo {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        gap: 5px !important;
+    }
+
+    .brand-logo .logo-icon {
+        width: 28px !important;
+        height: 28px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .brand-logo .logo-title {
+        font-size: 13px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .brand-logo .logo-subtitle {
+        font-size: 6px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .navbar-actions {
+        gap: 3px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .pill-toggle-btn {
+        width: 27px !important;
+        height: 27px !important;
+    }
+
+    .mobile-nav-toggle {
+        font-size: 17px !important;
+        padding: 2px !important;
+    }
+
+    /* Hero section */
+    .cacao-about-hero {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 55px 12px 40px !important;
+
+        min-height: auto !important;
+
+        background-size: cover !important;
+        background-position: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .cacao-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+    }
+
+    .cacao-hero-badge {
+        font-size: 10px !important;
+        letter-spacing: 0.5px !important;
+        padding: 8px 5px !important;
+        line-height: 1.5 !important;
+    }
+
+    .cacao-hero-content h1 {
+        font-size: 27px !important;
+        line-height: 1.2 !important;
+        margin: 20px 0 !important;
+    }
+
+    .cacao-hero-content p {
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+        padding: 0 !important;
+        margin-bottom: 25px !important;
+    }
+
+    .cacao-hero-buttons {
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .cacao-btn-primary,
+    .cacao-btn-outline {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 11px 8px !important;
+        font-size: 12px !important;
+    }
+}
+/* =====================================
+   NAVBAR FIX - 320px
+===================================== */
+
+@media screen and (max-width: 320px) {
+
+    .site-navbar {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .navbar-inner {
+        width: 100% !important;
+        height: 58px !important;
+        padding: 0 6px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 4px !important;
+    }
+
+    /* Logo */
+    .brand-logo {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        gap: 5px !important;
+        overflow: hidden !important;
+    }
+
+    .brand-logo .logo-icon {
+        width: 27px !important;
+        height: 27px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .brand-logo .logo-title {
+        font-size: 13px !important;
+        letter-spacing: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .brand-logo .logo-subtitle {
+        display: none !important;
+    }
+
+    /* Navbar controls */
+    .navbar-actions {
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
+        gap: 4px !important;
+    }
+
+    .pill-toggle-btn {
+        width: 27px !important;
+        height: 27px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .mobile-nav-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 25px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        font-size: 17px !important;
+        flex-shrink: 0 !important;
+    }
+
+}
+/* ==========================================
+   CACAO & CRU - 320PX NAVBAR FIX
+========================================== */
+
+@media screen and (max-width: 320px) {
+
+    /* Navbar */
+    .site-navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Navbar Inner */
+    .site-navbar .navbar-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 58px !important;
+        padding: 0 7px !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 4px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Brand Logo Container */
+    .site-navbar .navbar-inner > a:first-child {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        max-width: 185px !important;
+        gap: 7px !important;
+        flex-shrink: 1 !important;
+        overflow: hidden !important;
+    }
+
+    /* Logo Image Container */
+    .site-navbar .navbar-inner > a:first-child > span:first-child {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Logo Image */
+    .site-navbar .navbar-inner > a:first-child img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    /* Brand Text Container */
+    .site-navbar .navbar-inner > a:first-child > span:nth-child(2) {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        overflow: hidden !important;
+    }
+
+    /* CACAO & CRU Title */
+    .site-navbar .navbar-inner > a:first-child
+    > span:nth-child(2) > span:first-child {
+        font-size: 16px !important;
+        letter-spacing: 0.2px !important;
+        line-height: 1.15 !important;
+        white-space: nowrap !important;
+    }
+
+    /* Specialty Imports */
+    .site-navbar .navbar-inner > a:first-child
+    > span:nth-child(2) > span:last-child {
+        display: none !important;
+    }
+
+    /* Hide desktop navigation */
+    .site-navbar nav {
+        display: none !important;
+    }
+
+    /* Navbar Controls */
+    .site-navbar .navbar-actions {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        flex-shrink: 0 !important;
+        gap: 3px !important;
+    }
+
+    /* RTL and Theme Buttons */
+    .site-navbar .navbar-actions .pill-toggle-btn {
+        width: 29px !important;
+        min-width: 29px !important;
+        height: 29px !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .site-navbar .navbar-actions .pill-toggle-btn svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    /* Hamburger */
+    .site-navbar .mobile-nav-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 25px !important;
+        min-width: 25px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .site-navbar .mobile-nav-toggle svg {
+        width: 19px !important;
+        height: 19px !important;
+    }
+}
+/* =========================================
+   ABOUT PAGE - 1024px NAVBAR FIX
+   No hamburger | Show all navigation items
+   ========================================= */
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+
+    .site-navbar {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .navbar-inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        flex-wrap: nowrap !important;
+        padding: 12px 18px !important;
+    }
+
+    /* Logo */
+    .navbar-inner > a:first-child {
+        gap: 9px !important;
+        flex-shrink: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .navbar-inner > a:first-child img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .navbar-inner > a:first-child span span:first-child {
+        font-size: 21px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .navbar-inner > a:first-child span span:last-child {
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* Navigation */
+    .navbar-inner nav {
+        display: flex !important;
+        flex: 1 1 auto !important;
+        justify-content: center !important;
+        min-width: 0 !important;
+    }
+
+    .nav-menu {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        gap: 2px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .nav-menu .nav-item {
+        flex-shrink: 0 !important;
+    }
+
+    .nav-menu .nav-link {
+        padding: 10px 9px !important;
+        font-size: 14px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Action buttons */
+    .navbar-actions {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 7px !important;
+        flex-shrink: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navbar-actions .pill-toggle-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 43px !important;
+        height: 40px !important;
+        flex-shrink: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Hide hamburger at 1024px */
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+
+    /* Keep CTA visible in dark and light themes */
+    html[data-theme="dark"] .navbar-actions,
+    html[data-theme="light"] .navbar-actions {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+}
 </style>
+</head>
+<body>
+
+  <!-- ==================== SYNCHRONIZED NAVBAR ==================== -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <!-- Logo with Brand Icon (Inline SVG) -->
+    <a href="index.html"
+   aria-label="Cacao & Cru Home"
+   style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      text-decoration: none;
+      flex-shrink: 0;
+   ">
+
+    <span style="
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        flex-shrink: 0;
+    ">
+        <img src="assets/images/logo.png"
+             alt="Cacao & Cru"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+                background: transparent;
+             ">
+    </span>
+
+    <span style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+    ">
+
+        <span style="
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            color: #ffffff;
+            white-space: nowrap;
+        ">
+            CACAO <span style="color: #d4af37;">&amp;</span> CRU
+        </span>
+
+        <span style="
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            line-height: 1.3;
+            color: #b8a99a;
+            white-space: nowrap;
+        ">
+            Specialty Imports
+        </span>
+
+    </span>
+</a>
+
+      <!-- Main Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Home Dropdown (Home 1 & Home 2) -->
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span class="dropdown-title">Heritage Reserve <span class="dropdown-tag">Home 1</span></span>
+                  <span class="dropdown-desc">Grand Chocolatiers & Single-Origin Direct Imports</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-atelier.html" class="dropdown-link">
+                  <span class="dropdown-title">Artisan Atelier <span class="dropdown-tag">Home 2</span></span>
+                  <span class="dropdown-desc">Modern Truffles, Bonbons & Pâtisserie Imports</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+<li class="nav-item">
+            <a href="products.html" class="nav-link">Products </a>
+          </li>
+          <!-- About Us (Active) -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About </a>
+          </li>
+
+          
+
+          <li class="nav-item">
+            <a href="gifting.html" class="nav-link">Gifting</a>
+          </li>
+           <li class="nav-item">
+            <a href="blog.html" class="nav-link">blog</a>
+          </li>
+
+          <!-- Pages Dropdown -->
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">
+              <span>Pages</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="maintenance.html" class="dropdown-link">
+                  <span class="dropdown-title">Maintenance Mode</span>
+                  <span class="dropdown-desc">Boutique cold-chain calibration page</span>
+                </a>
+              </li>
+              <li>
+                <a href="coming-soon.html" class="dropdown-link">
+                  <span class="dropdown-title">Coming Soon Launch</span>
+                  <span class="dropdown-desc">Winter Grand Cru seasonal drop teaser</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Action Controls (Capsule Pill Buttons Matching Reference) -->
+      <div class="navbar-actions">
+        <!-- RTL to LTR Capsule Pill Button -->
+        <button class="pill-toggle-btn" id="rtlToggle" data-tooltip="Switch to RTL" aria-label="Toggle Layout Direction">
+          <svg class="icon-bidirectional" viewBox="0 0 24 16" width="24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 3.5L23 8L18.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 3.5L1 8L5.5 12.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 8H22.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Dark to Light Mode Capsule Pill Button with Crescent Moon -->
+        <button class="pill-toggle-btn" id="themeToggle" data-tooltip="Dark Mode Active (Click for Light)" aria-label="Toggle Dark/Light Mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="navMoonGradAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE082" />
+                <stop offset="50%" stop-color="#FFCA28" />
+                <stop offset="100%" stop-color="#FF9800" />
+              </linearGradient>
+            </defs>
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="url(#navMoonGradAbout)" stroke="#FFA000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.1" fill="#E65100" opacity="0.3"/>
+            <circle cx="13" cy="15" r="0.9" fill="#E65100" opacity="0.25"/>
+            <circle cx="8" cy="15" r="0.7" fill="#E65100" opacity="0.25"/>
+          </svg>
+        </button>
+
+       
+
+        <!-- Mobile Navigation Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== SECTION 1: THE IMPORTER'S GENESIS & FOUNDING VISION ==================== -->
+  <!-- ================= HERO SECTION ================= -->
+<section class="cacao-about-hero"
+    style="
+        position: relative;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 7%;
+        overflow: hidden;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(20, 11, 7, 0.92) 0%,
+                rgba(35, 19, 12, 0.78) 45%,
+                rgba(25, 13, 8, 0.30) 100%
+            ),
+            url('assets/images/about\ hero.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #24150f;
+    ">
+
+    <!-- CONTENT -->
+    <div class="cacao-hero-content"
+        style="
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 800px;
+            color: #ffffff;
+        ">
+
+        <!-- BADGE -->
+        <span class="cacao-hero-badge"
+            style="
+                display: inline-block;
+                color: #d9b47c;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+            ">
+            ✦ Our Founding Heritage • Est. 2018
+        </span>
+
+        <!-- HEADING -->
+        <h1
+            style="
+                font-size: clamp(38px, 5vw, 68px);
+                line-height: 1.15;
+                font-weight: 600;
+                color: #ffffff;
+                margin: 0 0 25px;
+            ">
+
+            Dedicated to the Art of
+
+            <span
+                style="
+                    display: block;
+                    color: #d9b47c;
+                    margin-top: 8px;
+                ">
+                Pure Heirloom Cacao
+            </span>
+
+        </h1>
+
+        <!-- DESCRIPTION -->
+        <p
+            style="
+                max-width: 620px;
+                font-size: 17px;
+                line-height: 1.9;
+                color: #e8ded4;
+                margin-bottom: 35px;
+            ">
+
+            Discover the extraordinary world of premium European
+            confectionery and rare South American cacao.
+            Crafted through heritage, passion, and uncompromising quality.
+
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="cacao-hero-buttons"
+            style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                align-items: center;
+            ">
+
+            <a href="products.html"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 16px 28px;
+                    background: #b88a52;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    border: 1px solid #b88a52;
+                    transition: 0.3s ease;
+                ">
+                Explore Terroir Imports →
+            </a>
+
+            <a href="contact.html"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 16px 28px;
+                    background: transparent;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border: 1px solid #d9b47c;
+                    transition: 0.3s ease;
+                ">
+                Visit Our Tasting Salon
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
 
 <!-- ================= OUR STORY SECTION ================= -->
